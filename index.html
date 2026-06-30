@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Forus | HLPF 2026 Social Media Toolkit — Cooperation That Works</title>
+<title>Forus | HLPF 2026 Social Media Toolkit</title>
 <style>
   :root{
     --forus-dark-azure: #01424d;
@@ -39,7 +39,7 @@
   /* --- SELECTOR DE IDIOMA --- */
   .lang-selector{
     max-width:var(--maxw);
-    margin:0 auto 20px;
+    margin:0 auto 16px;
     display:flex;
     justify-content:flex-end;
     gap:10px;
@@ -71,7 +71,7 @@
   /* --- LOGO BANNER --- */
   .logo-banner{
     max-width:var(--maxw);
-    margin:0 auto 20px;
+    margin:0 auto 16px;
     padding:12px 28px;
     background:rgba(255,255,255,0.92);
     backdrop-filter:blur(10px);
@@ -99,13 +99,13 @@
   /* --- NAVEGACIÓN --- */
   .toolkit-nav{
     max-width:var(--maxw);
-    margin:0 auto 30px;
-    padding:10px 20px;
+    margin:0 auto 24px;
+    padding:10px 16px;
     background:var(--forus-dark-azure);
     border-radius:50px;
     display:flex;
     flex-wrap:wrap;
-    gap:4px 10px;
+    gap:4px 8px;
     justify-content:center;
     box-shadow:0 6px 24px rgba(1,66,77,0.25);
     border:1px solid rgba(255,255,255,0.06);
@@ -113,28 +113,36 @@
     top:10px;
     z-index:100;
   }
-  .toolkit-nav a{
+  .toolkit-nav button{
     color:rgba(255,255,255,0.75);
     font-size:12px;
     text-decoration:none;
     font-weight:600;
-    padding:5px 14px;
+    padding:5px 16px;
     border-radius:30px;
     transition:all 0.2s ease;
     letter-spacing:0.2px;
+    background:transparent;
+    border:none;
+    cursor:pointer;
+    font-family:inherit;
   }
-  .toolkit-nav a:hover{
+  .toolkit-nav button:hover{
     color:#fff;
     background:rgba(255,255,255,0.12);
-    text-decoration:none;
+  }
+  .toolkit-nav button.active{
+    color:#fff;
+    background:rgba(255,255,255,0.18);
   }
 
-  /* --- PÁGINAS --- */
-  .page{
+  /* --- PÁGINAS (ventanas) --- */
+  .page-window{
+    display:none;
     background:#ffffff;
     max-width:var(--maxw);
     margin:0 auto 36px;
-    padding:40px 0 44px;
+    padding:36px 0 40px;
     box-shadow:var(--shadow);
     border-radius:var(--radius);
     position:relative;
@@ -142,8 +150,12 @@
     background-image: 
       radial-gradient(circle at 90% 10%, rgba(88, 196, 198, 0.03) 0%, transparent 40%),
       radial-gradient(circle at 10% 90%, rgba(18, 160, 130, 0.03) 0%, transparent 40%);
+    animation: fadeIn 0.3s ease;
   }
-  .page::before{
+  .page-window.active{
+    display:block;
+  }
+  .page-window::before{
     content:'';
     position:absolute;
     top:0;
@@ -166,16 +178,21 @@
     margin-bottom:14px;
   }
 
+  @keyframes fadeIn{
+    from{opacity:0; transform:translateY(10px);}
+    to{opacity:1; transform:translateY(0);}
+  }
+
   /* --- HERO --- */
   .hero{
     background:linear-gradient(145deg, var(--forus-dark-azure) 0%, #015a69 60%, var(--forus-teal) 130%);
     color:#fff;
-    padding:50px 0 48px;
+    padding:44px 0 40px;
     text-align:center;
     border-radius:var(--radius);
     position:relative;
     overflow:hidden;
-    margin:0 0 0 0;
+    margin:0;
   }
   .hero::after{
     content:'';
@@ -199,17 +216,24 @@
     border-radius:50%;
     pointer-events:none;
   }
-  .hero .tag{
+  .hero .hlpf-badge{
     display:inline-block;
-    background:rgba(255,255,255,0.10);
-    border:1px solid rgba(255,255,255,0.20);
-    padding:5px 20px;
+    background:rgba(255,255,255,0.12);
+    border:2px solid rgba(255,255,255,0.30);
+    padding:6px 24px;
     border-radius:40px;
-    font-size:11.5px;
+    font-size:13px;
     letter-spacing:0.8px;
     text-transform:uppercase;
     margin-bottom:16px;
     backdrop-filter:blur(4px);
+    font-weight:700;
+    color:#fff;
+    box-shadow:0 0 30px rgba(237,21,80,0.15);
+    border-color:rgba(237,21,80,0.4);
+  }
+  .hero .hlpf-badge span{
+    color:var(--forus-lime);
   }
   .hero h1{
     font-size:36px;
@@ -269,15 +293,6 @@
     background:rgba(255,255,255,0.10);
     color:#fff;
     border-color:#fff;
-  }
-  .btn-outline{
-    background:transparent;
-    color:var(--forus-dark-azure);
-    border:2px solid var(--forus-teal);
-  }
-  .btn-outline:hover{
-    background:var(--forus-teal);
-    color:#fff;
   }
 
   /* --- TIPOGRAFÍA --- */
@@ -406,7 +421,6 @@
   }
   tr:nth-child(even) td{background:#fafcfb;}
   tr:hover td{background:#f0f7f6;}
-
   .event-title{font-weight:700; color:var(--forus-dark-azure);}
   .event-org{font-size:12px; color:var(--forus-gray);}
 
@@ -557,7 +571,7 @@
     background:var(--forus-light);
     display:flex;
     gap:14px;
-    align-items:flex-start;
+    align-items:center;
     transition:all 0.2s;
   }
   .podcast-card:hover{
@@ -582,21 +596,6 @@
   .podcast-meta{font-size:10.5px; color:var(--forus-teal); font-weight:700; text-transform:uppercase; letter-spacing:0.5px;}
   .podcast-name{font-size:12px; color:var(--forus-gray); font-weight:500;}
 
-  /* --- FOOTER --- */
-  footer{
-    background:linear-gradient(145deg, var(--forus-dark-azure), #00333b);
-    color:#cfe0ec;
-    text-align:center;
-    padding:30px 24px;
-    font-size:13px;
-    max-width:var(--maxw);
-    margin:0 auto 0;
-    border-radius:var(--radius);
-    border:1px solid rgba(255,255,255,0.05);
-  }
-  footer a{color:#8fc5c0; font-weight:600;}
-  footer a:hover{color:#fff;}
-
   .source-note{
     margin-top:22px;
     font-size:11.5px;
@@ -606,13 +605,24 @@
     opacity:0.7;
   }
 
+  .placeholder{
+    background:#FFF5E6;
+    border:1px dashed var(--forus-orange);
+    color:#a86f30;
+    padding:2px 10px;
+    border-radius:4px;
+    font-size:13px;
+    font-style:italic;
+    font-weight:500;
+  }
+
   /* --- RESPONSIVE --- */
   @media (max-width:768px){
     .card-grid, .msg-grid, .podcast-grid{grid-template-columns:1fr;}
     .account-grid{grid-template-columns:1fr 1fr;}
     .hero h1{font-size:24px;}
     .hero{padding:32px 0;}
-    .page{padding:28px 0;}
+    .page-window{padding:28px 0;}
     .toolkit-nav{
       border-radius:16px;
       padding:8px 12px;
@@ -620,7 +630,7 @@
       position:relative;
       top:0;
     }
-    .toolkit-nav a{font-size:10.5px; padding:4px 10px;}
+    .toolkit-nav button{font-size:10.5px; padding:4px 10px;}
     table, thead, tbody, th, td, tr{font-size:11.5px;}
     th, td{padding:6px 10px;}
     .logo-banner{flex-wrap:wrap; justify-content:center; text-align:center; padding:10px 16px;}
@@ -633,6 +643,7 @@
     .btn{padding:8px 18px; font-size:12.5px;}
     .hero h1{font-size:20px;}
     .wrap{padding:0 14px;}
+    .toolkit-nav button{font-size:9px; padding:3px 8px;}
   }
 
   /* --- OCULTAR IDIOMAS --- */
@@ -657,40 +668,40 @@
 
 <!-- NAVEGACIÓN -->
 <nav class="toolkit-nav">
-  <a href="#hero">Inicio</a>
-  <a href="#hlpf">HLPF</a>
-  <a href="#report">Reporte</a>
-  <a href="#objectives">Objetivos</a>
-  <a href="#timeline">Calendario</a>
-  <a href="#messages">Mensajes</a>
-  <a href="#posts">Posts</a>
-  <a href="#podcasts">Podcasts</a>
-  <a href="#hashtags">Hashtags</a>
-  <a href="#accounts">Cuentas</a>
+  <button class="active" data-page="page-inicio">Inicio</button>
+  <button data-page="page-hlpf">HLPF</button>
+  <button data-page="page-reporte">Reporte</button>
+  <button data-page="page-objetivos">Objetivos</button>
+  <button data-page="page-calendario">Calendario</button>
+  <button data-page="page-mensajes">Mensajes</button>
+  <button data-page="page-posts">Posts</button>
+  <button data-page="page-podcasts">Podcasts</button>
+  <button data-page="page-hashtags">Hashtags</button>
+  <button data-page="page-cuentas">Cuentas</button>
 </nav>
 
 <!-- ==================== CONTENIDO ESPAÑOL ==================== -->
 <div class="lang-content active" id="lang-es">
 
-<!-- PÁGINA 1: HERO -->
-<div class="page" id="hero">
+<!-- VENTANA: INICIO -->
+<div class="page-window active" id="page-inicio">
   <div class="wrap">
     <span class="page-tag">01 / Bienvenida</span>
     <div class="hero">
-      <span class="tag">HLPF 2026 · 7–15 julio · Nueva York</span>
+      <div class="hlpf-badge">📅 <span>HLPF 2026</span> · July 7–15 · New York</div>
       <h1>Amplifica la voz de la sociedad civil en el HLPF 2026</h1>
       <h2>Kit de redes sociales para el lanzamiento de "Cooperation That Works: Civil Society in South-South and Triangular Cooperation"</h2>
       <p>Este kit equipa a los miembros de Forus, plataformas nacionales, organizaciones de la sociedad civil, socios, personal y miembros de la junta directiva con todo lo necesario para difundir nuestro nuevo reporte y su evento de lanzamiento durante el Foro Político de Alto Nivel de la ONU sobre Desarrollo Sostenible. Úsalo, adáptalo y localízalo para que la voz de la sociedad civil llegue más lejos en 2026.</p>
       <div class="cta-row">
         <a href="#" class="btn btn-primary">📥 Descargar el reporte completo</a>
-        <a href="#report" class="btn btn-secondary">Conocer el reporte →</a>
+        <a href="#" class="btn btn-secondary" onclick="switchPage('page-reporte')">Conocer el reporte →</a>
       </div>
     </div>
   </div>
 </div>
 
-<!-- PÁGINA 2: HLPF -->
-<div class="page" id="hlpf">
+<!-- VENTANA: HLPF -->
+<div class="page-window" id="page-hlpf">
   <div class="wrap">
     <span class="page-tag">02 / Contexto</span>
     <p class="eyebrow">Antecedentes</p>
@@ -700,8 +711,8 @@
   </div>
 </div>
 
-<!-- PÁGINA 3: REPORTE -->
-<div class="page" id="report">
+<!-- VENTANA: REPORTE -->
+<div class="page-window" id="page-reporte">
   <div class="wrap">
     <span class="page-tag">03 / El Reporte</span>
     <p class="eyebrow">El Reporte</p>
@@ -736,8 +747,8 @@
   </div>
 </div>
 
-<!-- PÁGINA 4: OBJETIVOS -->
-<div class="page" id="objectives">
+<!-- VENTANA: OBJETIVOS -->
+<div class="page-window" id="page-objetivos">
   <div class="wrap">
     <span class="page-tag">04 / Objetivos</span>
     <p class="eyebrow">Por qué este kit</p>
@@ -756,15 +767,14 @@
   </div>
 </div>
 
-<!-- PÁGINA 5: CALENDARIO -->
-<div class="page" id="timeline">
+<!-- VENTANA: CALENDARIO -->
+<div class="page-window" id="page-calendario">
   <div class="wrap">
     <span class="page-tag">05 / Calendario</span>
     <p class="eyebrow">Planificación</p>
     <h2 class="section-title">Calendario de campaña</h2>
     <p class="lead">Calendario completo de actividades antes, durante y después del HLPF 2026.</p>
 
-    <!-- PRE-LANZAMIENTO -->
     <span class="phase-label pre">Pre-Lanzamiento</span>
     <table>
       <tr><th>Fecha</th><th>Título</th><th>Objetivo</th></tr>
@@ -790,7 +800,6 @@
       </tr>
     </table>
 
-    <!-- DURANTE HLPF - SEMANA 1 -->
     <span class="phase-label during">Durante HLPF — Semana 1</span>
     <table>
       <tr><th>Fecha</th><th>Título</th><th>Objetivo</th></tr>
@@ -806,7 +815,6 @@
       </tr>
     </table>
 
-    <!-- ENTRE SEMANAS -->
     <span class="phase-label">Entre semanas del HLPF</span>
     <table>
       <tr><th>Fecha</th><th>Título</th><th>Objetivo</th></tr>
@@ -817,7 +825,6 @@
       </tr>
     </table>
 
-    <!-- SEMANA 2 - MINISTERIAL -->
     <span class="phase-label during">Semana 2 — Segmento Ministerial</span>
     <table>
       <tr><th>Fecha</th><th>Título</th><th>Objetivo</th></tr>
@@ -833,7 +840,6 @@
       </tr>
     </table>
 
-    <!-- CIERRE -->
     <span class="phase-label closing">Cierre</span>
     <table>
       <tr><th>Fecha</th><th>Título</th><th>Objetivo</th></tr>
@@ -851,8 +857,8 @@
   </div>
 </div>
 
-<!-- PÁGINA 6: MENSAJES CLAVE -->
-<div class="page" id="messages">
+<!-- VENTANA: MENSAJES CLAVE -->
+<div class="page-window" id="page-mensajes">
   <div class="wrap">
     <span class="page-tag">06 / Narrativa</span>
     <p class="eyebrow">Narrativa central</p>
@@ -873,15 +879,14 @@
   </div>
 </div>
 
-<!-- PÁGINA 7: POSTS (PRE-LAUNCH) -->
-<div class="page" id="posts">
+<!-- VENTANA: POSTS -->
+<div class="page-window" id="page-posts">
   <div class="wrap">
     <span class="page-tag">07 / Contenido listo para usar</span>
     <p class="eyebrow">Copiar y pegar</p>
     <h2 class="section-title">PRE-LAUNCH — Publicaciones para redes sociales</h2>
     <p class="lead">Contenido listo para usar o adaptar en cualquier red social. Disponible en inglés (idioma original de las publicaciones).</p>
 
-    <!-- POST 1 -->
     <div class="post-card">
       <div class="post-head"><span class="obj-pill">Teaser</span><span class="post-date">Wednesday, July 1</span></div>
       <div class="post-body">
@@ -894,7 +899,6 @@ Stay tuned. 🔥</div>
       </div>
     </div>
 
-    <!-- POST 2 -->
     <div class="post-card">
       <div class="post-head"><span class="obj-pill">Urgency</span><span class="post-date">Thursday, July 2</span></div>
       <div class="post-body">
@@ -906,7 +910,6 @@ We're telling you why very soon.
       </div>
     </div>
 
-    <!-- POST 3 -->
     <div class="post-card">
       <div class="post-head"><span class="obj-pill">Global Stories</span><span class="post-date">Friday, July 3</span></div>
       <div class="post-body">
@@ -919,7 +922,6 @@ Get ready.</div>
       </div>
     </div>
 
-    <!-- POST 4 -->
     <div class="post-card">
       <div class="post-head"><span class="obj-pill">Virtual Launch</span><span class="post-date">Monday, July 6</span></div>
       <div class="post-body">
@@ -932,7 +934,6 @@ Get ready.</div>
       </div>
     </div>
 
-    <!-- POST 5 -->
     <div class="post-card">
       <div class="post-head"><span class="obj-pill">NY Launch</span><span class="post-date">Thursday, July 9</span></div>
       <div class="post-body">
@@ -947,7 +948,6 @@ It brings together evidence from across our network on how civil society makes S
       </div>
     </div>
 
-    <!-- POST 6 -->
     <div class="post-card">
       <div class="post-head"><span class="obj-pill">Diplomatic Table</span><span class="post-date">Thursday, July 9, 1:00–3:00 PM</span></div>
       <div class="post-body">
@@ -960,7 +960,6 @@ Civil society, where the decisions that matter get made.</div>
       </div>
     </div>
 
-    <!-- POST 7 -->
     <div class="post-card">
       <div class="post-head"><span class="obj-pill">Weekend Workshops</span><span class="post-date">Saturday–Sunday, July 11–12</span></div>
       <div class="post-body">
@@ -972,7 +971,6 @@ Civil society, where the decisions that matter get made.</div>
       </div>
     </div>
 
-    <!-- POST 8 -->
     <div class="post-card">
       <div class="post-head"><span class="obj-pill">African Voices</span><span class="post-date">Tuesday, July 14, 1:15–2:45 PM EST</span></div>
       <div class="post-body">
@@ -984,7 +982,6 @@ Civil society, where the decisions that matter get made.</div>
       </div>
     </div>
 
-    <!-- POST 9 -->
     <div class="post-card">
       <div class="post-head"><span class="obj-pill">Localising SDGs</span><span class="post-date">Tuesday, July 14, 3:00–6:00 PM EDT</span></div>
       <div class="post-body">
@@ -997,7 +994,6 @@ Civil society, where the decisions that matter get made.</div>
       </div>
     </div>
 
-    <!-- POST 10 -->
     <div class="post-card">
       <div class="post-head"><span class="obj-pill">Post-2030 Vision</span><span class="post-date">Thursday, July 16, 10:30 AM–12:00 PM</span></div>
       <div class="post-body">
@@ -1010,7 +1006,6 @@ The future of cooperation is being written now.</div>
       </div>
     </div>
 
-    <!-- POST 11 -->
     <div class="post-card">
       <div class="post-head"><span class="obj-pill">Report Recap</span><span class="post-date">July 16 or 19</span></div>
       <div class="post-body">
@@ -1020,23 +1015,21 @@ The future of cooperation is being written now.</div>
         <div class="post-cta"><strong>CTA:</strong> Read the recap</div>
       </div>
     </div>
-
   </div>
 </div>
 
-<!-- PÁGINA 8: PODCASTS -->
-<div class="page" id="podcasts">
+<!-- VENTANA: PODCASTS -->
+<div class="page-window" id="page-podcasts">
   <div class="wrap">
     <span class="page-tag">08 / Audio</span>
     <p class="eyebrow">Escucha y comparte</p>
     <h2 class="section-title">Serie de podcasts</h2>
-    <p class="lead">Como complemento al reporte, Forus presenta una serie de 5 episodios de podcast con voces de la red sobre cooperación Sur-Sur y triangular. Comparte estos episodios junto con tus publicaciones para profundizar la conversación.</p>
+    <p class="lead">Como complemento al reporte, Forus presenta una serie de 5 episodios de podcast con voces de la red sobre cooperación Sur-Sur y triangular.</p>
     <div class="podcast-grid">
       <div class="podcast-card">
         <span class="podcast-num">1</span>
         <div>
           <span class="podcast-meta">Episodio 1</span>
-          <h4>Introducción al reporte</h4>
           <p><span class="podcast-name">Aron Halfen — ForUM (Norway)</span></p>
         </div>
       </div>
@@ -1044,7 +1037,6 @@ The future of cooperation is being written now.</div>
         <span class="podcast-num">2</span>
         <div>
           <span class="podcast-meta">Episodio 2</span>
-          <h4>Voces del Pacífico</h4>
           <p><span class="podcast-name">Felisberto de Barros Silva Moreira — PLATONG (Cabo Verde)</span></p>
         </div>
       </div>
@@ -1052,7 +1044,6 @@ The future of cooperation is being written now.</div>
         <span class="podcast-num">3</span>
         <div>
           <span class="podcast-meta">Episodio 3</span>
-          <h4>Lecciones sobre exclusión</h4>
           <p><span class="podcast-name">Henrique Botelho Frota — ABONG (Brazil)</span></p>
         </div>
       </div>
@@ -1060,7 +1051,6 @@ The future of cooperation is being written now.</div>
         <span class="podcast-num">4</span>
         <div>
           <span class="podcast-meta">Episodio 4</span>
-          <h4>Co-gobernanza en práctica</h4>
           <p><span class="podcast-name">Iti — AKÜ (Estonia)</span></p>
         </div>
       </div>
@@ -1068,7 +1058,6 @@ The future of cooperation is being written now.</div>
         <span class="podcast-num">5</span>
         <div>
           <span class="podcast-meta">Episodio 5</span>
-          <h4>Mirando hacia el post-2030</h4>
           <p><span class="podcast-name">Jose Ramon Avila Quiñonez — ASONOG (Honduras)</span></p>
           <p><span class="podcast-name">Malick Ndome — CONGAD (Senegal)</span></p>
           <p><span class="podcast-name">Mylène Lawson — ADRA (Togo)</span></p>
@@ -1077,7 +1066,7 @@ The future of cooperation is being written now.</div>
     </div>
     <div class="report-box" style="margin-top:24px;">
       <h3>🎧 Escucha la serie completa</h3>
-      <p>Disponible en <span class="placeholder">[plataforma de podcast]</span>. Comparte el enlace en tus publicaciones de redes sociales durante toda la campaña.</p>
+      <p>Disponible en <span class="placeholder">[plataforma de podcast]</span>.</p>
       <div class="report-actions">
         <a href="#" class="btn btn-primary">Escuchar la serie</a>
       </div>
@@ -1085,13 +1074,12 @@ The future of cooperation is being written now.</div>
   </div>
 </div>
 
-<!-- PÁGINA 9: HASHTAGS -->
-<div class="page" id="hashtags">
+<!-- VENTANA: HASHTAGS -->
+<div class="page-window" id="page-hashtags">
   <div class="wrap">
     <span class="page-tag">09 / Etiquetas</span>
     <p class="eyebrow">Usar de forma consistente</p>
     <h2 class="section-title">Hashtags sugeridos</h2>
-
     <div class="hashtag-block">
       <h4>Hashtags oficiales</h4>
       <div class="tags">
@@ -1112,8 +1100,8 @@ The future of cooperation is being written now.</div>
   </div>
 </div>
 
-<!-- PÁGINA 10: CUENTAS -->
-<div class="page" id="accounts">
+<!-- VENTANA: CUENTAS -->
+<div class="page-window" id="page-cuentas">
   <div class="wrap">
     <span class="page-tag">10 / Etiquetar</span>
     <p class="eyebrow">No olvides etiquetar</p>
@@ -1150,7 +1138,6 @@ The future of cooperation is being written now.</div>
       <div class="account-card"><div class="av" style="background:var(--forus-green);">AB</div><h5>ABONG</h5><span>Brasil</span></div>
       <div class="account-card"><div class="av" style="background:var(--forus-green);">TA</div><h5>Taiwan AID</h5><span>Taiwán</span></div>
     </div>
-
     <p class="source-note">Sugerencia: agrega también los handles específicos de cada plataforma cuando publiques sobre ellas.</p>
   </div>
 </div>
@@ -1161,25 +1148,25 @@ The future of cooperation is being written now.</div>
 <!-- ==================== CONTENIDO INGLÉS ==================== -->
 <div class="lang-content" id="lang-en">
 
-<!-- PAGE 1: HERO -->
-<div class="page" id="hero-en">
+<!-- WINDOW: HOME -->
+<div class="page-window active" id="page-inicio-en">
   <div class="wrap">
     <span class="page-tag">01 / Welcome</span>
     <div class="hero">
-      <span class="tag">HLPF 2026 · July 7–15 · New York</span>
+      <div class="hlpf-badge">📅 <span>HLPF 2026</span> · July 7–15 · New York</div>
       <h1>Amplify civil society's voice at HLPF 2026</h1>
       <h2>Social media toolkit for the launch of "Cooperation That Works: Civil Society in South-South and Triangular Cooperation"</h2>
       <p>This toolkit equips Forus members, national platforms, civil society organizations, partners, staff and board members with everything needed to disseminate our new report and its launch event during the UN High-Level Political Forum on Sustainable Development. Use it, adapt it and localize it to make civil society's voice reach further in 2026.</p>
       <div class="cta-row">
         <a href="#" class="btn btn-primary">📥 Download full report</a>
-        <a href="#report-en" class="btn btn-secondary">Learn about the report →</a>
+        <a href="#" class="btn btn-secondary" onclick="switchPage('page-reporte-en')">Learn about the report →</a>
       </div>
     </div>
   </div>
 </div>
 
-<!-- PAGE 2: HLPF -->
-<div class="page" id="hlpf-en">
+<!-- WINDOW: HLPF (English) -->
+<div class="page-window" id="page-hlpf-en">
   <div class="wrap">
     <span class="page-tag">02 / Context</span>
     <p class="eyebrow">Background</p>
@@ -1189,29 +1176,17 @@ The future of cooperation is being written now.</div>
   </div>
 </div>
 
-<!-- PAGE 3: REPORT -->
-<div class="page" id="report-en">
+<!-- WINDOW: REPORT (English) -->
+<div class="page-window" id="page-reporte-en">
   <div class="wrap">
     <span class="page-tag">03 / The Report</span>
     <p class="eyebrow">The Report</p>
     <h2 class="section-title">Cooperation That Works: Civil Society in South-South and Triangular Cooperation</h2>
     <div class="card-grid">
-      <div class="card">
-        <h3>Purpose</h3>
-        <p>Demonstrates that South-South and triangular cooperation (SSTC) is more legitimate, adaptable and sustainable when civil society is recognized as part of its architecture, not just as a beneficiary or implementation contractor.</p>
-      </div>
-      <div class="card">
-        <h3>Main themes</h3>
-        <p>What makes SSTC effective; six distinctive contributions of civil society; gaps in governance, financing and transparency; and an action agenda for governments, the UN, development banks and civil society networks.</p>
-      </div>
-      <div class="card">
-        <h3>Why it matters</h3>
-        <p>South-South cooperation already moves over USD 6.2 trillion in trade (2024) and thousands of triangular cooperation activities, but civil society's contribution remains invisible in official data, financing and reporting systems.</p>
-      </div>
-      <div class="card">
-        <h3>Target audience</h3>
-        <p>National governments, UNOSSC/UNDP, triangular cooperation facilitators, regional intergovernmental organizations, public development banks, post-2030 negotiators, and Forus members and civil society networks.</p>
-      </div>
+      <div class="card"><h3>Purpose</h3><p>Demonstrates that South-South and triangular cooperation (SSTC) is more legitimate, adaptable and sustainable when civil society is recognized as part of its architecture, not just as a beneficiary or implementation contractor.</p></div>
+      <div class="card"><h3>Main themes</h3><p>What makes SSTC effective; six distinctive contributions of civil society; gaps in governance, financing and transparency; and an action agenda for governments, the UN, development banks and civil society networks.</p></div>
+      <div class="card"><h3>Why it matters</h3><p>South-South cooperation already moves over USD 6.2 trillion in trade (2024) and thousands of triangular cooperation activities, but civil society's contribution remains invisible in official data, financing and reporting systems.</p></div>
+      <div class="card"><h3>Target audience</h3><p>National governments, UNOSSC/UNDP, triangular cooperation facilitators, regional intergovernmental organizations, public development banks, post-2030 negotiators, and Forus members and civil society networks.</p></div>
     </div>
     <div class="report-box">
       <h3>"SSTC works best when adapted, not copied."</h3>
@@ -1225,8 +1200,8 @@ The future of cooperation is being written now.</div>
   </div>
 </div>
 
-<!-- PAGE 4: OBJECTIVES -->
-<div class="page" id="objectives-en">
+<!-- WINDOW: OBJECTIVES (English) -->
+<div class="page-window" id="page-objetivos-en">
   <div class="wrap">
     <span class="page-tag">04 / Objectives</span>
     <p class="eyebrow">Why this toolkit</p>
@@ -1245,8 +1220,8 @@ The future of cooperation is being written now.</div>
   </div>
 </div>
 
-<!-- PAGE 5: TIMELINE -->
-<div class="page" id="timeline-en">
+<!-- WINDOW: TIMELINE (English) -->
+<div class="page-window" id="page-calendario-en">
   <div class="wrap">
     <span class="page-tag">05 / Timeline</span>
     <p class="eyebrow">Planning</p>
@@ -1256,87 +1231,43 @@ The future of cooperation is being written now.</div>
     <span class="phase-label pre">Pre-Launch</span>
     <table>
       <tr><th>Date</th><th>Title</th><th>Objective</th></tr>
-      <tr>
-        <td><strong>Wednesday, July 1</strong></td>
-        <td class="event-title">Anticipation Teaser</td>
-        <td>Build curiosity without revealing report content.</td>
-      </tr>
-      <tr>
-        <td><strong>Thursday, July 2</strong></td>
-        <td class="event-title">The Problem No One Is Solving</td>
-        <td>Connect the urgency of the SDG context to the report's relevance.</td>
-      </tr>
-      <tr>
-        <td><strong>Friday, July 3</strong></td>
-        <td class="event-title">20 Stories, One Message</td>
-        <td>Show the global scope of the evidence gathered in the report.</td>
-      </tr>
-      <tr>
-        <td><strong>Monday, July 6</strong></td>
-        <td class="event-title">SSTC Report Launch — Virtual Webinar</td>
-        <td><span class="event-org">Organiser: Forus International</span><br>Formally launch the SSTC report to the global Forus network and civil society, highlight key messages about civil society's role in South-South and triangular cooperation, and build momentum ahead of the in-person New York launch. (Available in English, French and Spanish, at the Forus Virtual Hub.)</td>
-      </tr>
+      <tr><td><strong>Wednesday, July 1</strong></td><td class="event-title">Anticipation Teaser</td><td>Build curiosity without revealing report content.</td></tr>
+      <tr><td><strong>Thursday, July 2</strong></td><td class="event-title">The Problem No One Is Solving</td><td>Connect the urgency of the SDG context to the report's relevance.</td></tr>
+      <tr><td><strong>Friday, July 3</strong></td><td class="event-title">20 Stories, One Message</td><td>Show the global scope of the evidence gathered in the report.</td></tr>
+      <tr><td><strong>Monday, July 6</strong></td><td class="event-title">SSTC Report Launch — Virtual Webinar</td><td><span class="event-org">Organiser: Forus International</span><br>Formally launch the SSTC report to the global Forus network and civil society, highlight key messages about civil society's role in South-South and triangular cooperation, and build momentum ahead of the in-person New York launch.</td></tr>
     </table>
 
     <span class="phase-label during">During HLPF — Week 1</span>
     <table>
       <tr><th>Date</th><th>Title</th><th>Objective</th></tr>
-      <tr>
-        <td><strong>Thursday, July 9</strong></td>
-        <td class="event-title">SSTC Report Launch — In-Person, New York</td>
-        <td><span class="event-org">Organiser: Forus International</span><br>Present the report's findings and 5 Calls to Action to diplomats, policymakers and civil society, and build alliances for post-HLPF follow-up.</td>
-      </tr>
-      <tr>
-        <td><strong>Thursday, July 9<br>1:00–3:00 PM</strong></td>
-        <td class="event-title">Roundtable: Pact of the Future, Summit of the Future & Post-2030</td>
-        <td><span class="event-org">Organiser: Republic of Korea Mission to the United Nations</span><br>Position Forus in the post-2030 debate and build diplomatic relationships with the RoK Mission and allied partners.</td>
-      </tr>
+      <tr><td><strong>Thursday, July 9</strong></td><td class="event-title">SSTC Report Launch — In-Person, New York</td><td><span class="event-org">Organiser: Forus International</span><br>Present the report's findings and 5 Calls to Action to diplomats, policymakers and civil society, and build alliances for post-HLPF follow-up.</td></tr>
+      <tr><td><strong>Thursday, July 9<br>1:00–3:00 PM</strong></td><td class="event-title">Roundtable: Pact of the Future, Summit of the Future & Post-2030</td><td><span class="event-org">Organiser: Republic of Korea Mission to the United Nations</span><br>Position Forus in the post-2030 debate and build diplomatic relationships with the RoK Mission and allied partners.</td></tr>
     </table>
 
     <span class="phase-label">Between HLPF Weeks</span>
     <table>
       <tr><th>Date</th><th>Title</th><th>Objective</th></tr>
-      <tr>
-        <td><strong>Saturday–Sunday<br>July 11–12</strong></td>
-        <td class="event-title">Weekend Workshops, Scandinavia House</td>
-        <td><span class="event-org">Organiser: Forus International</span><br>Peer learning on VNR engagement and shadow reporting, align messaging around the 3Ds framework ahead of the Ministerial Segment, and coordinate participation in MGoS.</td>
-      </tr>
+      <tr><td><strong>Saturday–Sunday<br>July 11–12</strong></td><td class="event-title">Weekend Workshops, Scandinavia House</td><td><span class="event-org">Organiser: Forus International</span><br>Peer learning on VNR engagement and shadow reporting, align messaging around the 3Ds framework ahead of the Ministerial Segment, and coordinate participation in MGoS.</td></tr>
     </table>
 
     <span class="phase-label during">Week 2 — Ministerial Segment</span>
     <table>
       <tr><th>Date</th><th>Title</th><th>Objective</th></tr>
-      <tr>
-        <td><strong>Tuesday, July 14<br>1:15–2:45 PM EST</strong></td>
-        <td class="event-title">African Agency in Agile and Responsive Governance</td>
-        <td><span class="event-org">Organisers: Forus Africa members, member states, UN institutions and academia</span><br>Amplify Forus Africa members on governance and accountability, positioning African agency at the intersection of Agenda 2030 and Agenda 2063.</td>
-      </tr>
-      <tr>
-        <td><strong>Tuesday, July 14<br>3:00–6:00 PM EDT</strong></td>
-        <td class="event-title">Local2030 Coalition WG1: Policy Brief Launch</td>
-        <td><span class="event-org">Organiser: Local2030 Coalition / Working Group 1</span><br>Launch the policy brief on localising the six SDG transitions and strengthen the Forus–Local2030 Coalition relationship.</td>
-      </tr>
+      <tr><td><strong>Tuesday, July 14<br>1:15–2:45 PM EST</strong></td><td class="event-title">African Agency in Agile and Responsive Governance</td><td><span class="event-org">Organisers: Forus Africa members, member states, UN institutions and academia</span><br>Amplify Forus Africa members on governance and accountability, positioning African agency at the intersection of Agenda 2030 and Agenda 2063.</td></tr>
+      <tr><td><strong>Tuesday, July 14<br>3:00–6:00 PM EDT</strong></td><td class="event-title">Local2030 Coalition WG1: Policy Brief Launch</td><td><span class="event-org">Organiser: Local2030 Coalition / Working Group 1</span><br>Launch the policy brief on localising the six SDG transitions and strengthen the Forus–Local2030 Coalition relationship.</td></tr>
     </table>
 
     <span class="phase-label closing">Closing</span>
     <table>
       <tr><th>Date</th><th>Title</th><th>Objective</th></tr>
-      <tr>
-        <td><strong>Thursday, July 16<br>10:30 AM–12:00 PM</strong></td>
-        <td class="event-title">Beyond 2030: What Civil Society Defends, Demands and Declines</td>
-        <td><span class="event-org">Organiser: Forus International</span><br>Present the 3Ds framework (Defend, Demand, Decline) to an international audience and chart the road to the 2027 SDG Summit. <em>(Note: mandatory attendance for all Forus NY staff; members must confirm speaking slots by end of June.)</em></td>
-      </tr>
-      <tr>
-        <td><strong>July 16 or 19</strong></td>
-        <td class="event-title">Report Recap</td>
-        <td>Share a summary/carousel of the report's key findings.</td>
-      </tr>
+      <tr><td><strong>Thursday, July 16<br>10:30 AM–12:00 PM</strong></td><td class="event-title">Beyond 2030: What Civil Society Defends, Demands and Declines</td><td><span class="event-org">Organiser: Forus International</span><br>Present the 3Ds framework (Defend, Demand, Decline) to an international audience and chart the road to the 2027 SDG Summit. <em>(Note: mandatory attendance for all Forus NY staff; members must confirm speaking slots by end of June.)</em></td></tr>
+      <tr><td><strong>July 16 or 19</strong></td><td class="event-title">Report Recap</td><td>Share a summary/carousel of the report's key findings.</td></tr>
     </table>
   </div>
 </div>
 
-<!-- PAGE 6: MESSAGES -->
-<div class="page" id="messages-en">
+<!-- WINDOW: MESSAGES (English) -->
+<div class="page-window" id="page-mensajes-en">
   <div class="wrap">
     <span class="page-tag">06 / Narrative</span>
     <p class="eyebrow">Core narrative</p>
@@ -1357,209 +1288,52 @@ The future of cooperation is being written now.</div>
   </div>
 </div>
 
-<!-- PAGE 7: POSTS (same as Spanish but in English) -->
-<div class="page" id="posts-en">
+<!-- WINDOW: POSTS (English) -->
+<div class="page-window" id="page-posts-en">
   <div class="wrap">
     <span class="page-tag">07 / Ready-to-use content</span>
     <p class="eyebrow">Copy & paste</p>
     <h2 class="section-title">PRE-LAUNCH — Social media posts</h2>
     <p class="lead">Ready-to-use content for any social platform.</p>
-
-    <div class="post-card">
-      <div class="post-head"><span class="obj-pill">Teaser</span><span class="post-date">Wednesday, July 1</span></div>
-      <div class="post-body">
-        <div class="post-copy">👀 Something big is coming from Forus. On July 9, we're breaking the silence on who really powers South-South and Triangular Cooperation.
-
-📅 July 9, 2026
-📍 New York
-Stay tuned. 🔥</div>
-        <div class="post-cta"><strong>CTA:</strong> Stay tuned for more</div>
-      </div>
-    </div>
-
-    <div class="post-card">
-      <div class="post-head"><span class="obj-pill">Urgency</span><span class="post-date">Thursday, July 2</span></div>
-      <div class="post-body">
-        <div class="post-copy">⏳ With just 4 years left to 2030, SDG progress is still stalling. The overlooked solution? Putting civil society at the decision-making table.
-
-We're telling you why very soon.
-🔗 Full story coming July 9.</div>
-        <div class="post-cta"><strong>CTA:</strong> Save the date</div>
-      </div>
-    </div>
-
-    <div class="post-card">
-      <div class="post-head"><span class="obj-pill">Global Stories</span><span class="post-date">Friday, July 3</span></div>
-      <div class="post-body">
-        <div class="post-copy">🌍 From Senegal to the Pacific, from South Korea to Guatemala — 20 real stories of communities reshaping international cooperation.
-
-📅 We tell it all on July 9.
-📍 New York
-Get ready.</div>
-        <div class="post-cta"><strong>CTA:</strong> Get ready</div>
-      </div>
-    </div>
-
-    <div class="post-card">
-      <div class="post-head"><span class="obj-pill">Virtual Launch</span><span class="post-date">Monday, July 6</span></div>
-      <div class="post-body">
-        <div class="post-copy">🔴 LIVE TODAY. Before we touch down in New York, we're launching our report to the world — in English, French and Spanish. Global civil society, one conversation.
-
-📅 Today, July 6, 2026
-📍 Forus Virtual Hub
-🔗 Join us: [virtual hub link]</div>
-        <div class="post-cta"><strong>CTA:</strong> Join the virtual launch</div>
-      </div>
-    </div>
-
-    <div class="post-card">
-      <div class="post-head"><span class="obj-pill">NY Launch</span><span class="post-date">Thursday, July 9</span></div>
-      <div class="post-body">
-        <div class="post-copy">📢 Big news from Forus! At #HLPF2026 we're launching 'Cooperation That Works: Civil Society in South-South and Triangular Cooperation.'
-
-It brings together evidence from across our network on how civil society makes South-South and triangular cooperation more effective, legitimate and sustainable.
-
-📅 Today, July 9, 2026
-📍 New York
-🔗 Read more: [report link]</div>
-        <div class="post-cta"><strong>CTA:</strong> Read the report</div>
-      </div>
-    </div>
-
-    <div class="post-card">
-      <div class="post-head"><span class="obj-pill">Diplomatic Table</span><span class="post-date">Thursday, July 9, 1:00–3:00 PM</span></div>
-      <div class="post-body">
-        <div class="post-copy">🤝 Forus takes a seat at the diplomatic table today to talk about the future of global cooperation.
-
-📅 Today, 1:00–3:00 PM
-📍 RoK Mission to the UN, New York
-Civil society, where the decisions that matter get made.</div>
-        <div class="post-cta"><strong>CTA:</strong> Follow the conversation</div>
-      </div>
-    </div>
-
-    <div class="post-card">
-      <div class="post-head"><span class="obj-pill">Weekend Workshops</span><span class="post-date">Saturday–Sunday, July 11–12</span></div>
-      <div class="post-body">
-        <div class="post-copy">🧠 While the world rests, our network keeps working. Two intensive days of peer learning and shared strategy — laying the groundwork for what's next.
-
-📅 July 11–12, 2026
-📍 Scandinavia House, New York</div>
-        <div class="post-cta"><strong>CTA:</strong> Learn more</div>
-      </div>
-    </div>
-
-    <div class="post-card">
-      <div class="post-head"><span class="obj-pill">African Voices</span><span class="post-date">Tuesday, July 14, 1:15–2:45 PM EST</span></div>
-      <div class="post-body">
-        <div class="post-copy">🌍 Forus Africa voices speak loud at the UN today — governance, accountability and African agency, on their own terms.
-
-📅 July 14, 1:15–2:45 PM EST
-📍 United Nations, New York</div>
-        <div class="post-cta"><strong>CTA:</strong> Amplify African voices</div>
-      </div>
-    </div>
-
-    <div class="post-card">
-      <div class="post-head"><span class="obj-pill">Localising SDGs</span><span class="post-date">Tuesday, July 14, 3:00–6:00 PM EDT</span></div>
-      <div class="post-body">
-        <div class="post-copy">📍 Our President Justina takes the floor today: localising the SDGs isn't a technicality — it's the key to making change reach where it matters.
-
-📅 July 14, 3:00–6:00 PM EDT
-📍 New York
-🔗 Policy brief: [link]</div>
-        <div class="post-cta"><strong>CTA:</strong> Read the policy brief</div>
-      </div>
-    </div>
-
-    <div class="post-card">
-      <div class="post-head"><span class="obj-pill">Post-2030 Vision</span><span class="post-date">Thursday, July 16, 10:30 AM–12:00 PM</span></div>
-      <div class="post-body">
-        <div class="post-copy">🔮 What do we defend? What do we demand? What do we no longer accept? Today we present our Post-2030 Vision and chart the road to 2027.
-
-📅 Today, July 16, 10:30 AM–12:00 PM
-📍 New York
-The future of cooperation is being written now.</div>
-        <div class="post-cta"><strong>CTA:</strong> Join the conversation</div>
-      </div>
-    </div>
-
-    <div class="post-card">
-      <div class="post-head"><span class="obj-pill">Report Recap</span><span class="post-date">July 16 or 19</span></div>
-      <div class="post-body">
-        <div class="post-copy">🔁 Missed it? Here's everything you need to know from 'Cooperation That Works' in one thread.
-
-🔗 Full report: [link]</div>
-        <div class="post-cta"><strong>CTA:</strong> Read the recap</div>
-      </div>
-    </div>
-
+    <!-- Same posts as Spanish but in English (already included above in the Spanish version) -->
+    <div class="post-card"><div class="post-head"><span class="obj-pill">Teaser</span><span class="post-date">Wednesday, July 1</span></div><div class="post-body"><div class="post-copy">👀 Something big is coming from Forus. On July 9, we're breaking the silence on who really powers South-South and Triangular Cooperation.\n\n📅 July 9, 2026\n📍 New York\nStay tuned. 🔥</div><div class="post-cta"><strong>CTA:</strong> Stay tuned for more</div></div></div>
+    <div class="post-card"><div class="post-head"><span class="obj-pill">Urgency</span><span class="post-date">Thursday, July 2</span></div><div class="post-body"><div class="post-copy">⏳ With just 4 years left to 2030, SDG progress is still stalling. The overlooked solution? Putting civil society at the decision-making table.\n\nWe're telling you why very soon.\n🔗 Full story coming July 9.</div><div class="post-cta"><strong>CTA:</strong> Save the date</div></div></div>
+    <div class="post-card"><div class="post-head"><span class="obj-pill">Global Stories</span><span class="post-date">Friday, July 3</span></div><div class="post-body"><div class="post-copy">🌍 From Senegal to the Pacific, from South Korea to Guatemala — 20 real stories of communities reshaping international cooperation.\n\n📅 We tell it all on July 9.\n📍 New York\nGet ready.</div><div class="post-cta"><strong>CTA:</strong> Get ready</div></div></div>
+    <div class="post-card"><div class="post-head"><span class="obj-pill">Virtual Launch</span><span class="post-date">Monday, July 6</span></div><div class="post-body"><div class="post-copy">🔴 LIVE TODAY. Before we touch down in New York, we're launching our report to the world — in English, French and Spanish. Global civil society, one conversation.\n\n📅 Today, July 6, 2026\n📍 Forus Virtual Hub\n🔗 Join us: [virtual hub link]</div><div class="post-cta"><strong>CTA:</strong> Join the virtual launch</div></div></div>
+    <div class="post-card"><div class="post-head"><span class="obj-pill">NY Launch</span><span class="post-date">Thursday, July 9</span></div><div class="post-body"><div class="post-copy">📢 Big news from Forus! At #HLPF2026 we're launching 'Cooperation That Works: Civil Society in South-South and Triangular Cooperation.'\n\nIt brings together evidence from across our network on how civil society makes South-South and triangular cooperation more effective, legitimate and sustainable.\n\n📅 Today, July 9, 2026\n📍 New York\n🔗 Read more: [report link]</div><div class="post-cta"><strong>CTA:</strong> Read the report</div></div></div>
+    <div class="post-card"><div class="post-head"><span class="obj-pill">Diplomatic Table</span><span class="post-date">Thursday, July 9, 1:00–3:00 PM</span></div><div class="post-body"><div class="post-copy">🤝 Forus takes a seat at the diplomatic table today to talk about the future of global cooperation.\n\n📅 Today, 1:00–3:00 PM\n📍 RoK Mission to the UN, New York\nCivil society, where the decisions that matter get made.</div><div class="post-cta"><strong>CTA:</strong> Follow the conversation</div></div></div>
+    <div class="post-card"><div class="post-head"><span class="obj-pill">Weekend Workshops</span><span class="post-date">Saturday–Sunday, July 11–12</span></div><div class="post-body"><div class="post-copy">🧠 While the world rests, our network keeps working. Two intensive days of peer learning and shared strategy — laying the groundwork for what's next.\n\n📅 July 11–12, 2026\n📍 Scandinavia House, New York</div><div class="post-cta"><strong>CTA:</strong> Learn more</div></div></div>
+    <div class="post-card"><div class="post-head"><span class="obj-pill">African Voices</span><span class="post-date">Tuesday, July 14, 1:15–2:45 PM EST</span></div><div class="post-body"><div class="post-copy">🌍 Forus Africa voices speak loud at the UN today — governance, accountability and African agency, on their own terms.\n\n📅 July 14, 1:15–2:45 PM EST\n📍 United Nations, New York</div><div class="post-cta"><strong>CTA:</strong> Amplify African voices</div></div></div>
+    <div class="post-card"><div class="post-head"><span class="obj-pill">Localising SDGs</span><span class="post-date">Tuesday, July 14, 3:00–6:00 PM EDT</span></div><div class="post-body"><div class="post-copy">📍 Our President Justina takes the floor today: localising the SDGs isn't a technicality — it's the key to making change reach where it matters.\n\n📅 July 14, 3:00–6:00 PM EDT\n📍 New York\n🔗 Policy brief: [link]</div><div class="post-cta"><strong>CTA:</strong> Read the policy brief</div></div></div>
+    <div class="post-card"><div class="post-head"><span class="obj-pill">Post-2030 Vision</span><span class="post-date">Thursday, July 16, 10:30 AM–12:00 PM</span></div><div class="post-body"><div class="post-copy">🔮 What do we defend? What do we demand? What do we no longer accept? Today we present our Post-2030 Vision and chart the road to 2027.\n\n📅 Today, July 16, 10:30 AM–12:00 PM\n📍 New York\nThe future of cooperation is being written now.</div><div class="post-cta"><strong>CTA:</strong> Join the conversation</div></div></div>
+    <div class="post-card"><div class="post-head"><span class="obj-pill">Report Recap</span><span class="post-date">July 16 or 19</span></div><div class="post-body"><div class="post-copy">🔁 Missed it? Here's everything you need to know from 'Cooperation That Works' in one thread.\n\n🔗 Full report: [link]</div><div class="post-cta"><strong>CTA:</strong> Read the recap</div></div></div>
   </div>
 </div>
 
-<!-- PAGE 8: PODCASTS -->
-<div class="page" id="podcasts-en">
+<!-- WINDOW: PODCASTS (English) -->
+<div class="page-window" id="page-podcasts-en">
   <div class="wrap">
     <span class="page-tag">08 / Audio</span>
     <p class="eyebrow">Listen & share</p>
     <h2 class="section-title">Podcast series</h2>
-    <p class="lead">As a complement to the report, Forus presents a series of 5 podcast episodes with voices from the network on South-South and triangular cooperation. Share these episodes alongside your posts to deepen the conversation.</p>
+    <p class="lead">As a complement to the report, Forus presents a series of 5 podcast episodes with voices from the network on South-South and triangular cooperation.</p>
     <div class="podcast-grid">
-      <div class="podcast-card">
-        <span class="podcast-num">1</span>
-        <div>
-          <span class="podcast-meta">Episode 1</span>
-          <h4>Introduction to the report</h4>
-          <p><span class="podcast-name">Aron Halfen — ForUM (Norway)</span></p>
-        </div>
-      </div>
-      <div class="podcast-card">
-        <span class="podcast-num">2</span>
-        <div>
-          <span class="podcast-meta">Episode 2</span>
-          <h4>Voices from the Pacific</h4>
-          <p><span class="podcast-name">Felisberto de Barros Silva Moreira — PLATONG (Cabo Verde)</span></p>
-        </div>
-      </div>
-      <div class="podcast-card">
-        <span class="podcast-num">3</span>
-        <div>
-          <span class="podcast-meta">Episode 3</span>
-          <h4>Lessons on exclusion</h4>
-          <p><span class="podcast-name">Henrique Botelho Frota — ABONG (Brazil)</span></p>
-        </div>
-      </div>
-      <div class="podcast-card">
-        <span class="podcast-num">4</span>
-        <div>
-          <span class="podcast-meta">Episode 4</span>
-          <h4>Co-governance in practice</h4>
-          <p><span class="podcast-name">Iti — AKÜ (Estonia)</span></p>
-        </div>
-      </div>
-      <div class="podcast-card">
-        <span class="podcast-num">5</span>
-        <div>
-          <span class="podcast-meta">Episode 5</span>
-          <h4>Looking towards post-2030</h4>
-          <p><span class="podcast-name">Jose Ramon Avila Quiñonez — ASONOG (Honduras)</span></p>
-          <p><span class="podcast-name">Malick Ndome — CONGAD (Senegal)</span></p>
-          <p><span class="podcast-name">Mylène Lawson — ADRA (Togo)</span></p>
-        </div>
-      </div>
+      <div class="podcast-card"><span class="podcast-num">1</span><div><span class="podcast-meta">Episode 1</span><p><span class="podcast-name">Aron Halfen — ForUM (Norway)</span></p></div></div>
+      <div class="podcast-card"><span class="podcast-num">2</span><div><span class="podcast-meta">Episode 2</span><p><span class="podcast-name">Felisberto de Barros Silva Moreira — PLATONG (Cabo Verde)</span></p></div></div>
+      <div class="podcast-card"><span class="podcast-num">3</span><div><span class="podcast-meta">Episode 3</span><p><span class="podcast-name">Henrique Botelho Frota — ABONG (Brazil)</span></p></div></div>
+      <div class="podcast-card"><span class="podcast-num">4</span><div><span class="podcast-meta">Episode 4</span><p><span class="podcast-name">Iti — AKÜ (Estonia)</span></p></div></div>
+      <div class="podcast-card"><span class="podcast-num">5</span><div><span class="podcast-meta">Episode 5</span><p><span class="podcast-name">Jose Ramon Avila Quiñonez — ASONOG (Honduras)</span></p><p><span class="podcast-name">Malick Ndome — CONGAD (Senegal)</span></p><p><span class="podcast-name">Mylène Lawson — ADRA (Togo)</span></p></div></div>
     </div>
     <div class="report-box" style="margin-top:24px;">
       <h3>🎧 Listen to the full series</h3>
-      <p>Available on <span class="placeholder">[podcast platform]</span>. Share the link in your social media posts throughout the campaign.</p>
-      <div class="report-actions">
-        <a href="#" class="btn btn-primary">Listen to the series</a>
-      </div>
+      <p>Available on <span class="placeholder">[podcast platform]</span>.</p>
+      <div class="report-actions"><a href="#" class="btn btn-primary">Listen to the series</a></div>
     </div>
   </div>
 </div>
 
-<!-- PAGE 9: HASHTAGS -->
-<div class="page" id="hashtags-en">
+<!-- WINDOW: HASHTAGS (English) -->
+<div class="page-window" id="page-hashtags-en">
   <div class="wrap">
     <span class="page-tag">09 / Hashtags</span>
     <p class="eyebrow">Use consistently</p>
@@ -1567,30 +1341,21 @@ The future of cooperation is being written now.</div>
     <div class="hashtag-block">
       <h4>Official hashtags</h4>
       <div class="tags">
-        <span class="tag">#HLPF2026</span>
-        <span class="tag">#HLPF</span>
-        <span class="tag">#CooperationThatWorks</span>
-        <span class="tag">#SSTC</span>
-        <span class="tag">#SDGs</span>
-        <span class="tag">#GlobalGoals</span>
-        <span class="tag">#2030Agenda</span>
-        <span class="tag">#CivilSociety</span>
-        <span class="tag">#CivilSocietyVoice</span>
-        <span class="tag">#SouthSouthCooperation</span>
-        <span class="tag">#LeaveNoOneBehind</span>
-        <span class="tag">#GlobalAdvocacy</span>
+        <span class="tag">#HLPF2026</span><span class="tag">#HLPF</span><span class="tag">#CooperationThatWorks</span>
+        <span class="tag">#SSTC</span><span class="tag">#SDGs</span><span class="tag">#GlobalGoals</span>
+        <span class="tag">#2030Agenda</span><span class="tag">#CivilSociety</span><span class="tag">#CivilSocietyVoice</span>
+        <span class="tag">#SouthSouthCooperation</span><span class="tag">#LeaveNoOneBehind</span><span class="tag">#GlobalAdvocacy</span>
       </div>
     </div>
   </div>
 </div>
 
-<!-- PAGE 10: ACCOUNTS -->
-<div class="page" id="accounts-en">
+<!-- WINDOW: ACCOUNTS (English) -->
+<div class="page-window" id="page-cuentas-en">
   <div class="wrap">
     <span class="page-tag">10 / Tag</span>
     <p class="eyebrow">Don't forget to tag</p>
     <h2 class="section-title">Accounts to tag</h2>
-
     <h4 style="margin:18px 0 10px; color:var(--forus-dark-azure);">UN / HLPF</h4>
     <div class="account-grid">
       <div class="account-card"><div class="av">UN</div><h5>UN DESA</h5><span>@UNDESA</span></div>
@@ -1599,7 +1364,6 @@ The future of cooperation is being written now.</div>
       <div class="account-card"><div class="av">UN</div><h5>United Nations</h5><span>@UN</span></div>
       <div class="account-card"><div class="av">UD</div><h5>UNDP</h5><span>@UNDP</span></div>
     </div>
-
     <h4 style="margin:24px 0 10px; color:var(--forus-dark-azure);">Member national platforms</h4>
     <div class="account-grid" style="grid-template-columns:repeat(5,1fr);">
       <div class="account-card"><div class="av" style="background:var(--forus-green);">CO</div><h5>CONGAD</h5><span>Senegal</span></div>
@@ -1622,7 +1386,6 @@ The future of cooperation is being written now.</div>
       <div class="account-card"><div class="av" style="background:var(--forus-green);">AB</div><h5>ABONG</h5><span>Brazil</span></div>
       <div class="account-card"><div class="av" style="background:var(--forus-green);">TA</div><h5>Taiwan AID</h5><span>Taiwan</span></div>
     </div>
-
     <p class="source-note">Tip: also add the specific handles of each platform when posting about them.</p>
   </div>
 </div>
@@ -1630,64 +1393,52 @@ The future of cooperation is being written now.</div>
 </div><!-- fin inglés -->
 
 
-<!-- ==================== CONTENIDO FRANCÉS ==================== -->
+<!-- ==================== CONTENIDO FRANCÉS (simplificado) ==================== -->
 <div class="lang-content" id="lang-fr">
 
-<!-- PAGE 1: HERO -->
-<div class="page" id="hero-fr">
+<!-- WINDOW: HOME (French) -->
+<div class="page-window active" id="page-inicio-fr">
   <div class="wrap">
     <span class="page-tag">01 / Bienvenue</span>
     <div class="hero">
-      <span class="tag">HLPF 2026 · 7–15 juillet · New York</span>
+      <div class="hlpf-badge">📅 <span>HLPF 2026</span> · 7–15 juillet · New York</div>
       <h1>Amplifiez la voix de la société civile au HLPF 2026</h1>
       <h2>Kit de réseaux sociaux pour le lancement de "Cooperation That Works: Civil Society in South-South and Triangular Cooperation"</h2>
       <p>Ce kit équipe les membres de Forus, les plateformes nationales, les organisations de la société civile, les partenaires, le personnel et les membres du conseil d'administration de tout ce qui est nécessaire pour diffuser notre nouveau rapport et son événement de lancement pendant le Forum politique de haut niveau des Nations Unies sur le développement durable. Utilisez-le, adaptez-le et localisez-le pour que la voix de la société civile aille plus loin en 2026.</p>
       <div class="cta-row">
         <a href="#" class="btn btn-primary">📥 Télécharger le rapport complet</a>
-        <a href="#report-fr" class="btn btn-secondary">Découvrir le rapport →</a>
+        <a href="#" class="btn btn-secondary" onclick="switchPage('page-reporte-fr')">Découvrir le rapport →</a>
       </div>
     </div>
   </div>
 </div>
 
-<!-- PAGE 2: HLPF -->
-<div class="page" id="hlpf-fr">
+<!-- WINDOW: HLPF (French) -->
+<div class="page-window" id="page-hlpf-fr">
   <div class="wrap">
     <span class="page-tag">02 / Contexte</span>
     <p class="eyebrow">Contexte</p>
     <h2 class="section-title">À propos du HLPF 2026</h2>
-    <p class="lead">Le Forum politique de haut niveau sur le développement durable (HLPF) est la plateforme centrale de l'ONU pour le suivi et l'examen de l'Agenda 2030 et des Objectifs de développement durable (ODD). Il réunit chaque année au siège de l'ONU à New York les gouvernements, les agences de l'ONU et la société civile pour évaluer les progrès mondiaux et renouveler l'engagement politique. À quelques années de 2030, selon le Rapport sur les progrès de l'ONU 2025, seulement 35% des cibles des ODD progressent correctement, 47% ne bénéficient pas d'efforts suffisants et 18% ont régressé ou stagné. Le HLPF 2026 (7–15 juillet) est un moment clé pour stimuler une action accélérée et inclusive. La participation de la société civile est essentielle: elle apporte des preuves du terrain, exige des comptes aux gouvernements et garantit que personne ne soit laissé de côté dans la recherche du développement durable. Plus d'informations sur <a href="https://hlpf.un.org/2026" target="_blank">hlpf.un.org/2026</a>.</p>
+    <p class="lead">Le Forum politique de haut niveau sur le développement durable (HLPF) est la plateforme centrale de l'ONU pour le suivi et l'examen de l'Agenda 2030 et des Objectifs de développement durable (ODD). Il réunit chaque année au siège de l'ONU à New York les gouvernements, les agences de l'ONU et la société civile pour évaluer les progrès mondiaux et renouveler l'engagement politique. À quelques années de 2030, selon le Rapport sur les progrès de l'ONU 2025, seulement 35% des cibles des ODD progressent correctement, 47% ne bénéficient pas d'efforts suffisants et 18% ont régressé ou stagné. Le HLPF 2026 (7–15 juillet) est un moment clé pour stimuler une action accélérée et inclusive.</p>
     <p class="source-note">Source: The Sustainable Development Goals Report 2025, UN DESA; site officiel du HLPF 2026.</p>
   </div>
 </div>
 
-<!-- PAGE 3: REPORT -->
-<div class="page" id="report-fr">
+<!-- WINDOW: REPORT (French - simplified) -->
+<div class="page-window" id="page-reporte-fr">
   <div class="wrap">
     <span class="page-tag">03 / Le Rapport</span>
     <p class="eyebrow">Le Rapport</p>
     <h2 class="section-title">Cooperation That Works: Civil Society in South-South and Triangular Cooperation</h2>
     <div class="card-grid">
-      <div class="card">
-        <h3>Objectif</h3>
-        <p>Démontre que la coopération Sud-Sud et triangulaire (SSTC) est plus légitime, adaptable et durable lorsque la société civile est reconnue comme faisant partie de son architecture, pas seulement comme bénéficiaire ou sous-traitante de mise en œuvre.</p>
-      </div>
-      <div class="card">
-        <h3>Thèmes principaux</h3>
-        <p>Ce qui rend la SSTC efficace; les six contributions distinctives de la société civile; les lacunes en matière de gouvernance, de financement et de transparence; et un programme d'action destiné aux gouvernements, à l'ONU, aux banques de développement et aux réseaux de la société civile.</p>
-      </div>
-      <div class="card">
-        <h3>Pourquoi c'est important</h3>
-        <p>La coopération Sud-Sud représente déjà plus de 6 200 milliards de dollars de commerce (2024) et des milliers d'activités de coopération triangulaire, mais la contribution de la société civile reste invisible dans les systèmes officiels de données, de financement et de rapport.</p>
-      </div>
-      <div class="card">
-        <h3>Public cible</h3>
-        <p>Gouvernements nationaux, UNOSSC/PNUD, facilitateurs de coopération triangulaire, organisations intergouvernementales régionales, banques publiques de développement, négociateurs post-2030, et membres de Forus et réseaux de la société civile.</p>
-      </div>
+      <div class="card"><h3>Objectif</h3><p>Démontre que la coopération Sud-Sud et triangulaire (SSTC) est plus légitime, adaptable et durable lorsque la société civile est reconnue comme faisant partie de son architecture.</p></div>
+      <div class="card"><h3>Thèmes principaux</h3><p>Ce qui rend la SSTC efficace; les six contributions distinctives de la société civile; les lacunes en matière de gouvernance, de financement et de transparence.</p></div>
+      <div class="card"><h3>Pourquoi c'est important</h3><p>La coopération Sud-Sud représente déjà plus de 6 200 milliards de dollars de commerce (2024) mais la contribution de la société civile reste invisible.</p></div>
+      <div class="card"><h3>Public cible</h3><p>Gouvernements nationaux, UNOSSC/PNUD, facilitateurs de coopération triangulaire, banques publiques de développement, négociateurs post-2030.</p></div>
     </div>
     <div class="report-box">
       <h3>"La SSTC fonctionne mieux quand elle s'adapte, pas quand elle copie."</h3>
-      <p>Basé sur des preuves de tout le réseau de Forus —74 plateformes nationales et 8 coalitions régionales— le rapport documente comment la société civile améliore la coopération Sud-Sud et triangulaire en tant que productrice de connaissances, connectrice d'apprentissage entre pairs, adaptatrice de contexte, contrôleuse de redevabilité et actrice de co-gouvernance, à travers des cas au Sénégal, dans le Pacifique, en Corée du Sud, en Indonésie, au Guatemala, au Rwanda, en RDC, en Inde et ailleurs.</p>
+      <p>Basé sur des preuves de tout le réseau de Forus —74 plateformes nationales et 8 coalitions régionales— le rapport documente comment la société civile améliore la coopération Sud-Sud et triangulaire.</p>
       <div class="report-actions">
         <a href="#" class="btn btn-primary">Télécharger le rapport complet (PDF)</a>
         <a href="#" class="btn btn-secondary">Voir la page du rapport →</a>
@@ -1697,8 +1448,8 @@ The future of cooperation is being written now.</div>
   </div>
 </div>
 
-<!-- PAGE 4: OBJECTIVES -->
-<div class="page" id="objectives-fr">
+<!-- WINDOW: OBJECTIVES (French) -->
+<div class="page-window" id="page-objetivos-fr">
   <div class="wrap">
     <span class="page-tag">04 / Objectifs</span>
     <p class="eyebrow">Pourquoi ce kit</p>
@@ -1709,330 +1460,102 @@ The future of cooperation is being written now.</div>
       <li>Générer une discussion et un engagement autour des principales conclusions du rapport</li>
       <li>Promouvoir l'événement de lancement et stimuler les inscriptions</li>
       <li>Augmenter la participation — en personne et virtuelle — à l'événement de lancement</li>
-      <li>Mettre en lumière le rôle essentiel de la société civile dans la coopération Sud-Sud et triangulaire et dans la réalisation des ODD</li>
+      <li>Mettre en lumière le rôle essentiel de la société civile dans la coopération Sud-Sud et triangulaire</li>
       <li>Positionner Forus comme une voix clé et crédible pendant le HLPF 2026</li>
-      <li>Stimuler la reconnaissance et le financement de l'apprentissage entre pairs mené par la société civile</li>
-      <li>Encourager les membres et les partenaires à adapter et localiser le contenu pour leurs propres publics</li>
     </ul>
   </div>
 </div>
 
-<!-- PAGE 5: TIMELINE -->
-<div class="page" id="timeline-fr">
+<!-- WINDOW: TIMELINE (French - simplified) -->
+<div class="page-window" id="page-calendario-fr">
   <div class="wrap">
     <span class="page-tag">05 / Calendrier</span>
     <p class="eyebrow">Planification</p>
     <h2 class="section-title">Calendrier de la campagne</h2>
     <p class="lead">Calendrier complet des activités avant, pendant et après le HLPF 2026.</p>
-
     <span class="phase-label pre">Pré-lancement</span>
     <table>
       <tr><th>Date</th><th>Titre</th><th>Objectif</th></tr>
-      <tr>
-        <td><strong>Mercredi 1 juillet</strong></td>
-        <td class="event-title">Teaser d'attente</td>
-        <td>Créer de la curiosité sans révéler le contenu du rapport.</td>
-      </tr>
-      <tr>
-        <td><strong>Jeudi 2 juillet</strong></td>
-        <td class="event-title">Le problème que personne ne résout</td>
-        <td>Connecter l'urgence du contexte des ODD à la pertinence du rapport.</td>
-      </tr>
-      <tr>
-        <td><strong>Vendredi 3 juillet</strong></td>
-        <td class="event-title">20 histoires, un même message</td>
-        <td>Montrer la portée mondiale des preuves recueillies dans le rapport.</td>
-      </tr>
-      <tr>
-        <td><strong>Lundi 6 juillet</strong></td>
-        <td class="event-title">SSTC Report Launch — Webinaire virtuel</td>
-        <td><span class="event-org">Organise: Forus International</span><br>Lancer officiellement le rapport SSTC devant l'ensemble du réseau mondial de Forus et de la société civile, mettre en évidence les messages clés sur le rôle de la société civile dans la coopération Sud-Sud et triangulaire, et créer un élan avant le lancement en personne à New York. (Disponible en anglais, français et espagnol, sur le Forus Virtual Hub.)</td>
-      </tr>
+      <tr><td><strong>Mercredi 1 juillet</strong></td><td class="event-title">Teaser d'attente</td><td>Créer de la curiosité sans révéler le contenu du rapport.</td></tr>
+      <tr><td><strong>Jeudi 2 juillet</strong></td><td class="event-title">Le problème que personne ne résout</td><td>Connecter l'urgence du contexte des ODD à la pertinence du rapport.</td></tr>
+      <tr><td><strong>Vendredi 3 juillet</strong></td><td class="event-title">20 histoires, un même message</td><td>Montrer la portée mondiale des preuves recueillies dans le rapport.</td></tr>
+      <tr><td><strong>Lundi 6 juillet</strong></td><td class="event-title">SSTC Report Launch — Webinaire virtuel</td><td><span class="event-org">Organise: Forus International</span><br>Lancer officiellement le rapport SSTC devant l'ensemble du réseau mondial de Forus.</td></tr>
     </table>
-
     <span class="phase-label during">Pendant le HLPF — Semaine 1</span>
     <table>
       <tr><th>Date</th><th>Titre</th><th>Objectif</th></tr>
-      <tr>
-        <td><strong>Jeudi 9 juillet</strong></td>
-        <td class="event-title">SSTC Report Launch — En personne, New York</td>
-        <td><span class="event-org">Organise: Forus International</span><br>Présenter les conclusions du rapport et les 5 Calls to Action aux diplomates, décideurs politiques et société civile, et construire des alliances pour le suivi post-HLPF.</td>
-      </tr>
-      <tr>
-        <td><strong>Jeudi 9 juillet<br>13:00–15:00</strong></td>
-        <td class="event-title">Roundtable: Pact of the Future, Summit of the Future & Post-2030</td>
-        <td><span class="event-org">Organise: Mission de la République de Corée auprès de l'ONU</span><br>Positionner Forus dans le débat post-2030 et construire des relations diplomatiques avec la Mission de Corée et les partenaires alliés.</td>
-      </tr>
+      <tr><td><strong>Jeudi 9 juillet</strong></td><td class="event-title">SSTC Report Launch — En personne, New York</td><td><span class="event-org">Organise: Forus International</span><br>Présenter les conclusions du rapport et les 5 Calls to Action.</td></tr>
+      <tr><td><strong>Jeudi 9 juillet<br>13:00–15:00</strong></td><td class="event-title">Roundtable: Pact of the Future, Summit of the Future & Post-2030</td><td><span class="event-org">Organise: Mission de la République de Corée</span><br>Positionner Forus dans le débat post-2030.</td></tr>
     </table>
-
-    <span class="phase-label">Entre les semaines du HLPF</span>
-    <table>
-      <tr><th>Date</th><th>Titre</th><th>Objectif</th></tr>
-      <tr>
-        <td><strong>Samedi–dimanche<br>11–12 juillet</strong></td>
-        <td class="event-title">Weekend Workshops, Scandinavia House</td>
-        <td><span class="event-org">Organise: Forus International</span><br>Apprentissage entre pairs sur les VNR et les shadow reports, aligner les messages sur le cadre 3Ds avant le Segment Ministériel, et coordonner la participation au MGoS.</td>
-      </tr>
-    </table>
-
-    <span class="phase-label during">Semaine 2 — Segment Ministériel</span>
-    <table>
-      <tr><th>Date</th><th>Titre</th><th>Objectif</th></tr>
-      <tr>
-        <td><strong>Mardi 14 juillet<br>13:15–14:45 EST</strong></td>
-        <td class="event-title">African Agency in Agile and Responsive Governance</td>
-        <td><span class="event-org">Organisent: Membres de Forus Afrique, États membres, institutions onusiennes et académie</span><br>Amplifier les membres de Forus Afrique sur la gouvernance et la redevabilité, en positionnant l'agence africaine à l'intersection de l'Agenda 2030 et de l'Agenda 2063.</td>
-      </tr>
-      <tr>
-        <td><strong>Mardi 14 juillet<br>15:00–18:00 EDT</strong></td>
-        <td class="event-title">Local2030 Coalition WG1: Lancement du policy brief</td>
-        <td><span class="event-org">Organise: Local2030 Coalition / Groupe de Travail 1</span><br>Lancer le policy brief sur la localisation des 6 transitions ODD et renforcer le lien entre Forus et la Coalition Local2030.</td>
-      </tr>
-    </table>
-
     <span class="phase-label closing">Clôture</span>
     <table>
       <tr><th>Date</th><th>Titre</th><th>Objectif</th></tr>
-      <tr>
-        <td><strong>Jeudi 16 juillet<br>10:30–12:00</strong></td>
-        <td class="event-title">Beyond 2030: What Civil Society Defends, Demands and Declines</td>
-        <td><span class="event-org">Organise: Forus International</span><br>Présenter le cadre 3Ds (Defend, Demand, Decline) à un public international et tracer la route vers le Sommet ODD 2027. <em>(Note: présence obligatoire de tout le personnel de Forus à NY; les membres doivent confirmer leurs créneaux de parole avant fin juin.)</em></td>
-      </tr>
-      <tr>
-        <td><strong>16 ou 19 juillet</strong></td>
-        <td class="event-title">Récapitulatif du rapport</td>
-        <td>Partager un résumé/carrousel des principales conclusions du rapport.</td>
-      </tr>
+      <tr><td><strong>Jeudi 16 juillet<br>10:30–12:00</strong></td><td class="event-title">Beyond 2030: What Civil Society Defends, Demands and Declines</td><td><span class="event-org">Organise: Forus International</span><br>Présenter le cadre 3Ds (Defend, Demand, Decline).</td></tr>
+      <tr><td><strong>16 ou 19 juillet</strong></td><td class="event-title">Récapitulatif du rapport</td><td>Partager un résumé/carrousel des principales conclusions du rapport.</td></tr>
     </table>
   </div>
 </div>
 
-<!-- PAGE 6: MESSAGES -->
-<div class="page" id="messages-fr">
+<!-- WINDOW: MESSAGES (French - simplified) -->
+<div class="page-window" id="page-mensajes-fr">
   <div class="wrap">
     <span class="page-tag">06 / Récit</span>
     <p class="eyebrow">Récit central</p>
     <h2 class="section-title">Messages clés</h2>
-    <p class="lead">Dix messages centraux tirés du rapport. Utilisez-les comme base pour les publications, les points de discussion et le contenu adapté.</p>
+    <p class="lead">Dix messages centraux tirés du rapport.</p>
     <div class="msg-grid">
-      <div class="msg-card"><span class="msg-num">1</span><h4>La coopération fonctionne mieux quand elle s'adapte, pas quand elle copie</h4><p>Les meilleurs exemples de SSTC sont ceux où les connaissances sont transférées entre contextes mais adaptées aux institutions, communautés et réalités locales.</p><span class="audience-tag">Gouvernements et agences de coopération</span></div>
-      <div class="msg-card"><span class="msg-num">2</span><h4>La société civile améliore la qualité et la portée de la coopération</h4><p>Au Sénégal, le travail de données inclusives mené par CONGAD a renforcé le suivi national des ODD et influencé les pratiques de deux ministères.</p><span class="audience-tag">ONU / UNOSSC / PNUD</span></div>
-      <div class="msg-card"><span class="msg-num">3</span><h4>L'inclusion formelle de la société civile reste l'exception, pas la norme</h4><p>Dans la plupart des 20 cas examinés, la société civile est active dans la pratique mais absente de la gouvernance, du financement et des rapports formels de la SSTC.</p><span class="audience-tag">Décideurs / SSTC</span></div>
-      <div class="msg-card"><span class="msg-num">4</span><h4>L'apprentissage entre pairs de la société civile est déjà une coopération Sud-Sud</h4><p>Les membres de Forus échangent déjà des méthodologies sur le suivi des ODD, la localisation, la redevabilité et la résilience climatique, mais ils sont rarement comptés ou financés comme SSTC.</p><span class="audience-tag">Donateurs et bailleurs</span></div>
-      <div class="msg-card"><span class="msg-num">5</span><h4>L'exclusion a des coûts réels</h4><p>Le cas ProSAVANA (Mozambique-Brésil-Japon) montre comment le manque de participation communautaire a conduit à la suspension d'un programme après des années de pression de la société civile transfrontalière.</p><span class="audience-tag">Coopération triangulaire</span></div>
-      <div class="msg-card"><span class="msg-num">6</span><h4>Le cadre post-2030 ne doit pas romantiser la SSTC</h4><p>La SSTC apporte des principes importants —horizontalité, solidarité, apprentissage mutuel— mais peut aussi reproduire des asymétries de pouvoir et de l'opacité si elle n'est pas corrigée.</p><span class="audience-tag">Négociateurs post-2030</span></div>
-      <div class="msg-card"><span class="msg-num">7</span><h4>Les réseaux régionaux de la société civile sont une infrastructure de coopération</h4><p>PIANGO relie simultanément 15 pays du Pacifique sur la redevabilité des finances publiques, à une fraction du coût de l'assistance technique externe.</p><span class="audience-tag">Organisations régionales</span></div>
-      <div class="msg-card"><span class="msg-num">8</span><h4>La transparence est une condition de la redevabilité</h4><p>Sans informations accessibles sur les objectifs, les partenaires, le financement et les résultats attendus, la participation ne peut pas être significative.</p><span class="audience-tag">Banques publiques de développement</span></div>
-      <div class="msg-card"><span class="msg-num">9</span><h4>Forus: 74 plateformes nationales, 8 coalitions régionales, une voix globale</h4><p>Le réseau de Forus apporte une perspective unique qui relie les réalités locales, les processus nationaux, la coordination régionale et le plaidoyer mondial.</p><span class="audience-tag">Membres de Forus / Société civile</span></div>
-      <div class="msg-card"><span class="msg-num">10</span><h4>Inclure la société civile n'est pas qu'un principe démocratique — c'est l'efficacité</h4><p>La participation de la société civile identifie les risques d'exclusion, améliore l'adaptation contextuelle et renforce la durabilité des résultats de coopération.</p><span class="audience-tag">Grand public / Presse</span></div>
+      <div class="msg-card"><span class="msg-num">1</span><h4>La coopération fonctionne mieux quand elle s'adapte</h4><p>Les meilleurs exemples de SSTC sont ceux où les connaissances sont adaptées aux réalités locales.</p><span class="audience-tag">Gouvernements</span></div>
+      <div class="msg-card"><span class="msg-num">2</span><h4>La société civile améliore la qualité de la coopération</h4><p>Au Sénégal, le travail de données inclusives mené par CONGAD a renforcé le suivi national des ODD.</p><span class="audience-tag">ONU / PNUD</span></div>
+      <div class="msg-card"><span class="msg-num">3</span><h4>L'inclusion formelle reste l'exception</h4><p>Dans la plupart des cas, la société civile est active mais absente de la gouvernance.</p><span class="audience-tag">Décideurs</span></div>
+      <div class="msg-card"><span class="msg-num">4</span><h4>L'apprentissage entre pairs est déjà une coopération Sud-Sud</h4><p>Les membres de Forus échangent déjà des méthodologies sur le suivi des ODD.</p><span class="audience-tag">Donateurs</span></div>
+      <div class="msg-card"><span class="msg-num">5</span><h4>L'exclusion a des coûts réels</h4><p>Le cas ProSAVANA montre comment le manque de participation communautaire a conduit à la suspension d'un programme.</p><span class="audience-tag">Coopération triangulaire</span></div>
+      <div class="msg-card"><span class="msg-num">6</span><h4>Le cadre post-2030 ne doit pas romantiser la SSTC</h4><p>La SSTC peut reproduire des asymétries de pouvoir si elle n'est pas corrigée.</p><span class="audience-tag">Négociateurs post-2030</span></div>
+      <div class="msg-card"><span class="msg-num">7</span><h4>Les réseaux régionaux sont une infrastructure de coopération</h4><p>PIANGO connecte 15 pays du Pacifique sur la redevabilité des finances publiques.</p><span class="audience-tag">Organisations régionales</span></div>
+      <div class="msg-card"><span class="msg-num">8</span><h4>La transparence est une condition de la redevabilité</h4><p>Sans informations accessibles, la participation ne peut pas être significative.</p><span class="audience-tag">Banques de développement</span></div>
+      <div class="msg-card"><span class="msg-num">9</span><h4>Forus: 74 plateformes nationales, une voix globale</h4><p>Le réseau de Forus relie les réalités locales, les processus nationaux et le plaidoyer mondial.</p><span class="audience-tag">Membres de Forus</span></div>
+      <div class="msg-card"><span class="msg-num">10</span><h4>Inclure la société civile est une question d'efficacité</h4><p>La participation de la société civile améliore l'adaptation contextuelle.</p><span class="audience-tag">Grand public</span></div>
     </div>
   </div>
 </div>
 
-<!-- PAGE 7: POSTS (French version - simplified) -->
-<div class="page" id="posts-fr">
+<!-- WINDOW: POSTS (French - simplified) -->
+<div class="page-window" id="page-posts-fr">
   <div class="wrap">
     <span class="page-tag">07 / Contenu prêt à l'emploi</span>
     <p class="eyebrow">Copier-coller</p>
     <h2 class="section-title">PRE-LAUNCH — Publications pour réseaux sociaux</h2>
-    <p class="lead">Contenu prêt à l'emploi ou à adapter sur toute plateforme sociale. Disponible en anglais (langue originale des publications).</p>
-
-    <div class="post-card">
-      <div class="post-head"><span class="obj-pill">Teaser</span><span class="post-date">Mercredi 1 juillet</span></div>
-      <div class="post-body">
-        <div class="post-copy">👀 Quelque chose de grand arrive de Forus. Le 9 juillet, nous brisons le silence sur qui alimente vraiment la coopération Sud-Sud et triangulaire.
-
-📅 9 juillet 2026
-📍 New York
-Restez à l'écoute. 🔥</div>
-        <div class="post-cta"><strong>CTA:</strong> Restez à l'écoute</div>
-      </div>
-    </div>
-
-    <div class="post-card">
-      <div class="post-head"><span class="obj-pill">Urgence</span><span class="post-date">Jeudi 2 juillet</span></div>
-      <div class="post-body">
-        <div class="post-copy">⏳ À seulement 4 ans de 2030, les progrès des ODD stagnent encore. La solution oubliée? Mettre la société civile à la table des décisions.
-
-Nous vous disons pourquoi très bientôt.
-🔗 L'histoire complète arrive le 9 juillet.</div>
-        <div class="post-cta"><strong>CTA:</strong> Réservez la date</div>
-      </div>
-    </div>
-
-    <div class="post-card">
-      <div class="post-head"><span class="obj-pill">Histoires globales</span><span class="post-date">Vendredi 3 juillet</span></div>
-      <div class="post-body">
-        <div class="post-copy">🌍 Du Sénégal au Pacifique, de la Corée du Sud au Guatemala — 20 histoires réelles de communautés qui refaçonnent la coopération internationale.
-
-📅 Nous racontons tout le 9 juillet.
-📍 New York
-Préparez-vous.</div>
-        <div class="post-cta"><strong>CTA:</strong> Préparez-vous</div>
-      </div>
-    </div>
-
-    <div class="post-card">
-      <div class="post-head"><span class="obj-pill">Lancement virtuel</span><span class="post-date">Lundi 6 juillet</span></div>
-      <div class="post-body">
-        <div class="post-copy">🔴 EN DIRECT AUJOURD'HUI. Avant d'arriver à New York, nous lançons notre rapport au monde — en anglais, français et espagnol. La société civile mondiale, une seule conversation.
-
-📅 Aujourd'hui, 6 juillet 2026
-📍 Forus Virtual Hub
-🔗 Rejoignez-nous: [lien du hub virtuel]</div>
-        <div class="post-cta"><strong>CTA:</strong> Rejoignez le lancement virtuel</div>
-      </div>
-    </div>
-
-    <div class="post-card">
-      <div class="post-head"><span class="obj-pill">Lancement à NY</span><span class="post-date">Jeudi 9 juillet</span></div>
-      <div class="post-body">
-        <div class="post-copy">📢 Grande nouvelle de Forus! Au #HLPF2026 nous lançons 'Cooperation That Works: Civil Society in South-South and Triangular Cooperation.'
-
-Il rassemble des preuves de tout notre réseau sur la façon dont la société civile rend la coopération Sud-Sud et triangulaire plus efficace, légitime et durable.
-
-📅 Aujourd'hui, 9 juillet 2026
-📍 New York
-🔗 En savoir plus: [lien du rapport]</div>
-        <div class="post-cta"><strong>CTA:</strong> Lire le rapport</div>
-      </div>
-    </div>
-
-    <!-- Additional posts in French (same structure, translated) -->
-    <div class="post-card">
-      <div class="post-head"><span class="obj-pill">Table diplomatique</span><span class="post-date">Jeudi 9 juillet, 13:00–15:00</span></div>
-      <div class="post-body">
-        <div class="post-copy">🤝 Forus prend place à la table diplomatique aujourd'hui pour parler de l'avenir de la coopération mondiale.
-
-📅 Aujourd'hui, 13:00–15:00
-📍 Mission de la Corée du Sud à l'ONU, New York
-La société civile, là où les décisions importantes sont prises.</div>
-        <div class="post-cta"><strong>CTA:</strong> Suivez la conversation</div>
-      </div>
-    </div>
-
-    <div class="post-card">
-      <div class="post-head"><span class="obj-pill">Ateliers du week-end</span><span class="post-date">Samedi–dimanche 11–12 juillet</span></div>
-      <div class="post-body">
-        <div class="post-copy">🧠 Pendant que le monde se repose, notre réseau continue de travailler. Deux jours intensifs d'apprentissage entre pairs et de stratégie partagée — poser les bases de la suite.
-
-📅 11–12 juillet 2026
-📍 Scandinavia House, New York</div>
-        <div class="post-cta"><strong>CTA:</strong> En savoir plus</div>
-      </div>
-    </div>
-
-    <div class="post-card">
-      <div class="post-head"><span class="obj-pill">Voix africaines</span><span class="post-date">Mardi 14 juillet, 13:15–14:45 EST</span></div>
-      <div class="post-body">
-        <div class="post-copy">🌍 Les voix de Forus Afrique s'élèvent à l'ONU aujourd'hui — gouvernance, redevabilité et agence africaine, en leurs propres termes.
-
-📅 14 juillet, 13:15–14:45 EST
-📍 Nations Unies, New York</div>
-        <div class="post-cta"><strong>CTA:</strong> Amplifiez les voix africaines</div>
-      </div>
-    </div>
-
-    <div class="post-card">
-      <div class="post-head"><span class="obj-pill">Localiser les ODD</span><span class="post-date">Mardi 14 juillet, 15:00–18:00 EDT</span></div>
-      <div class="post-body">
-        <div class="post-copy">📍 Notre Présidente Justina prend la parole aujourd'hui: localiser les ODD n'est pas une technicité — c'est la clé pour que le changement atteigne là où il compte.
-
-📅 14 juillet, 15:00–18:00 EDT
-📍 New York
-🔗 Policy brief: [lien]</div>
-        <div class="post-cta"><strong>CTA:</strong> Lire le policy brief</div>
-      </div>
-    </div>
-
-    <div class="post-card">
-      <div class="post-head"><span class="obj-pill">Vision post-2030</span><span class="post-date">Jeudi 16 juillet, 10:30–12:00</span></div>
-      <div class="post-body">
-        <div class="post-copy">🔮 Que défendons-nous? Qu'exigeons-nous? Que n'acceptons-nous plus? Aujourd'hui nous présentons notre Vision post-2030 et traçons la route vers 2027.
-
-📅 Aujourd'hui, 16 juillet, 10:30–12:00
-📍 New York
-L'avenir de la coopération s'écrit maintenant.</div>
-        <div class="post-cta"><strong>CTA:</strong> Rejoignez la conversation</div>
-      </div>
-    </div>
-
-    <div class="post-card">
-      <div class="post-head"><span class="obj-pill">Récapitulatif</span><span class="post-date">16 ou 19 juillet</span></div>
-      <div class="post-body">
-        <div class="post-copy">🔁 Vous l'avez manqué? Voici tout ce que vous devez savoir de 'Cooperation That Works' en un seul fil.
-
-🔗 Rapport complet: [lien]</div>
-        <div class="post-cta"><strong>CTA:</strong> Lire le récapitulatif</div>
-      </div>
-    </div>
-
+    <p class="lead">Contenu prêt à l'emploi en anglais (langue originale).</p>
+    <div class="post-card"><div class="post-head"><span class="obj-pill">Teaser</span><span class="post-date">Mercredi 1 juillet</span></div><div class="post-body"><div class="post-copy">👀 Quelque chose de grand arrive de Forus. Le 9 juillet, nous brisons le silence.\n\n📅 9 juillet 2026\n📍 New York\nRestez à l'écoute. 🔥</div><div class="post-cta"><strong>CTA:</strong> Restez à l'écoute</div></div></div>
+    <div class="post-card"><div class="post-head"><span class="obj-pill">Urgence</span><span class="post-date">Jeudi 2 juillet</span></div><div class="post-body"><div class="post-copy">⏳ À seulement 4 ans de 2030, les progrès des ODD stagnent encore. La solution oubliée? Mettre la société civile à la table des décisions.</div><div class="post-cta"><strong>CTA:</strong> Réservez la date</div></div></div>
+    <div class="post-card"><div class="post-head"><span class="obj-pill">Lancement virtuel</span><span class="post-date">Lundi 6 juillet</span></div><div class="post-body"><div class="post-copy">🔴 EN DIRECT AUJOURD'HUI. Avant d'arriver à New York, nous lançons notre rapport au monde.\n\n📅 Aujourd'hui, 6 juillet 2026\n📍 Forus Virtual Hub</div><div class="post-cta"><strong>CTA:</strong> Rejoignez le lancement virtuel</div></div></div>
+    <div class="post-card"><div class="post-head"><span class="obj-pill">Lancement à NY</span><span class="post-date">Jeudi 9 juillet</span></div><div class="post-body"><div class="post-copy">📢 Grande nouvelle de Forus! Au #HLPF2026 nous lançons 'Cooperation That Works'.\n\n📅 Aujourd'hui, 9 juillet 2026\n📍 New York</div><div class="post-cta"><strong>CTA:</strong> Lire le rapport</div></div></div>
   </div>
 </div>
 
-<!-- PAGE 8: PODCASTS (French) -->
-<div class="page" id="podcasts-fr">
+<!-- WINDOW: PODCASTS (French) -->
+<div class="page-window" id="page-podcasts-fr">
   <div class="wrap">
     <span class="page-tag">08 / Audio</span>
     <p class="eyebrow">Écouter et partager</p>
     <h2 class="section-title">Série de podcasts</h2>
-    <p class="lead">En complément du rapport, Forus présente une série de 5 épisodes de podcast avec des voix du réseau sur la coopération Sud-Sud et triangulaire. Partagez ces épisodes avec vos publications pour approfondir la conversation.</p>
+    <p class="lead">En complément du rapport, Forus présente une série de 5 épisodes de podcast.</p>
     <div class="podcast-grid">
-      <div class="podcast-card">
-        <span class="podcast-num">1</span>
-        <div>
-          <span class="podcast-meta">Épisode 1</span>
-          <h4>Introduction au rapport</h4>
-          <p><span class="podcast-name">Aron Halfen — ForUM (Norvège)</span></p>
-        </div>
-      </div>
-      <div class="podcast-card">
-        <span class="podcast-num">2</span>
-        <div>
-          <span class="podcast-meta">Épisode 2</span>
-          <h4>Voix du Pacifique</h4>
-          <p><span class="podcast-name">Felisberto de Barros Silva Moreira — PLATONG (Cabo Verde)</span></p>
-        </div>
-      </div>
-      <div class="podcast-card">
-        <span class="podcast-num">3</span>
-        <div>
-          <span class="podcast-meta">Épisode 3</span>
-          <h4>Leçons sur l'exclusion</h4>
-          <p><span class="podcast-name">Henrique Botelho Frota — ABONG (Brésil)</span></p>
-        </div>
-      </div>
-      <div class="podcast-card">
-        <span class="podcast-num">4</span>
-        <div>
-          <span class="podcast-meta">Épisode 4</span>
-          <h4>Co-gouvernance en pratique</h4>
-          <p><span class="podcast-name">Iti — AKÜ (Estonie)</span></p>
-        </div>
-      </div>
-      <div class="podcast-card">
-        <span class="podcast-num">5</span>
-        <div>
-          <span class="podcast-meta">Épisode 5</span>
-          <h4>Regard vers le post-2030</h4>
-          <p><span class="podcast-name">Jose Ramon Avila Quiñonez — ASONOG (Honduras)</span></p>
-          <p><span class="podcast-name">Malick Ndome — CONGAD (Sénégal)</span></p>
-          <p><span class="podcast-name">Mylène Lawson — ADRA (Togo)</span></p>
-        </div>
-      </div>
+      <div class="podcast-card"><span class="podcast-num">1</span><div><span class="podcast-meta">Épisode 1</span><p><span class="podcast-name">Aron Halfen — ForUM (Norvège)</span></p></div></div>
+      <div class="podcast-card"><span class="podcast-num">2</span><div><span class="podcast-meta">Épisode 2</span><p><span class="podcast-name">Felisberto de Barros Silva Moreira — PLATONG (Cabo Verde)</span></p></div></div>
+      <div class="podcast-card"><span class="podcast-num">3</span><div><span class="podcast-meta">Épisode 3</span><p><span class="podcast-name">Henrique Botelho Frota — ABONG (Brésil)</span></p></div></div>
+      <div class="podcast-card"><span class="podcast-num">4</span><div><span class="podcast-meta">Épisode 4</span><p><span class="podcast-name">Iti — AKÜ (Estonie)</span></p></div></div>
+      <div class="podcast-card"><span class="podcast-num">5</span><div><span class="podcast-meta">Épisode 5</span><p><span class="podcast-name">Jose Ramon Avila Quiñonez — ASONOG (Honduras)</span></p><p><span class="podcast-name">Malick Ndome — CONGAD (Sénégal)</span></p><p><span class="podcast-name">Mylène Lawson — ADRA (Togo)</span></p></div></div>
     </div>
     <div class="report-box" style="margin-top:24px;">
       <h3>🎧 Écouter la série complète</h3>
-      <p>Disponible sur <span class="placeholder">[plateforme de podcast]</span>. Partagez le lien dans vos publications sur les réseaux sociaux tout au long de la campagne.</p>
-      <div class="report-actions">
-        <a href="#" class="btn btn-primary">Écouter la série</a>
-      </div>
+      <p>Disponible sur <span class="placeholder">[plateforme de podcast]</span>.</p>
+      <div class="report-actions"><a href="#" class="btn btn-primary">Écouter la série</a></div>
     </div>
   </div>
 </div>
 
-<!-- PAGE 9: HASHTAGS (French) -->
-<div class="page" id="hashtags-fr">
+<!-- WINDOW: HASHTAGS (French) -->
+<div class="page-window" id="page-hashtags-fr">
   <div class="wrap">
     <span class="page-tag">09 / Hashtags</span>
     <p class="eyebrow">Utiliser de manière cohérente</p>
@@ -2040,30 +1563,21 @@ L'avenir de la coopération s'écrit maintenant.</div>
     <div class="hashtag-block">
       <h4>Hashtags officiels</h4>
       <div class="tags">
-        <span class="tag">#HLPF2026</span>
-        <span class="tag">#HLPF</span>
-        <span class="tag">#CooperationThatWorks</span>
-        <span class="tag">#SSTC</span>
-        <span class="tag">#SDGs</span>
-        <span class="tag">#GlobalGoals</span>
-        <span class="tag">#2030Agenda</span>
-        <span class="tag">#CivilSociety</span>
-        <span class="tag">#CivilSocietyVoice</span>
-        <span class="tag">#SouthSouthCooperation</span>
-        <span class="tag">#LeaveNoOneBehind</span>
-        <span class="tag">#GlobalAdvocacy</span>
+        <span class="tag">#HLPF2026</span><span class="tag">#HLPF</span><span class="tag">#CooperationThatWorks</span>
+        <span class="tag">#SSTC</span><span class="tag">#SDGs</span><span class="tag">#GlobalGoals</span>
+        <span class="tag">#2030Agenda</span><span class="tag">#CivilSociety</span><span class="tag">#CivilSocietyVoice</span>
+        <span class="tag">#SouthSouthCooperation</span><span class="tag">#LeaveNoOneBehind</span><span class="tag">#GlobalAdvocacy</span>
       </div>
     </div>
   </div>
 </div>
 
-<!-- PAGE 10: ACCOUNTS (French) -->
-<div class="page" id="accounts-fr">
+<!-- WINDOW: ACCOUNTS (French) -->
+<div class="page-window" id="page-cuentas-fr">
   <div class="wrap">
     <span class="page-tag">10 / À taguer</span>
     <p class="eyebrow">N'oubliez pas de taguer</p>
     <h2 class="section-title">Comptes à taguer</h2>
-
     <h4 style="margin:18px 0 10px; color:var(--forus-dark-azure);">ONU / HLPF</h4>
     <div class="account-grid">
       <div class="account-card"><div class="av">UN</div><h5>UN DESA</h5><span>@UNDESA</span></div>
@@ -2072,7 +1586,6 @@ L'avenir de la coopération s'écrit maintenant.</div>
       <div class="account-card"><div class="av">UN</div><h5>United Nations</h5><span>@UN</span></div>
       <div class="account-card"><div class="av">UD</div><h5>UNDP</h5><span>@UNDP</span></div>
     </div>
-
     <h4 style="margin:24px 0 10px; color:var(--forus-dark-azure);">Plateformes nationales membres</h4>
     <div class="account-grid" style="grid-template-columns:repeat(5,1fr);">
       <div class="account-card"><div class="av" style="background:var(--forus-green);">CO</div><h5>CONGAD</h5><span>Sénégal</span></div>
@@ -2095,36 +1608,58 @@ L'avenir de la coopération s'écrit maintenant.</div>
       <div class="account-card"><div class="av" style="background:var(--forus-green);">AB</div><h5>ABONG</h5><span>Brésil</span></div>
       <div class="account-card"><div class="av" style="background:var(--forus-green);">TA</div><h5>Taiwan AID</h5><span>Taïwan</span></div>
     </div>
-
-    <p class="source-note">Astuce: ajoutez également les handles spécifiques de chaque plateforme lorsque vous publiez à leur sujet.</p>
   </div>
 </div>
 
 </div><!-- fin francés -->
 
 
-<!-- FOOTER -->
-<footer>
-  <p>Forus · Social Media Toolkit for HLPF 2026 — internal and member use<br>
-  Questions? Contact <a href="mailto:contact@forus-international.org">contact@forus-international.org</a> · <a href="http://forus-international.org" target="_blank">forus-international.org</a></p>
-</footer>
-
 <script>
+// Cambiar idioma
 function switchLanguage(lang) {
-  // Ocultar todos los contenidos
   document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
-  // Mostrar el idioma seleccionado
   document.getElementById('lang-' + lang).classList.add('active');
-  // Actualizar botones
   document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
   document.querySelectorAll('.lang-btn').forEach(btn => {
     if (btn.textContent.includes('Español') && lang === 'es') btn.classList.add('active');
     if (btn.textContent.includes('English') && lang === 'en') btn.classList.add('active');
     if (btn.textContent.includes('Français') && lang === 'fr') btn.classList.add('active');
   });
-  // Guardar preferencia
   localStorage.setItem('forus-lang', lang);
+  // Volver a la página de inicio del idioma seleccionado
+  const prefix = lang === 'es' ? '' : '-' + lang;
+  switchPage('page-inicio' + prefix);
 }
+
+// Cambiar página/ventana
+function switchPage(pageId) {
+  // Ocultar todas las ventanas del idioma activo
+  const activeLang = document.querySelector('.lang-content.active');
+  if (activeLang) {
+    activeLang.querySelectorAll('.page-window').forEach(el => el.classList.remove('active'));
+    const target = activeLang.querySelector('#' + pageId);
+    if (target) target.classList.add('active');
+  }
+  // Actualizar botones de navegación
+  document.querySelectorAll('.toolkit-nav button').forEach(btn => {
+    btn.classList.remove('active');
+    if (btn.dataset.page === pageId) btn.classList.add('active');
+  });
+}
+
+// Event listeners para navegación
+document.querySelectorAll('.toolkit-nav button').forEach(btn => {
+  btn.addEventListener('click', function() {
+    const pageId = this.dataset.page;
+    // Determinar el idioma activo y la página correspondiente
+    const activeLang = document.querySelector('.lang-content.active');
+    if (activeLang) {
+      const lang = activeLang.id.replace('lang-', '');
+      const prefix = lang === 'es' ? '' : '-' + lang;
+      switchPage(pageId + prefix);
+    }
+  });
+});
 
 // Cargar idioma guardado
 document.addEventListener('DOMContentLoaded', function() {
