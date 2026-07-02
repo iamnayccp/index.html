@@ -529,6 +529,98 @@
   }
   .post-cta{margin-top:10px; font-size:13px; color:var(--forus-gray);}
   .post-cta strong{color:var(--forus-dark-azure);}
+  .post-tags{
+    margin-top:8px;
+    font-size:11.5px;
+    color:var(--forus-teal);
+    font-weight:600;
+    display:flex;
+    flex-wrap:wrap;
+    gap:4px;
+  }
+  .post-tags span{background:var(--forus-light); padding:2px 10px; border-radius:12px; border:1px solid var(--forus-border);}
+
+  /* --- PODCASTS --- */
+  .podcast-grid{display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-top:20px;}
+  .podcast-card{
+    background:var(--forus-light);
+    border:1px solid var(--forus-border);
+    border-radius:var(--radius);
+    padding:20px 22px;
+    transition:all 0.25s;
+    border-top:4px solid transparent;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+  }
+  .podcast-card:hover{
+    border-top-color:var(--forus-teal);
+    border-color:var(--forus-teal);
+    box-shadow:0 4px 16px rgba(88,196,198,0.10);
+  }
+  .podcast-card .podcast-icon{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:4px;
+  }
+  .podcast-card .podcast-icon .num{
+    flex:0 0 auto;
+    width:36px;
+    height:36px;
+    border-radius:50%;
+    background:var(--forus-vivid-crimson);
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:800;
+    font-size:14px;
+  }
+  .podcast-card .podcast-icon .icon{
+    font-size:24px;
+  }
+  .podcast-card h4{
+    margin:0;
+    font-size:15px;
+    color:var(--forus-dark-azure);
+    line-height:1.3;
+  }
+  .podcast-card .podcast-meta{
+    font-size:11px;
+    font-weight:700;
+    color:var(--forus-teal);
+    text-transform:uppercase;
+    letter-spacing:0.5px;
+  }
+  .podcast-card p{
+    margin:0;
+    font-size:13px;
+    color:var(--forus-gray);
+    line-height:1.5;
+  }
+  .podcast-card .podcast-link{
+    margin-top:4px;
+    font-size:12.5px;
+    font-weight:600;
+    color:var(--forus-teal);
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+  }
+  .podcast-card .podcast-link:hover{
+    color:var(--forus-vivid-crimson);
+    text-decoration:underline;
+  }
+  .podcast-card .podcast-flag{
+    display:inline-block;
+    font-size:20px;
+    margin-right:6px;
+  }
+  .podcast-card .podcast-speaker{
+    font-weight:600;
+    color:var(--forus-dark-azure);
+  }
 
   /* --- HASHTAGS --- */
   .hashtag-block{margin-top:20px;}
@@ -581,40 +673,6 @@
   }
   .account-card h5{margin:0 0 3px; font-size:13px;}
   .account-card span{font-size:11.5px; color:var(--forus-gray);}
-
-  /* --- PODCASTS --- */
-  .podcast-grid{display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:18px;}
-  .podcast-card{
-    border:1px solid var(--forus-border);
-    border-radius:var(--radius);
-    padding:18px 20px;
-    background:var(--forus-light);
-    display:flex;
-    gap:14px;
-    align-items:center;
-    transition:all 0.2s;
-  }
-  .podcast-card:hover{
-    border-color:var(--forus-vivid-crimson);
-    background:#fff;
-  }
-  .podcast-num{
-    flex:0 0 auto;
-    width:36px;
-    height:36px;
-    border-radius:50%;
-    background:var(--forus-vivid-crimson);
-    color:#fff;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-weight:800;
-    font-size:13px;
-  }
-  .podcast-card h4{margin:0 0 3px; font-size:14px; color:var(--forus-dark-azure);}
-  .podcast-card p{margin:0 0 4px; font-size:12.5px; color:var(--forus-gray);}
-  .podcast-meta{font-size:10.5px; color:var(--forus-teal); font-weight:700; text-transform:uppercase; letter-spacing:0.5px;}
-  .podcast-name{font-size:12px; color:var(--forus-gray); font-weight:500;}
 
   .source-note{
     margin-top:22px;
@@ -941,167 +999,209 @@
     <h2 class="section-title">Publicaciones para redes sociales</h2>
     <p class="lead">Contenido listo para usar o adaptar en cualquier red social.</p>
 
-    <!-- SECCIÓN 1: PRE-LANZAMIENTO -->
-    <div class="post-section-title">📢 PRE-LANZAMIENTO <span class="badge badge-pre">2–6 julio</span></div>
-
+    <!-- Jueves 2 julio -->
     <div class="post-card">
-      <div class="post-head"><span class="obj-pill">Inicio</span><span class="post-date">Jueves 2 julio</span></div>
+      <div class="post-head"><span class="obj-pill">Intro HLPF</span><span class="post-date">Jueves 2 julio 2026</span></div>
       <div class="post-body">
-        <div class="post-copy">🎯🌍📢🤝 Mientras los gobiernos, la sociedad civil y los actores de la ONU se reúnen para el #HLPF2026, ¿cómo pasamos de los compromisos a la acción?
+        <div class="post-copy">🌍 Mientras gobiernos, organizaciones de la sociedad civil y actores de las Naciones Unidas se reúnen en el #FPAN2026, ¿cómo transformamos los compromisos en acciones concretas?
 
-Este año, #Forus y sus miembros están aportando experiencias locales, evidencia de la sociedad civil y soluciones prácticas a los debates globales sobre desarrollo sostenible. Desde los Exámenes Nacionales Voluntarios hasta el futuro de la agenda post-2030, creemos que la participación significativa y la rendición de cuentas deben seguir siendo el corazón de la cooperación internacional.
+Este año, #Forus y sus miembros llevan experiencias locales, evidencia de la sociedad civil y soluciones prácticas a los debates mundiales sobre el desarrollo sostenible.
 
-En los próximos días, compartiremos ideas, informes, podcasts, eventos y perspectivas de toda nuestra red.
+Desde los Exámenes Nacionales Voluntarios (ENV) hasta la construcción de la agenda posterior a la #Agenda2030, creemos que la participación significativa y la rendición de cuentas deben seguir siendo el eje de la cooperación internacional.
 
-https://www.forus-international.org/en/campaigns?modal_page=page&modal_detail_id=high-level-political-forum-2026
+📢 Durante los próximos días compartiremos informes, pódcasts, eventos, análisis y perspectivas de toda nuestra red.
 
-#HLPF2026 #Agenda2030 #GlobalGoals #Forus #CivilSociety</div>
+🔗 https://www.forus-international.org/en/campaigns?modal_page=page&modal_detail_id=high-level-political-forum-2026
+
+#FPAN2026 #Agenda2030 #ObjetivosGlobales #Forus #SociedadCivil</div>
+        <div class="post-tags"><span>@UN</span> <span>@UNDESA</span> <span>@UNDP</span> <span>@EU</span></div>
         <div class="post-cta"><strong>CTA:</strong> Sigue la conversación</div>
       </div>
     </div>
 
+    <!-- Viernes 3 julio -->
     <div class="post-card">
-      <div class="post-head"><span class="obj-pill">Teaser del reporte</span><span class="post-date">Viernes 3 julio</span></div>
+      <div class="post-head"><span class="obj-pill">Anuncio del reporte</span><span class="post-date">Viernes 3 julio 2026</span></div>
       <div class="post-body">
-        <div class="post-copy">📢📄🌍🔍 Nuevo reporte | 7 julio 2026
+        <div class="post-copy">📢 Lanzamiento de un nuevo informe | 7 de julio de 2026
 
-La Cooperación Sur-Sur y Triangular está configurando cada vez más cómo los países y las comunidades comparten conocimientos, recursos y soluciones.
+🌍 La Cooperación Sur-Sur y Triangular (CSST) está transformando la manera en que los países y las comunidades comparten conocimientos, recursos y soluciones.
 
-Pero, ¿qué hace que estas alianzas sean realmente efectivas?
+Pero, ¿qué hace que estas alianzas sean realmente eficaces?
 
-Basado en más de 20 estudios de caso de toda la red de Forus, nuestro nuevo informe global explora cómo la Cooperación Sur-Sur y Triangular puede volverse más inclusiva, responsable y adaptada a las realidades locales.
+A partir de más de 20 estudios de caso de toda la red de Forus, nuestro nuevo informe mundial explora cómo la Cooperación Sur-Sur y Triangular puede ser más inclusiva, responsable y adaptada a las realidades locales.
 
-El informe destaca lecciones prácticas sobre intercambio entre pares, aprendizaje compartido, gobernanza, participación y construcción de alianzas.
+El informe presenta lecciones prácticas sobre el intercambio entre pares, el aprendizaje compartido, la gobernanza, la participación y la construcción de alianzas.
 
-Únete a nosotros durante el #HLPF2026 mientras lanzamos el informe y discutimos cómo la cooperación puede apoyar mejor el desarrollo sostenible. Regístrate aquí: https://us02web.zoom.us/meeting/register/WXoC-XbeQ9yPugq_IybHDQ#/registration
+🤝 Acompáñanos durante el #FPAN2026 en el lanzamiento del informe y en el debate sobre cómo la cooperación puede apoyar mejor el desarrollo sostenible.
 
-#SSTC #SouthSouthCooperation #SDGs #HLPF2026 #Forus</div>
+📝 Inscríbete aquí: https://us02web.zoom.us/meeting/register/WXoC-XbeQ9yPugq_IybHDQ#/registration
+
+#CSST #CooperaciónSurSur #ODS #FPAN2026 #Forus</div>
+        <div class="post-tags"><span>@UNOSSC</span> <span>@UNDESA</span> <span>@UNDP</span> <span>@EU</span> <span>@AFD_France</span> <span>@Fondationfrance</span> <span>@oxfamhongkong</span> <span>@GvtMonaco</span> <span>@EUatUN</span></div>
         <div class="post-cta"><strong>CTA:</strong> Regístrate para el lanzamiento</div>
       </div>
     </div>
 
-    <!-- SECCIÓN 2: DURANTE EL HLPF -->
-    <div class="post-section-title">🚀 DURANTE EL HLPF <span class="badge badge-launch">7–14 julio</span></div>
-
+    <!-- Lunes 7 julio -->
     <div class="post-card">
-      <div class="post-head"><span class="obj-pill">Lanzamiento SSTC</span><span class="post-date">Lunes 7 julio</span></div>
+      <div class="post-head"><span class="obj-pill">Webinar lanzamiento</span><span class="post-date">Lunes 7 julio 2026</span></div>
       <div class="post-body">
-        <div class="post-copy">🌍🤝📊💡 ¿Cómo se ve una Cooperación Sur-Sur y Triangular efectiva en la práctica?
+        <div class="post-copy">🌍 ¿Cómo es una Cooperación Sur-Sur y Triangular realmente eficaz en la práctica?
 
-Junto con socios y líderes de la sociedad civil, exploraremos cómo la cooperación impulsada localmente puede fortalecer los resultados del desarrollo, promover el aprendizaje compartido y apoyar una toma de decisiones más inclusiva.
+Junto con socios y líderes de la sociedad civil, exploraremos cómo una cooperación impulsada desde lo local puede fortalecer los resultados del desarrollo, promover el aprendizaje compartido y favorecer una toma de decisiones más inclusiva.
 
-La conversación se basará en los hallazgos del nuevo informe global SSTC de Forus. Lee el resumen ejecutivo aquí: https://www.forus-international.org/en/extra/hub/resources-publications?modal_page=pdf&modal_detail_id=executive-summary-cooperation-that-works-civil-society-in-south-south-and-triangular-cooperation
+💡 La conversación se basará en los hallazgos del nuevo informe mundial de Forus sobre la Cooperación Sur-Sur y Triangular (CSST), destacando experiencias y recomendaciones prácticas de toda nuestra red.
 
-#HLPF2026 #SSTC #SouthSouthCooperation #Forus</div>
+📖 Lee el resumen ejecutivo aquí:
+https://www.forus-international.org/en/extra/hub/resources-publications?modal_page=pdf&modal_detail_id=executive-summary-cooperation-that-works-civil-society-in-south-south-and-triangular-cooperation
+
+#FPAN2026 #CSST #CooperaciónSurSur #Forus</div>
+        <div class="post-tags"><span>@UNOSSC</span> <span>@UNDESA</span> <span>@UNDP</span> <span>@EU</span> <span>@AFD_France</span> <span>@Fondationfrance</span> <span>@oxfamhongkong</span> <span>@GvtMonaco</span> <span>@EUatUN</span></div>
         <div class="post-cta"><strong>CTA:</strong> Lee el resumen ejecutivo</div>
       </div>
     </div>
 
+    <!-- Martes 8 julio -->
     <div class="post-card">
-      <div class="post-head"><span class="obj-pill">VNRs</span><span class="post-date">Martes 8 julio</span></div>
+      <div class="post-head"><span class="obj-pill">VNRs y plataformas</span><span class="post-date">Martes 8 julio 2026</span></div>
       <div class="post-body">
-        <div class="post-copy">📊🌍🗣️📢 Este año, 13 Plataformas Nacionales de Forus están ubicadas en países que presentan Exámenes Nacionales Voluntarios (#VNRs) en el Foro Político de Alto Nivel de las Naciones Unidas.
+        <div class="post-copy">🌍 Este año, 13 Plataformas Nacionales de Forus pertenecen a países que presentan sus Exámenes Nacionales Voluntarios (#ENV) en el Foro Político de Alto Nivel de las Naciones Unidas.
 
-Nuestros miembros trabajan cada día para monitorear el progreso, involucrar a las comunidades y exigir responsabilidades a los tomadores de decisiones por los compromisos de los #ODS. El proceso de VNR es una oportunidad importante para que los gobiernos informen sobre la implementación. Pero la rendición de cuentas es más fuerte cuando las voces de la sociedad civil también son escuchadas.
+Cada día, nuestros miembros trabajan para supervisar los avances, involucrar a las comunidades y exigir la rendición de cuentas de los responsables de la toma de decisiones respecto a sus compromisos con los #ODS.
 
-Por eso, los miembros de Forus compartirán sus perspectivas, lecciones aprendidas y recomendaciones durante todo el #HLPF2026.
+El proceso de los ENV es una oportunidad clave para que los gobiernos informen sobre la implementación de la #Agenda2030. Sin embargo, la rendición de cuentas es más sólida cuando también se escuchan las voces de la sociedad civil.
 
-Aprende más sobre nuestro compromiso aquí: https://www.forus-international.org/en/agenda-2030
+🤝 Por ello, los miembros de Forus compartirán sus perspectivas, aprendizajes y recomendaciones durante todo el #FPAN2026.
 
-#VNR2026 #Agenda2030 #SDGs #CivilSociety #Forus</div>
+🔗 Conoce más sobre nuestra participación:
+https://www.forus-international.org/en/agenda-2030
+
+#ENV2026 #Agenda2030 #ODS #SociedadCivil #Forus</div>
+        <div class="post-tags"><span>@UN</span> <span>@UNDESA</span> <span>@UNDP</span> <span>@EU</span></div>
         <div class="post-cta"><strong>CTA:</strong> Aprende más sobre nuestro compromiso</div>
       </div>
     </div>
 
+    <!-- Jueves 9 julio - Beyond the Review -->
     <div class="post-card">
-      <div class="post-head"><span class="obj-pill">Beyond the Review</span><span class="post-date">Jueves 9 julio</span></div>
+      <div class="post-head"><span class="obj-pill">Beyond the Review</span><span class="post-date">Jueves 9 julio 2026</span></div>
       <div class="post-body">
-        <div class="post-copy">🎙️🌍📢🔍 ¿Qué sucede más allá del Examen Nacional Voluntario?
+        <div class="post-copy">🎙️ ¿Qué ocurre después del Examen Nacional Voluntario?
 
-Mientras los países presentan sus avances en los Objetivos de Desarrollo Sostenible, Forus lanza una nueva temporada de Beyond the Review.
+Mientras los países presentan sus avances en los Objetivos de Desarrollo Sostenible (ODS), Forus lanza una nueva temporada de Beyond the Review.
 
-A través de conversaciones con Plataformas Nacionales y líderes de la sociedad civil, la serie explora lo que los informes oficiales a menudo no pueden capturar: las realidades que enfrentan las comunidades, los desafíos que persisten y el papel que juega la sociedad civil en impulsar el desarrollo sostenible.
+A través de conversaciones con Plataformas Nacionales y líderes de la sociedad civil, la serie explora aquello que los informes oficiales muchas veces no reflejan: las realidades que viven las comunidades, los desafíos que persisten y el papel fundamental que desempeña la sociedad civil para impulsar el desarrollo sostenible.
 
-Mantente atento a los primeros episodios durante el #HLPF2026. Escucha todos nuestros podcasts aquí: https://www.forus-international.org/en/a-space-for-us
+🎧 No te pierdas los primeros episodios durante el #FPAN2026.
 
-#BeyondTheReview #Agenda2030 #VNR2026 #Forus #CivilSociety</div>
+🔗 Escucha todos nuestros podcasts aquí:
+https://www.forus-international.org/en/a-space-for-us
+
+#BeyondTheReview #Agenda2030 #ENV2026 #Forus #SociedadCivil</div>
+        <div class="post-tags"><span>@UN</span> <span>@UNDESA</span> <span>@UNDP</span> <span>@Hivos</span> <span>@EU</span></div>
         <div class="post-cta"><strong>CTA:</strong> Escucha los podcasts</div>
       </div>
     </div>
 
+    <!-- Jueves 9 julio - EUSEE -->
     <div class="post-card">
-      <div class="post-head"><span class="obj-pill">Espacio cívico</span><span class="post-date">Jueves 9 julio</span></div>
+      <div class="post-head"><span class="obj-pill">EUSEE</span><span class="post-date">Jueves 9 julio 2026</span></div>
       <div class="post-body">
-        <div class="post-copy">🕊️🌍📊🔍 El desarrollo sostenible depende de un entorno favorable para la sociedad civil.
+        <div class="post-copy">🌍 El desarrollo sostenible depende de un entorno propicio para la sociedad civil.
 
-A través de la iniciativa #EUSEE, las organizaciones de la sociedad civil en 86 países documentan los cambios en el espacio cívico, la participación, las libertades y las condiciones que permiten a las organizaciones contribuir efectivamente a los procesos de desarrollo.
+A través de la iniciativa #EUSEE, organizaciones de la sociedad civil de 86 países documentan los cambios en el espacio cívico, la participación, las libertades fundamentales y las condiciones que permiten a las organizaciones contribuir de manera efectiva a los procesos de desarrollo.
 
-Mientras los gobiernos presentan sus Exámenes Nacionales Voluntarios en el #HLPF2026, esta evidencia proporciona un complemento importante a los informes oficiales y nos ayuda a comprender mejor si la sociedad civil puede participar genuinamente en la configuración de los resultados del desarrollo.
+Mientras los gobiernos presentan sus Exámenes Nacionales Voluntarios (ENV) durante el #FPAN2026, esta evidencia complementa los informes oficiales y nos ayuda a comprender mejor si la sociedad civil puede participar de forma genuina en la construcción de los resultados del desarrollo.
 
-#HLPF2026 #CivilSociety #SDGs #Agenda2030 #Forus #VNRs</div>
+🔗 Conoce más sobre nuestro trabajo:
+https://www.forus-international.org/en/agenda-2030
+
+#FPAN2026 #SociedadCivil #ODS #Agenda2030 #Forus #ENV</div>
+        <div class="post-tags"><span>@Hivos</span> <span>@CIVICUS</span> <span>@EU</span> <span>@TransparIntl</span> <span>@OxfamNovib</span> <span>@UNDESA</span></div>
         <div class="post-cta"><strong>CTA:</strong> Aprende más sobre EU-SEE</div>
       </div>
     </div>
 
+    <!-- Martes 14 julio - African Agency -->
     <div class="post-card">
-      <div class="post-head"><span class="obj-pill">Voces africanas</span><span class="post-date">Martes 14 julio, 13:15–14:45 EST</span></div>
+      <div class="post-head"><span class="obj-pill">African Agency</span><span class="post-date">Martes 14 julio 2026 | 13:15–14:45 EST</span></div>
       <div class="post-body">
-        <div class="post-copy">🌍🗣️🌍📢 Las voces de Forus África se alzan hoy en la ONU — gobernanza, rendición de cuentas y agencia africana, en sus propios términos.
+        <div class="post-copy">🌍 Las voces de Forus África toman la palabra hoy en las Naciones Unidas.
 
-📅 14 julio, 13:15–14:45 EST
-📍 Naciones Unidas, Nueva York</div>
+Únete a la conversación sobre gobernanza, rendición de cuentas y liderazgo africano, destacando el papel de la sociedad civil africana en el avance de la Agenda 2030 y la Agenda 2063.
+
+📅 14 de julio | 13:15–14:45 EST
+📍 Naciones Unidas, Nueva York
+
+#FPAN2026 #Agenda2030 #Agenda2063 #ForusAfrica #Gobernanza #RendiciónDeCuentas #SociedadCivil #Forus</div>
+        <div class="post-tags"><span>@UN</span> <span>@UNDESA</span> <span>@UNDP</span> <span>@AFD_France</span> <span>@Fondationfrance</span> <span>@oxfamhongkong</span> <span>@GvtMonaco</span> <span>@EU</span></div>
         <div class="post-cta"><strong>CTA:</strong> Amplifica las voces africanas</div>
       </div>
     </div>
 
+    <!-- Martes 14 julio - Local2030 -->
     <div class="post-card">
-      <div class="post-head"><span class="obj-pill">Localizando los ODS</span><span class="post-date">Martes 14 julio, 15:00–18:00 EDT</span></div>
+      <div class="post-head"><span class="obj-pill">Local2030 Coalition</span><span class="post-date">Martes 14 julio 2026 | 15:00–18:00 EDT</span></div>
       <div class="post-body">
-        <div class="post-copy">📍🌍📊🗣️ Nuestra Presidenta Justina Kaluinaitė de la Plataforma NGDO de Lituania toma la palabra hoy: localizar los ODS es la clave para que el cambio llegue a donde importa.
+        <div class="post-copy">📍 Coalición Local2030 GT1: Lanzamiento del documento de políticas sobre la localización de las seis transiciones de los ODS
 
-📅 14 julio, 15:00–18:00 EDT
-📍 Nueva York</div>
+Organiza: Coalición Local2030 – Grupo de Trabajo 1
+
+🎤 Hoy, nuestra presidenta, Justina Kaluinaitė, de la Plataforma Lituana de ONGD, participa para destacar que la localización de los #ODS es clave para que el desarrollo sostenible genere cambios reales allí donde más se necesitan.
+
+📅 14 de julio | 15:00–18:00 EDT
+📍 Nueva York
+
+#Local2030 #FPAN2026 #ODS #Agenda2030 #Localización #SociedadCivil #Forus</div>
+        <div class="post-tags"><span>@Local2030</span> <span>@UN_Habitat</span> <span>@UNDESA</span> <span>@UNDP</span> <span>@AFD_France</span> <span>@Fondationfrance</span> <span>@oxfamhongkong</span> <span>@GvtMonaco</span> <span>@EU</span></div>
         <div class="post-cta"><strong>CTA:</strong> Lee el policy brief</div>
       </div>
     </div>
 
-    <!-- SECCIÓN 3: DESPUÉS -->
-    <div class="post-section-title">🔁 DESPUÉS <span class="badge badge-after">16–19 julio</span></div>
-
+    <!-- Jueves 16 julio - Post-2030 -->
     <div class="post-card">
-      <div class="post-head"><span class="obj-pill">Visión Post-2030</span><span class="post-date">Jueves 16 julio</span></div>
+      <div class="post-head"><span class="obj-pill">Post-2030 Vision</span><span class="post-date">Jueves 16 julio 2026 | 📸 Galería de fotos</span></div>
       <div class="post-body">
-        <div class="post-copy">📸🌍🔮📢 Imágenes del evento #HLPF2026 de Forus: El futuro después de 2030 ya se está forjando.
+        <div class="post-copy">📸 Imágenes del evento de Forus en el #FPAN2026
 
-El debate no es solo sobre los objetivos futuros. Se trata de participación, rendición de cuentas, financiamiento y los valores que guiarán la cooperación internacional en los próximos años.
+El futuro después de 2030 ya se está construyendo.
 
-A través de consultas con miembros y socios de todo el mundo, Forus ha desarrollado una visión colectiva de la sociedad civil para la agenda post-2030.
+El debate no se centra únicamente en los futuros objetivos. También trata sobre la participación, la rendición de cuentas, la financiación y los valores que guiarán la cooperación internacional en los próximos años.
 
-Nuestra visión se basa en tres preguntas simples:
+Tras un amplio proceso de consultas con miembros y socios de todo el mundo, Forus ha desarrollado una visión colectiva de la sociedad civil para la agenda posterior a 2030.
 
-✔ ¿Qué debemos defender?
-✔ ¿Qué debemos exigir?
-✔ ¿Qué debemos rechazar?
+Nuestra visión se articula en torno a tres preguntas clave:
 
-Lee nuestra visión: https://www.forus-international.org/en/campaigns?modal_page=campaign&modal_detail_id=forus-post-2030-vision
+✔️ ¿Qué debemos defender?
+✔️ ¿Qué debemos exigir?
+✔️ ¿Qué debemos rechazar?
 
-#Post2030 #HLPF2026 #Agenda2030 #Forus</div>
+🔗 Descubre nuestra visión:
+https://www.forus-international.org/en/campaigns?modal_page=campaign&modal_detail_id=forus-post-2030-vision
+
+#Post2030 #FPAN2026 #Agenda2030 #SociedadCivil #ODS #Forus</div>
+        <div class="post-tags"><span>@UN</span> <span>@UNDESA</span> <span>@UNDP</span> <span>@AFD_France</span> <span>@Fondationfrance</span> <span>@oxfamhongkong</span> <span>@GvtMonaco</span> <span>@EU</span></div>
         <div class="post-cta"><strong>CTA:</strong> Lee la visión</div>
       </div>
     </div>
 
+    <!-- 19 julio - Recap final -->
     <div class="post-card">
-      <div class="post-head"><span class="obj-pill">Recapitulación final</span><span class="post-date">19 julio</span></div>
+      <div class="post-head"><span class="obj-pill">Recapitulación final</span><span class="post-date">19 julio 2026 | 📸 Galería de fotos</span></div>
       <div class="post-body">
-        <div class="post-copy">🌍📢🤝🔮 #HLPF2026 - A medida que nos acercamos a los últimos cinco años de la Agenda 2030, el progreso depende de alianzas, participación y rendición de cuentas.
+        <div class="post-copy">📸 Lo más destacado del #FPAN2026
 
-Durante todo el #HLPF2026, los miembros de Forus de todo el mundo aportaron evidencia local, perspectivas comunitarias y soluciones prácticas a las conversaciones globales sobre desarrollo sostenible.
+A medida que nos acercamos a los últimos cinco años de la #Agenda2030, el progreso depende de las alianzas, la participación y la rendición de cuentas.
 
-Desde los Exámenes Nacionales Voluntarios hasta el monitoreo de un entorno favorable, desde la Cooperación Sur-Sur hasta la agenda post-2030, nuestro mensaje sigue siendo el mismo:
+Durante el #FPAN2026, los miembros de Forus de todo el mundo llevaron evidencia local, perspectivas comunitarias y soluciones prácticas a los debates mundiales sobre desarrollo sostenible.
 
-Ningún futuro sostenible puede construirse sin la sociedad civil.
+Desde los Exámenes Nacionales Voluntarios (ENV) y el seguimiento de un entorno propicio para la sociedad civil, hasta la Cooperación Sur-Sur y Triangular (CSST) y la agenda posterior a 2030, nuestro mensaje sigue siendo el mismo:
 
-#HLPF2026 #SDGs #Agenda2030 #Forus #CivilSociety #GlobalGoals</div>
+💙 No puede construirse un futuro sostenible sin la sociedad civil.
+
+#FPAN2026 #ODS #Agenda2030 #Forus #SociedadCivil #ObjetivosGlobales</div>
+        <div class="post-tags"><span>@UNOSSC</span> <span>@UN</span> <span>@UNDESA</span> <span>@UNDP</span> <span>@AFD_France</span> <span>@Fondationfrance</span> <span>@oxfamhongkong</span> <span>@GvtMonaco</span> <span>@EU</span></div>
         <div class="post-cta"><strong>CTA:</strong> Comparte tus momentos destacados</div>
       </div>
     </div>
@@ -1115,51 +1215,54 @@ Ningún futuro sostenible puede construirse sin la sociedad civil.
     <span class="page-tag">07 / Audio</span>
     <p class="eyebrow">Escucha y comparte</p>
     <h2 class="section-title">Serie de podcasts</h2>
-    <p class="lead">Como complemento al reporte, Forus presenta una serie de 5 episodios de podcast con voces de la red sobre cooperación Sur-Sur y triangular.</p>
+    <p class="lead">Como complemento al reporte, Forus presenta una serie de episodios del podcast "Beyond the Review" con voces de la red sobre la implementación de los ODS y la participación de la sociedad civil.</p>
+
     <div class="podcast-grid">
+      <!-- Episodio 1 - Noruega -->
       <div class="podcast-card">
-        <span class="podcast-num">1</span>
-        <div>
+        <div class="podcast-icon">
+          <span class="num">1</span>
+          <span class="icon">🇳🇴</span>
           <span class="podcast-meta">Episodio 1</span>
-          <p><span class="podcast-name">Aron Halfen — ForUM (Norway)</span></p>
         </div>
+        <h4>Beyond the Review - Lessons from Norway on transformative actions for the 2030 Agenda</h4>
+        <p><span class="podcast-speaker">Aron Halfen</span> — Head of Policy, ForUM (Norwegian Forum for Development and Environment)</p>
+        <p>Noruega presenta su tercer Examen Nacional Voluntario. Un momento para evaluar honestamente qué ha cambiado realmente y qué tiene que decir la sociedad civil sobre la brecha entre la ambición política y la realidad vivida.</p>
+        <a href="https://soundcloud.com/user-975127425/beyond-the-review" target="_blank" class="podcast-link">🎧 Escuchar en SoundCloud →</a>
       </div>
+
+      <!-- Episodio 2 - Estonia -->
       <div class="podcast-card">
-        <span class="podcast-num">2</span>
-        <div>
+        <div class="podcast-icon">
+          <span class="num">2</span>
+          <span class="icon">🇪🇪</span>
           <span class="podcast-meta">Episodio 2</span>
-          <p><span class="podcast-name">Felisberto de Barros Silva Moreira — PLATONG (Cabo Verde)</span></p>
         </div>
+        <h4>Beyond the Review: Lessons from Estonia on SDGs implementation and civil society engagement</h4>
+        <p><span class="podcast-speaker">Iti Aavik</span> — Head of International Projects, AKÜ (Estonian Roundtable for Development Cooperation)</p>
+        <p>Estonia presenta su tercer ENV. Un país pequeño pero digitalmente avanzado que ha integrado los ODS en su estrategia nacional a largo plazo, con una sociedad civil que empuja para que la ambición se traduzca en acción.</p>
+        <a href="https://soundcloud.com/user-975127425/beyond-the-review-lessons-from" target="_blank" class="podcast-link">🎧 Escuchar en SoundCloud →</a>
       </div>
+
+      <!-- Episodio 3 - Brasil -->
       <div class="podcast-card">
-        <span class="podcast-num">3</span>
-        <div>
+        <div class="podcast-icon">
+          <span class="num">3</span>
+          <span class="icon">🇧🇷</span>
           <span class="podcast-meta">Episodio 3</span>
-          <p><span class="podcast-name">Henrique Botelho Frota — ABONG (Brazil)</span></p>
         </div>
-      </div>
-      <div class="podcast-card">
-        <span class="podcast-num">4</span>
-        <div>
-          <span class="podcast-meta">Episodio 4</span>
-          <p><span class="podcast-name">Iti — AKÜ (Estonia)</span></p>
-        </div>
-      </div>
-      <div class="podcast-card">
-        <span class="podcast-num">5</span>
-        <div>
-          <span class="podcast-meta">Episodio 5</span>
-          <p><span class="podcast-name">Jose Ramon Avila Quiñonez — ASONOG (Honduras)</span></p>
-          <p><span class="podcast-name">Malick Ndome — CONGAD (Senegal)</span></p>
-          <p><span class="podcast-name">Mylène Lawson — ADRA (Togo)</span></p>
-        </div>
+        <h4>Beyond the Review: Lessons from Brazil on occupying multilateral spaces with concrete proposals and an independent voice</h4>
+        <p><span class="podcast-speaker">Henrique Frota</span> — President, ABONG (Brazilian Association of NGOs)</p>
+        <p>Brasil presenta su tercer ENV. Un país de dimensiones continentales, profundas desigualdades y una sociedad civil extraordinariamente vibrante que ha mostrado al mundo cómo ocupar espacios multilaterales con propuestas concretas y voz independiente.</p>
+        <a href="https://soundcloud.com/user-975127425/en-beyond-the-review-lessons" target="_blank" class="podcast-link">🎧 Escuchar en SoundCloud →</a>
       </div>
     </div>
+
     <div class="report-box" style="margin-top:24px;">
       <h3>🎧 Escucha la serie completa</h3>
-      <p>Disponible en <span class="placeholder">[plataforma de podcast]</span>.</p>
+      <p>La serie "Beyond the Review" explora lo que los informes oficiales no capturan: las realidades que enfrentan las comunidades, los desafíos que persisten y el papel de la sociedad civil en el desarrollo sostenible.</p>
       <div class="report-actions">
-        <a href="#" class="btn btn-primary">Escuchar la serie</a>
+        <a href="https://www.forus-international.org/en/a-space-for-us" target="_blank" class="btn btn-primary">🌐 Todos los podcasts de Forus</a>
       </div>
     </div>
   </div>
@@ -1189,6 +1292,15 @@ Ningún futuro sostenible puede construirse sin la sociedad civil.
         <span class="tag">#VNR2026</span>
         <span class="tag">#BeyondTheReview</span>
         <span class="tag">#Post2030</span>
+        <span class="tag">#FPAN2026</span>
+        <span class="tag">#CSST</span>
+        <span class="tag">#CooperaciónSurSur</span>
+        <span class="tag">#ENV2026</span>
+        <span class="tag">#FPHN2026</span>
+        <span class="tag">#ENV</span>
+        <span class="tag">#ODS</span>
+        <span class="tag">#ODD</span>
+        <span class="tag">#ASpaceForUs</span>
       </div>
     </div>
   </div>
@@ -1208,6 +1320,22 @@ Ningún futuro sostenible puede construirse sin la sociedad civil.
       <div class="account-card"><div class="av">SS</div><h5>UNOSSC</h5><span>@UNOSSC</span></div>
       <div class="account-card"><div class="av">UN</div><h5>United Nations</h5><span>@UN</span></div>
       <div class="account-card"><div class="av">UD</div><h5>UNDP</h5><span>@UNDP</span></div>
+      <div class="account-card"><div class="av">EU</div><h5>European Union</h5><span>@EU</span></div>
+    </div>
+
+    <h4 style="margin:24px 0 10px; color:var(--forus-dark-azure);">Organizaciones socias</h4>
+    <div class="account-grid">
+      <div class="account-card"><div class="av" style="background:var(--forus-vivid-crimson);">AF</div><h5>AFD</h5><span>@AFD_France</span></div>
+      <div class="account-card"><div class="av" style="background:var(--forus-vivid-crimson);">FF</div><h5>Fondation de France</h5><span>@Fondationfrance</span></div>
+      <div class="account-card"><div class="av" style="background:var(--forus-vivid-crimson);">OX</div><h5>Oxfam Hong Kong</h5><span>@oxfamhongkong</span></div>
+      <div class="account-card"><div class="av" style="background:var(--forus-vivid-crimson);">GM</div><h5>Govt. Monaco</h5><span>@GvtMonaco</span></div>
+      <div class="account-card"><div class="av" style="background:var(--forus-vivid-crimson);">EU</div><h5>EU at UN</h5><span>@EUatUN</span></div>
+      <div class="account-card"><div class="av" style="background:var(--forus-vivid-crimson);">HV</div><h5>Hivos</h5><span>@Hivos</span></div>
+      <div class="account-card"><div class="av" style="background:var(--forus-vivid-crimson);">CV</div><h5>CIVICUS</h5><span>@CIVICUS</span></div>
+      <div class="account-card"><div class="av" style="background:var(--forus-vivid-crimson);">TI</div><h5>Transparency Intl</h5><span>@TransparIntl</span></div>
+      <div class="account-card"><div class="av" style="background:var(--forus-vivid-crimson);">OXN</div><h5>Oxfam Novib</h5><span>@OxfamNovib</span></div>
+      <div class="account-card"><div class="av" style="background:var(--forus-vivid-crimson);">L23</div><h5>Local2030</h5><span>@Local2030</span></div>
+      <div class="account-card"><div class="av" style="background:var(--forus-vivid-crimson);">UNH</div><h5>UN-Habitat</h5><span>@UN_Habitat</span></div>
     </div>
 
     <h4 style="margin:24px 0 10px; color:var(--forus-dark-azure);">Plataformas nacionales miembros</h4>
@@ -1242,7 +1370,7 @@ Ningún futuro sostenible puede construirse sin la sociedad civil.
 <!-- ==================== CONTENIDO INGLÉS ==================== -->
 <div class="lang-content" id="lang-en">
 
-<!-- WINDOW: HOME -->
+<!-- WINDOW: HOME (English) -->
 <div class="page-window active" id="page-inicio-en">
   <div class="wrap">
     <span class="page-tag">01 / Welcome</span>
@@ -1410,19 +1538,33 @@ Ningún futuro sostenible puede construirse sin la sociedad civil.
     <h2 class="section-title">Social media posts</h2>
     <p class="lead">Ready-to-use content for any social platform.</p>
 
-    <div class="post-section-title">📢 PRE-LAUNCH <span class="badge badge-pre">2–6 July</span></div>
-    <div class="post-card"><div class="post-head"><span class="obj-pill">Kick-off</span><span class="post-date">Thursday, July 2</span></div><div class="post-body"><div class="post-copy">🎯🌍📢🤝 As governments, civil society and UN stakeholders gather for the #HLPF2026 how do we move from commitments to action?
+    <!-- Thursday, July 2 -->
+    <div class="post-card">
+      <div class="post-head"><span class="obj-pill">Intro HLPF</span><span class="post-date">Thursday, July 2 2026</span></div>
+      <div class="post-body">
+        <div class="post-copy">🌍 As governments, civil society and UN stakeholders gather for #HLPF2026, how do we turn commitments into action?
 
-This year, #Forus and its members are bringing local experiences, civil society evidence and practical solutions to global discussions on sustainable development. From Voluntary National Reviews to the future of the post-2030 agenda, we believe meaningful participation and accountability must remain at the heart of international cooperation.
+This year, #Forus and its members are bringing local experiences, civil society evidence and practical solutions to global discussions on sustainable development.
 
-Over the coming days, we'll be sharing insights, reports, podcasts, events and perspectives from across our network.
+From Voluntary National Reviews (VNRs) to shaping the future beyond the #Agenda2030, we believe that meaningful participation and accountability must remain at the heart of international cooperation.
 
-https://www.forus-international.org/en/campaigns?modal_page=page&modal_detail_id=high-level-political-forum-2026
+📢 Over the coming days, we'll be sharing reports, podcasts, events, insights and perspectives from across our network.
 
-#HLPF2026 #Agenda2030 #GlobalGoals #Forus #CivilSociety</div><div class="post-cta"><strong>CTA:</strong> Follow the conversation</div></div></div>
-    <div class="post-card"><div class="post-head"><span class="obj-pill">Report Teaser</span><span class="post-date">Friday, July 3</span></div><div class="post-body"><div class="post-copy">📢📄🌍🔍 New report launch | 7 July 2026
+🔗 https://www.forus-international.org/en/campaigns?modal_page=page&modal_detail_id=high-level-political-forum-2026
 
-South-South and Triangular Cooperation is increasingly shaping how countries and communities share knowledge, resources and solutions.
+#HLPF2026 #Agenda2030 #GlobalGoals #Forus #CivilSociety</div>
+        <div class="post-tags"><span>@UN</span> <span>@UNDESA</span> <span>@UNDP</span> <span>@EU</span></div>
+        <div class="post-cta"><strong>CTA:</strong> Follow the conversation</div>
+      </div>
+    </div>
+
+    <!-- Friday, July 3 -->
+    <div class="post-card">
+      <div class="post-head"><span class="obj-pill">Report Announcement</span><span class="post-date">Friday, July 3 2026</span></div>
+      <div class="post-body">
+        <div class="post-copy">📢 New Report Launch | 7 July 2026
+
+🌍 South-South and Triangular Cooperation (SSTC) is increasingly shaping how countries and communities share knowledge, resources and solutions.
 
 But what makes these partnerships truly effective?
 
@@ -1430,77 +1572,179 @@ Drawing on more than 20 case studies from across the Forus network, our new glob
 
 The report highlights practical lessons on peer exchange, shared learning, governance, participation and partnership-building.
 
-Join us during #HLPF2026 as we launch the report and discuss how cooperation can better support sustainable development. Register here: https://us02web.zoom.us/meeting/register/WXoC-XbeQ9yPugq_IybHDQ#/registration
+🤝 Join us during #HLPF2026 as we launch the report and discuss how cooperation can better support sustainable development.
 
-#SSTC #SouthSouthCooperation #SDGs #HLPF2026 #Forus</div><div class="post-cta"><strong>CTA:</strong> Register for the launch</div></div></div>
+📝 Register here: https://us02web.zoom.us/meeting/register/WXoC-XbeQ9yPugq_IybHDQ#/registration
 
-    <div class="post-section-title">🚀 DURING HLPF <span class="badge badge-launch">7–14 July</span></div>
-    <div class="post-card"><div class="post-head"><span class="obj-pill">SSTC Launch</span><span class="post-date">Monday, July 7</span></div><div class="post-body"><div class="post-copy">🌍🤝📊💡 What does effective South-South and Triangular Cooperation look like in practice?
+#SSTC #SouthSouthCooperation #SDGs #HLPF2026 #Forus</div>
+        <div class="post-tags"><span>@UNOSSC</span> <span>@UNDESA</span> <span>@UNDP</span> <span>@EU</span> <span>@AFD_France</span> <span>@Fondationfrance</span> <span>@oxfamhongkong</span> <span>@GvtMonaco</span> <span>@EUatUN</span></div>
+        <div class="post-cta"><strong>CTA:</strong> Register for the launch</div>
+      </div>
+    </div>
+
+    <!-- Monday, July 7 -->
+    <div class="post-card">
+      <div class="post-head"><span class="obj-pill">Virtual Launch</span><span class="post-date">Monday, July 7 2026</span></div>
+      <div class="post-body">
+        <div class="post-copy">🌍 What does effective South-South and Triangular Cooperation look like in practice?
 
 Together with partners and civil society leaders, we'll explore how locally driven cooperation can strengthen development outcomes, promote shared learning and support more inclusive decision-making.
 
-The conversation will build on findings from Forus' new global SSTC report. Read the executive summary here: https://www.forus-international.org/en/extra/hub/resources-publications?modal_page=pdf&modal_detail_id=executive-summary-cooperation-that-works-civil-society-in-south-south-and-triangular-cooperation
+💡 The conversation will build on the findings of Forus' new global SSTC report, highlighting practical experiences and recommendations from across our network.
 
-#HLPF2026 #SSTC #SouthSouthCooperation #Forus</div><div class="post-cta"><strong>CTA:</strong> Read the executive summary</div></div></div>
-    <div class="post-card"><div class="post-head"><span class="obj-pill">VNRs</span><span class="post-date">Tuesday, July 8</span></div><div class="post-body"><div class="post-copy">📊🌍🗣️📢 This year, 13 Forus National Platforms are based in countries presenting Voluntary National Reviews (#VNRs) at the United Nations High-Level Political Forum.
+📖 Read the Executive Summary here:
+https://www.forus-international.org/en/extra/hub/resources-publications?modal_page=pdf&modal_detail_id=executive-summary-cooperation-that-works-civil-society-in-south-south-and-triangular-cooperation
 
-Our members are working every day to monitor progress, engage communities and hold decision-makers accountable for #SDG commitments. The VNR process is an important opportunity for governments to report on implementation. But accountability is strongest when civil society voices are also heard.
+#HLPF2026 #SSTC #SouthSouthCooperation #Forus</div>
+        <div class="post-tags"><span>@UNOSSC</span> <span>@UNDESA</span> <span>@UNDP</span> <span>@EU</span> <span>@AFD_France</span> <span>@Fondationfrance</span> <span>@oxfamhongkong</span> <span>@GvtMonaco</span> <span>@EUatUN</span></div>
+        <div class="post-cta"><strong>CTA:</strong> Read the executive summary</div>
+      </div>
+    </div>
 
-That's why Forus members will be sharing their perspectives, lessons learned and recommendations throughout #HLPF2026.
+    <!-- Tuesday, July 8 -->
+    <div class="post-card">
+      <div class="post-head"><span class="obj-pill">VNRs & Platforms</span><span class="post-date">Tuesday, July 8 2026</span></div>
+      <div class="post-body">
+        <div class="post-copy">🌍 This year, 13 Forus National Platforms are based in countries presenting Voluntary National Reviews (#VNRs) at the United Nations High-Level Political Forum.
 
-Learn more about our engagement here: https://www.forus-international.org/en/agenda-2030
+Every day, our members work to monitor progress, engage communities and hold decision-makers accountable for their #SDG commitments.
 
-#VNR2026 #Agenda2030 #SDGs #CivilSociety #Forus</div><div class="post-cta"><strong>CTA:</strong> Learn more about our engagement</div></div></div>
-    <div class="post-card"><div class="post-head"><span class="obj-pill">Beyond the Review</span><span class="post-date">Thursday, July 9</span></div><div class="post-body"><div class="post-copy">🎙️🌍📢🔍 What happens beyond the Voluntary National Review?
+The VNR process is an important opportunity for governments to report on the implementation of the #Agenda2030. But accountability is strongest when civil society voices are also heard.
 
-As countries present their progress on the Sustainable Development Goals, Forus is launching a new season of Beyond the Review.
+🤝 That's why Forus members will be sharing their perspectives, lessons learned and recommendations throughout #HLPF2026.
 
-Through conversations with National Platforms and civil society leaders, the series explores what the official reports often cannot capture: the realities communities face, the challenges that remain, and the role civil society plays in driving sustainable development forward.
+🔗 Learn more about our engagement:
+https://www.forus-international.org/en/agenda-2030
 
-Stay tuned for the first episodes during #HLPF2026. Listen to all our podcasts here: https://www.forus-international.org/en/a-space-for-us
+#VNR2026 #Agenda2030 #SDGs #CivilSociety #Forus</div>
+        <div class="post-tags"><span>@UN</span> <span>@UNDESA</span> <span>@UNDP</span> <span>@EU</span></div>
+        <div class="post-cta"><strong>CTA:</strong> Learn more about our engagement</div>
+      </div>
+    </div>
 
-#BeyondTheReview #Agenda2030 #VNR2026 #Forus #CivilSociety</div><div class="post-cta"><strong>CTA:</strong> Listen to the podcasts</div></div></div>
-    <div class="post-card"><div class="post-head"><span class="obj-pill">Civic Space</span><span class="post-date">Thursday, July 9</span></div><div class="post-body"><div class="post-copy">🕊️🌍📊🔍 Sustainable development depends on an enabling environment for civil society.
+    <!-- Thursday, July 9 - Beyond the Review -->
+    <div class="post-card">
+      <div class="post-head"><span class="obj-pill">Beyond the Review</span><span class="post-date">Thursday, July 9 2026</span></div>
+      <div class="post-body">
+        <div class="post-copy">🎙️ What happens beyond the Voluntary National Review?
 
-Through the #EUSEE initiative, civil society organisations in 86 countries are documenting changes in civic space, participation, freedoms and the conditions that allow organisations to contribute effectively to development processes.
+As countries present their progress on the Sustainable Development Goals (SDGs), Forus is launching a new season of Beyond the Review.
 
-As governments present their Voluntary National Reviews at #HLPF2026, this evidence provides an important complement to official reporting and helps us better understand whether civil society can genuinely participate in shaping development outcomes.
+Through conversations with National Platforms and civil society leaders, the series explores what official reports often cannot capture: the realities communities face, the challenges that remain, and the vital role civil society plays in advancing sustainable development.
 
-#HLPF2026 #CivilSociety #SDGs #Agenda2030 #Forus #VNRs</div><div class="post-cta"><strong>CTA:</strong> Learn more about EU-SEE</div></div></div>
-    <div class="post-card"><div class="post-head"><span class="obj-pill">African Voices</span><span class="post-date">Tuesday, July 14, 1:15–2:45 PM EST</span></div><div class="post-body"><div class="post-copy">🌍🗣️🌍📢 Forus Africa voices speak loud at the UN today — governance, accountability and African agency, on their own terms.
+🎧 Stay tuned for the first episodes during #HLPF2026.
 
-📅 July 14, 1:15–2:45 PM EST
-📍 United Nations, New York</div><div class="post-cta"><strong>CTA:</strong> Amplify African voices</div></div></div>
-    <div class="post-card"><div class="post-head"><span class="obj-pill">Localising SDGs</span><span class="post-date">Tuesday, July 14, 3:00–6:00 PM EDT</span></div><div class="post-body"><div class="post-copy">📍🌍📊🗣️ Our Chair Justina Kaluinaitė from the Lithuanian NGDO Platform takes the floor today: localising the SDGs is the key to making change reach where it matters.
+🔗 Listen to all our podcasts here:
+https://www.forus-international.org/en/a-space-for-us
 
-📅 July 14, 3:00–6:00 PM EDT
-📍 New York</div><div class="post-cta"><strong>CTA:</strong> Read the policy brief</div></div></div>
+#BeyondTheReview #Agenda2030 #VNR2026 #Forus #CivilSociety</div>
+        <div class="post-tags"><span>@UN</span> <span>@UNDESA</span> <span>@UNDP</span> <span>@Hivos</span> <span>@EU</span></div>
+        <div class="post-cta"><strong>CTA:</strong> Listen to the podcasts</div>
+      </div>
+    </div>
 
-    <div class="post-section-title">🔁 AFTER <span class="badge badge-after">16–19 July</span></div>
-    <div class="post-card"><div class="post-head"><span class="obj-pill">Post-2030 Vision</span><span class="post-date">Thursday, July 16</span></div><div class="post-body"><div class="post-copy">📸🌍🔮📢 Pictures from the Forus #HLPF2026 event: The future after 2030 is already being shaped.
+    <!-- Thursday, July 9 - EUSEE -->
+    <div class="post-card">
+      <div class="post-head"><span class="obj-pill">EUSEE</span><span class="post-date">Thursday, July 9 2026</span></div>
+      <div class="post-body">
+        <div class="post-copy">🌍 Sustainable development depends on an enabling environment for civil society.
 
-The debate is not only about future goals. It is about participation, accountability, financing and the values that will guide international cooperation in the years ahead.
+Through the #EUSEE initiative, civil society organisations in 86 countries are documenting changes in civic space, participation, fundamental freedoms and the conditions that enable organisations to contribute effectively to development processes.
+
+As governments present their Voluntary National Reviews (VNRs) during #HLPF2026, this evidence provides an important complement to official reporting and helps us better understand whether civil society can genuinely participate in shaping development outcomes.
+
+🔗 Learn more about our work:
+https://www.forus-international.org/en/agenda-2030
+
+#HLPF2026 #CivilSociety #SDGs #Agenda2030 #Forus #VNRs</div>
+        <div class="post-tags"><span>@Hivos</span> <span>@CIVICUS</span> <span>@EU</span> <span>@TransparIntl</span> <span>@OxfamNovib</span> <span>@UNDESA</span></div>
+        <div class="post-cta"><strong>CTA:</strong> Learn more about EU-SEE</div>
+      </div>
+    </div>
+
+    <!-- Tuesday, July 14 - African Agency -->
+    <div class="post-card">
+      <div class="post-head"><span class="obj-pill">African Agency</span><span class="post-date">Tuesday, July 14 2026 | 1:15–2:45 PM EST</span></div>
+      <div class="post-body">
+        <div class="post-copy">🌍 Forus Africa voices are taking the floor at the United Nations today.
+
+Join the discussion on governance, accountability and African leadership, highlighting the role of African civil society in advancing both the Agenda 2030 and the Agenda 2063.
+
+📅 14 July | 1:15–2:45 PM EST
+📍 United Nations, New York
+
+#HLPF2026 #Agenda2030 #Agenda2063 #ForusAfrica #Governance #Accountability #CivilSociety #Forus</div>
+        <div class="post-tags"><span>@UN</span> <span>@UNDESA</span> <span>@UNDP</span> <span>@AFD_France</span> <span>@Fondationfrance</span> <span>@oxfamhongkong</span> <span>@GvtMonaco</span> <span>@EU</span></div>
+        <div class="post-cta"><strong>CTA:</strong> Amplify African voices</div>
+      </div>
+    </div>
+
+    <!-- Tuesday, July 14 - Local2030 -->
+    <div class="post-card">
+      <div class="post-head"><span class="obj-pill">Local2030 Coalition</span><span class="post-date">Tuesday, July 14 2026 | 3:00–6:00 PM EDT</span></div>
+      <div class="post-body">
+        <div class="post-copy">📍 Local2030 Coalition WG1: Launch of the Policy Brief on Localising the Six SDG Transitions
+
+Organiser: Local2030 Coalition – Working Group 1
+
+🎤 Today, our Chair, Justina Kaluinaitė from the Lithuanian NGDO Platform, takes the floor to highlight why localising the #SDGs is key to ensuring that sustainable development creates real change where it matters most.
+
+📅 14 July | 3:00–6:00 PM EDT
+📍 New York
+
+#Local2030 #HLPF2026 #SDGs #Agenda2030 #Localization #CivilSociety #Forus</div>
+        <div class="post-tags"><span>@Local2030</span> <span>@UN_Habitat</span> <span>@UNDESA</span> <span>@UNDP</span> <span>@AFD_France</span> <span>@Fondationfrance</span> <span>@oxfamhongkong</span> <span>@GvtMonaco</span> <span>@EU</span></div>
+        <div class="post-cta"><strong>CTA:</strong> Read the policy brief</div>
+      </div>
+    </div>
+
+    <!-- Thursday, July 16 - Post-2030 -->
+    <div class="post-card">
+      <div class="post-head"><span class="obj-pill">Post-2030 Vision</span><span class="post-date">Thursday, July 16 2026 | 📸 Photo Gallery</span></div>
+      <div class="post-body">
+        <div class="post-copy">📸 Highlights from the Forus #HLPF2026 event
+
+The future beyond 2030 is already taking shape.
+
+The conversation is not only about future goals—it is also about participation, accountability, financing and the values that will guide international cooperation in the years ahead.
 
 Through consultations with members and partners around the world, Forus has developed a collective civil society vision for the post-2030 agenda.
 
-Our vision is built around three simple questions:
+Our vision is built around three key questions:
 
-✔ What must we defend?
-✔ What must we demand?
-✔ What must we decline?
+✔️ What must we defend?
+✔️ What must we demand?
+✔️ What must we reject?
 
-Read our vision: https://www.forus-international.org/en/campaigns?modal_page=campaign&modal_detail_id=forus-post-2030-vision
+🔗 Read our vision:
+https://www.forus-international.org/en/campaigns?modal_page=campaign&modal_detail_id=forus-post-2030-vision
 
-#Post2030 #HLPF2026 #Agenda2030 #Forus</div><div class="post-cta"><strong>CTA:</strong> Read the vision</div></div></div>
-    <div class="post-card"><div class="post-head"><span class="obj-pill">Closing Recap</span><span class="post-date">July 19</span></div><div class="post-body"><div class="post-copy">🌍📢🤝🔮 #HLPF2026 - As we approach the final five years of Agenda 2030 progress depends on partnerships, participation and accountability.
+#Post2030 #HLPF2026 #Agenda2030 #CivilSociety #GlobalGoals #Forus</div>
+        <div class="post-tags"><span>@UN</span> <span>@UNDESA</span> <span>@UNDP</span> <span>@AFD_France</span> <span>@Fondationfrance</span> <span>@oxfamhongkong</span> <span>@GvtMonaco</span> <span>@EU</span></div>
+        <div class="post-cta"><strong>CTA:</strong> Read the vision</div>
+      </div>
+    </div>
+
+    <!-- July 19 - Recap -->
+    <div class="post-card">
+      <div class="post-head"><span class="obj-pill">Final Recap</span><span class="post-date">July 19 2026 | 📸 Photo Gallery</span></div>
+      <div class="post-body">
+        <div class="post-copy">📸 #HLPF2026 Highlights
+
+As we approach the final five years of the #Agenda2030, progress depends on partnerships, participation and accountability.
 
 Throughout #HLPF2026, Forus members from around the world brought local evidence, community perspectives and practical solutions to global conversations on sustainable development.
 
-From Voluntary National Reviews to monitoring of an enabling environment, from South-South Cooperation to the post-2030 agenda, our message remains the same:
+From Voluntary National Reviews (VNRs) and monitoring the enabling environment for civil society, to South-South and Triangular Cooperation and the post-2030 agenda, our message remains the same:
 
-No sustainable future can be built without civil society.
+💙 No sustainable future can be built without civil society.
 
-#HLPF2026 #SDGs #Agenda2030 #Forus #CivilSociety #GlobalGoals</div><div class="post-cta"><strong>CTA:</strong> Share your highlights</div></div></div>
+#HLPF2026 #SDGs #Agenda2030 #Forus #CivilSociety #GlobalGoals</div>
+        <div class="post-tags"><span>@UNOSSC</span> <span>@UN</span> <span>@UNDESA</span> <span>@UNDP</span> <span>@AFD_France</span> <span>@Fondationfrance</span> <span>@oxfamhongkong</span> <span>@GvtMonaco</span> <span>@EU</span></div>
+        <div class="post-cta"><strong>CTA:</strong> Share your highlights</div>
+      </div>
+    </div>
+
   </div>
 </div>
 
@@ -1510,18 +1754,55 @@ No sustainable future can be built without civil society.
     <span class="page-tag">07 / Audio</span>
     <p class="eyebrow">Listen & share</p>
     <h2 class="section-title">Podcast series</h2>
-    <p class="lead">As a complement to the report, Forus presents a series of 5 podcast episodes with voices from the network on South-South and triangular cooperation.</p>
+    <p class="lead">As a complement to the report, Forus presents a series of "Beyond the Review" podcast episodes with voices from the network on SDG implementation and civil society engagement.</p>
+
     <div class="podcast-grid">
-      <div class="podcast-card"><span class="podcast-num">1</span><div><span class="podcast-meta">Episode 1</span><p><span class="podcast-name">Aron Halfen — ForUM (Norway)</span></p></div></div>
-      <div class="podcast-card"><span class="podcast-num">2</span><div><span class="podcast-meta">Episode 2</span><p><span class="podcast-name">Felisberto de Barros Silva Moreira — PLATONG (Cabo Verde)</span></p></div></div>
-      <div class="podcast-card"><span class="podcast-num">3</span><div><span class="podcast-meta">Episode 3</span><p><span class="podcast-name">Henrique Botelho Frota — ABONG (Brazil)</span></p></div></div>
-      <div class="podcast-card"><span class="podcast-num">4</span><div><span class="podcast-meta">Episode 4</span><p><span class="podcast-name">Iti — AKÜ (Estonia)</span></p></div></div>
-      <div class="podcast-card"><span class="podcast-num">5</span><div><span class="podcast-meta">Episode 5</span><p><span class="podcast-name">Jose Ramon Avila Quiñonez — ASONOG (Honduras)</span></p><p><span class="podcast-name">Malick Ndome — CONGAD (Senegal)</span></p><p><span class="podcast-name">Mylène Lawson — ADRA (Togo)</span></p></div></div>
+      <!-- Episode 1 - Norway -->
+      <div class="podcast-card">
+        <div class="podcast-icon">
+          <span class="num">1</span>
+          <span class="icon">🇳🇴</span>
+          <span class="podcast-meta">Episode 1</span>
+        </div>
+        <h4>Beyond the Review - Lessons from Norway on transformative actions for the 2030 Agenda</h4>
+        <p><span class="podcast-speaker">Aron Halfen</span> — Head of Policy, ForUM (Norwegian Forum for Development and Environment)</p>
+        <p>Norway is presenting its third Voluntary National Review. A moment for honest reckoning: what has actually changed, what hasn't, and what civil society has to say about the gap between political ambition and lived reality.</p>
+        <a href="https://soundcloud.com/user-975127425/beyond-the-review" target="_blank" class="podcast-link">🎧 Listen on SoundCloud →</a>
+      </div>
+
+      <!-- Episode 2 - Estonia -->
+      <div class="podcast-card">
+        <div class="podcast-icon">
+          <span class="num">2</span>
+          <span class="icon">🇪🇪</span>
+          <span class="podcast-meta">Episode 2</span>
+        </div>
+        <h4>Beyond the Review: Lessons from Estonia on SDGs implementation and civil society engagement</h4>
+        <p><span class="podcast-speaker">Iti Aavik</span> — Head of International Projects, AKÜ (Estonian Roundtable for Development Cooperation)</p>
+        <p>Estonia is presenting its third VNR. A small but digitally advanced country that has embedded the SDGs into its long-term national strategy, with civil society consistently pushing to make sure ambition translates into action.</p>
+        <a href="https://soundcloud.com/user-975127425/beyond-the-review-lessons-from" target="_blank" class="podcast-link">🎧 Listen on SoundCloud →</a>
+      </div>
+
+      <!-- Episode 3 - Brazil -->
+      <div class="podcast-card">
+        <div class="podcast-icon">
+          <span class="num">3</span>
+          <span class="icon">🇧🇷</span>
+          <span class="podcast-meta">Episode 3</span>
+        </div>
+        <h4>Beyond the Review: Lessons from Brazil on occupying multilateral spaces with concrete proposals and an independent voice</h4>
+        <p><span class="podcast-speaker">Henrique Frota</span> — President, ABONG (Brazilian Association of NGOs)</p>
+        <p>Brazil is presenting its third VNR. A country of continental dimensions, profound inequalities, and an extraordinarily vibrant civil society that has shown the world what it means to occupy multilateral spaces with concrete proposals and an independent voice.</p>
+        <a href="https://soundcloud.com/user-975127425/en-beyond-the-review-lessons" target="_blank" class="podcast-link">🎧 Listen on SoundCloud →</a>
+      </div>
     </div>
+
     <div class="report-box" style="margin-top:24px;">
       <h3>🎧 Listen to the full series</h3>
-      <p>Available on <span class="placeholder">[podcast platform]</span>.</p>
-      <div class="report-actions"><a href="#" class="btn btn-primary">Listen to the series</a></div>
+      <p>The "Beyond the Review" series explores what official reports cannot capture: the realities communities face, the challenges that remain, and the role civil society plays in driving sustainable development forward.</p>
+      <div class="report-actions">
+        <a href="https://www.forus-international.org/en/a-space-for-us" target="_blank" class="btn btn-primary">🌐 All Forus podcasts</a>
+      </div>
     </div>
   </div>
 </div>
@@ -1540,6 +1821,7 @@ No sustainable future can be built without civil society.
         <span class="tag">#2030Agenda</span><span class="tag">#CivilSociety</span><span class="tag">#CivilSocietyVoice</span>
         <span class="tag">#SouthSouthCooperation</span><span class="tag">#LeaveNoOneBehind</span><span class="tag">#GlobalAdvocacy</span>
         <span class="tag">#VNR2026</span><span class="tag">#BeyondTheReview</span><span class="tag">#Post2030</span>
+        <span class="tag">#ASpaceForUs</span>
       </div>
     </div>
   </div>
@@ -1558,6 +1840,21 @@ No sustainable future can be built without civil society.
       <div class="account-card"><div class="av">SS</div><h5>UNOSSC</h5><span>@UNOSSC</span></div>
       <div class="account-card"><div class="av">UN</div><h5>United Nations</h5><span>@UN</span></div>
       <div class="account-card"><div class="av">UD</div><h5>UNDP</h5><span>@UNDP</span></div>
+      <div class="account-card"><div class="av">EU</div><h5>European Union</h5><span>@EU</span></div>
+    </div>
+    <h4 style="margin:24px 0 10px; color:var(--forus-dark-azure);">Partner organizations</h4>
+    <div class="account-grid">
+      <div class="account-card"><div class="av" style="background:var(--forus-vivid-crimson);">AF</div><h5>AFD</h5><span>@AFD_France</span></div>
+      <div class="account-card"><div class="av" style="background:var(--forus-vivid-crimson);">FF</div><h5>Fondation de France</h5><span>@Fondationfrance</span></div>
+      <div class="account-card"><div class="av" style="background:var(--forus-vivid-crimson);">OX</div><h5>Oxfam Hong Kong</h5><span>@oxfamhongkong</span></div>
+      <div class="account-card"><div class="av" style="background:var(--forus-vivid-crimson);">GM</div><h5>Govt. Monaco</h5><span>@GvtMonaco</span></div>
+      <div class="account-card"><div class="av" style="background:var(--forus-vivid-crimson);">EU</div><h5>EU at UN</h5><span>@EUatUN</span></div>
+      <div class="account-card"><div class="av" style="background:var(--forus-vivid-crimson);">HV</div><h5>Hivos</h5><span>@Hivos</span></div>
+      <div class="account-card"><div class="av" style="background:var(--forus-vivid-crimson);">CV</div><h5>CIVICUS</h5><span>@CIVICUS</span></div>
+      <div class="account-card"><div class="av" style="background:var(--forus-vivid-crimson);">TI</div><h5>Transparency Intl</h5><span>@TransparIntl</span></div>
+      <div class="account-card"><div class="av" style="background:var(--forus-vivid-crimson);">OXN</div><h5>Oxfam Novib</h5><span>@OxfamNovib</span></div>
+      <div class="account-card"><div class="av" style="background:var(--forus-vivid-crimson);">L23</div><h5>Local2030</h5><span>@Local2030</span></div>
+      <div class="account-card"><div class="av" style="background:var(--forus-vivid-crimson);">UNH</div><h5>UN-Habitat</h5><span>@UN_Habitat</span></div>
     </div>
     <h4 style="margin:24px 0 10px; color:var(--forus-dark-azure);">Member national platforms</h4>
     <div class="account-grid" style="grid-template-columns:repeat(5,1fr);">
@@ -1759,97 +2056,213 @@ No sustainable future can be built without civil society.
     <h2 class="section-title">Publications pour réseaux sociaux</h2>
     <p class="lead">Contenu prêt à l'emploi pour toute plateforme sociale.</p>
 
-    <div class="post-section-title">📢 PRÉ-LANCEMENT <span class="badge badge-pre">2–6 juillet</span></div>
-    <div class="post-card"><div class="post-head"><span class="obj-pill">Kick-off</span><span class="post-date">Jeudi 2 juillet</span></div><div class="post-body"><div class="post-copy">🎯🌍📢🤝 Alors que les gouvernements, la société civile et les parties prenantes de l'ONU se réunissent pour le #HLPF2026, comment passer des engagements à l'action?
+    <!-- Jeudi 2 juillet -->
+    <div class="post-card">
+      <div class="post-head"><span class="obj-pill">Intro HLPF</span><span class="post-date">Jeudi 2 juillet 2026</span></div>
+      <div class="post-body">
+        <div class="post-copy">🌍 Alors que les gouvernements, les organisations de la société civile et les acteurs des Nations Unies se réunissent au #FPHN2026, comment transformer les engagements en actions concrètes ?
 
-Cette année, #Forus et ses membres apportent des expériences locales, des preuves de la société civile et des solutions pratiques aux discussions mondiales sur le développement durable. Des examens nationaux volontaires à l'avenir du programme post-2030, nous croyons que la participation significative et la redevabilité doivent rester au cœur de la coopération internationale.
+Cette année, #Forus et ses membres apportent des expériences locales, les preuves issues de la société civile et des solutions concrètes aux discussions mondiales sur le développement durable.
 
-Dans les jours à venir, nous partagerons des idées, des rapports, des podcasts, des événements et des perspectives de l'ensemble de notre réseau.
+Des Examens nationaux volontaires (ENV) à l'avenir de l'#Agenda2030, nous sommes convaincus que la participation significative et la redevabilité doivent rester au cœur de la coopération internationale.
 
-https://www.forus-international.org/en/campaigns?modal_page=page&modal_detail_id=high-level-political-forum-2026
+📢 Au cours des prochains jours, nous partagerons des rapports, des podcasts, des événements, des analyses et des perspectives provenant de l'ensemble de notre réseau.
 
-#HLPF2026 #Agenda2030 #GlobalGoals #Forus #CivilSociety</div><div class="post-cta"><strong>CTA:</strong> Suivez la conversation</div></div></div>
-    <div class="post-card"><div class="post-head"><span class="obj-pill">Teaser du rapport</span><span class="post-date">Vendredi 3 juillet</span></div><div class="post-body"><div class="post-copy">📢📄🌍🔍 Nouveau rapport | 7 juillet 2026
+🔗 https://www.forus-international.org/en/campaigns?modal_page=page&modal_detail_id=high-level-political-forum-2026
 
-La coopération Sud-Sud et triangulaire façonne de plus en plus la manière dont les pays et les communautés partagent les connaissances, les ressources et les solutions.
+#FPHN2026 #Agenda2030 #ObjectifsMondiaux #Forus #SociétéCivile</div>
+        <div class="post-tags"><span>@UN</span> <span>@UNDESA</span> <span>@UNDP</span> <span>@EU</span></div>
+        <div class="post-cta"><strong>CTA:</strong> Suivez la conversation</div>
+      </div>
+    </div>
 
-Mais qu'est-ce qui rend ces partenariats vraiment efficaces?
+    <!-- Vendredi 3 juillet -->
+    <div class="post-card">
+      <div class="post-head"><span class="obj-pill">Annonce du rapport</span><span class="post-date">Vendredi 3 juillet 2026</span></div>
+      <div class="post-body">
+        <div class="post-copy">📢 Lancement d'un nouveau rapport | 7 juillet 2026
 
-S'appuyant sur plus de 20 études de cas du réseau Forus, notre nouveau rapport mondial explore comment la coopération Sud-Sud et triangulaire peut devenir plus inclusive, responsable et adaptée aux réalités locales.
+🌍 La coopération Sud-Sud et la coopération triangulaire (CSST) jouent un rôle de plus en plus important dans la manière dont les pays et les communautés partagent leurs connaissances, leurs ressources et leurs solutions.
 
-Le rapport met en lumière des leçons pratiques sur les échanges entre pairs, l'apprentissage partagé, la gouvernance, la participation et la construction de partenariats.
+Mais qu'est-ce qui rend ces partenariats réellement efficaces ?
 
-Rejoignez-nous pendant le #HLPF2026 pour le lancement du rapport et discuter de la manière dont la coopération peut mieux soutenir le développement durable. Inscrivez-vous ici: https://us02web.zoom.us/meeting/register/WXoC-XbeQ9yPugq_IybHDQ#/registration
+S'appuyant sur plus de 20 études de cas issues du réseau Forus, notre nouveau rapport mondial montre comment la coopération Sud-Sud et triangulaire peut devenir plus inclusive, plus responsable et mieux adaptée aux réalités locales.
 
-#SSTC #SouthSouthCooperation #SDGs #HLPF2026 #Forus</div><div class="post-cta"><strong>CTA:</strong> Inscrivez-vous au lancement</div></div></div>
+Le rapport met en avant des enseignements pratiques sur les échanges entre pairs, l'apprentissage partagé, la gouvernance, la participation et le renforcement des partenariats.
 
-    <div class="post-section-title">🚀 PENDANT LE HLPF <span class="badge badge-launch">7–14 juillet</span></div>
-    <div class="post-card"><div class="post-head"><span class="obj-pill">Lancement SSTC</span><span class="post-date">Lundi 7 juillet</span></div><div class="post-body"><div class="post-copy">🌍🤝📊💡 À quoi ressemble une coopération Sud-Sud et triangulaire efficace dans la pratique?
+🤝 Rejoignez-nous pendant le #FPHN2026 pour le lancement du rapport et une discussion sur la manière dont la coopération peut mieux soutenir le développement durable.
 
-Avec des partenaires et des leaders de la société civile, nous explorerons comment la coopération menée localement peut renforcer les résultats du développement, promouvoir l'apprentissage partagé et soutenir une prise de décision plus inclusive.
+📝 Inscrivez-vous ici : https://us02web.zoom.us/meeting/register/WXoC-XbeQ9yPugq_IybHDQ#/registration
 
-La conversation s'appuiera sur les conclusions du nouveau rapport SSTC de Forus. Lisez le résumé analytique ici: https://www.forus-international.org/en/extra/hub/resources-publications?modal_page=pdf&modal_detail_id=executive-summary-cooperation-that-works-civil-society-in-south-south-and-triangular-cooperation
+#CSST #CooperationSudSud #ODD #FPHN2026 #Forus</div>
+        <div class="post-tags"><span>@UNOSSC</span> <span>@UNDESA</span> <span>@UNDP</span> <span>@EU</span> <span>@AFD_France</span> <span>@Fondationfrance</span> <span>@oxfamhongkong</span> <span>@GvtMonaco</span> <span>@EUatUN</span></div>
+        <div class="post-cta"><strong>CTA:</strong> Inscrivez-vous au lancement</div>
+      </div>
+    </div>
 
-#HLPF2026 #SSTC #SouthSouthCooperation #Forus</div><div class="post-cta"><strong>CTA:</strong> Lire le résumé</div></div></div>
-    <div class="post-card"><div class="post-head"><span class="obj-pill">VNRs</span><span class="post-date">Mardi 8 juillet</span></div><div class="post-body"><div class="post-copy">📊🌍🗣️📢 Cette année, 13 Plateformes Nationales de Forus sont basées dans des pays présentant des examens nationaux volontaires (#VNRs) au Forum politique de haut niveau des Nations Unies.
+    <!-- Lundi 7 juillet -->
+    <div class="post-card">
+      <div class="post-head"><span class="obj-pill">Lancement virtuel</span><span class="post-date">Lundi 7 juillet 2026</span></div>
+      <div class="post-body">
+        <div class="post-copy">🌍 À quoi ressemble une coopération Sud-Sud et triangulaire réellement efficace dans la pratique ?
 
-Nos membres travaillent chaque jour pour surveiller les progrès, engager les communautés et tenir les décideurs responsables des engagements #ODD. Le processus des VNRs est une occasion importante pour les gouvernements de rendre compte de la mise en œuvre. Mais la redevabilité est plus forte lorsque les voix de la société civile sont également entendues.
+Aux côtés de partenaires et de leaders de la société civile, nous explorerons comment une coopération portée par les acteurs locaux peut renforcer les résultats du développement, favoriser l'apprentissage mutuel et soutenir une prise de décision plus inclusive.
 
-C'est pourquoi les membres de Forus partageront leurs perspectives, les leçons apprises et leurs recommandations tout au long du #HLPF2026.
+💡 Cette discussion s'appuiera sur les conclusions du nouveau rapport mondial de Forus sur la coopération Sud-Sud et triangulaire (CSST), mettant en lumière des expériences concrètes et des recommandations issues de l'ensemble de notre réseau.
 
-Apprenez-en plus sur notre engagement ici: https://www.forus-international.org/en/agenda-2030
+📖 Consultez le résumé exécutif ici :
+https://www.forus-international.org/en/extra/hub/resources-publications?modal_page=pdf&modal_detail_id=executive-summary-cooperation-that-works-civil-society-in-south-south-and-triangular-cooperation
 
-#VNR2026 #Agenda2030 #SDGs #CivilSociety #Forus</div><div class="post-cta"><strong>CTA:</strong> En savoir plus sur notre engagement</div></div></div>
-    <div class="post-card"><div class="post-head"><span class="obj-pill">Beyond the Review</span><span class="post-date">Jeudi 9 juillet</span></div><div class="post-body"><div class="post-copy">🎙️🌍📢🔍 Que se passe-t-il au-delà de l'examen national volontaire?
+#FPHN2026 #CSST #CooperationSudSud #Forus</div>
+        <div class="post-tags"><span>@UNOSSC</span> <span>@UNDESA</span> <span>@UNDP</span> <span>@EU</span> <span>@AFD_France</span> <span>@Fondationfrance</span> <span>@oxfamhongkong</span> <span>@GvtMonaco</span> <span>@EUatUN</span></div>
+        <div class="post-cta"><strong>CTA:</strong> Lire le résumé exécutif</div>
+      </div>
+    </div>
 
-Alors que les pays présentent leurs progrès sur les Objectifs de développement durable, Forus lance une nouvelle saison de Beyond the Review.
+    <!-- Mardi 8 juillet -->
+    <div class="post-card">
+      <div class="post-head"><span class="obj-pill">ENV et plateformes</span><span class="post-date">Mardi 8 juillet 2026</span></div>
+      <div class="post-body">
+        <div class="post-copy">🌍 Cette année, 13 plateformes nationales de Forus sont présentes dans des pays qui présentent leurs Examens nationaux volontaires (#ENV) au Forum politique de haut niveau des Nations Unies.
 
-À travers des conversations avec les Plateformes Nationales et les leaders de la société civile, la série explore ce que les rapports officiels ne peuvent souvent pas capturer: les réalités auxquelles les communautés sont confrontées, les défis qui subsistent et le rôle que joue la société civile pour faire avancer le développement durable.
+Chaque jour, nos membres suivent les progrès réalisés, mobilisent les communautés et veillent à ce que les décideurs rendent compte de leurs engagements en faveur des #ODD.
 
-Restez à l'écoute pour les premiers épisodes pendant le #HLPF2026. Écoutez tous nos podcasts ici: https://www.forus-international.org/en/a-space-for-us
+Le processus des ENV constitue une occasion essentielle pour les gouvernements de rendre compte de la mise en œuvre de l'#Agenda2030. Mais la redevabilité est plus forte lorsque les voix de la société civile sont également entendues.
 
-#BeyondTheReview #Agenda2030 #VNR2026 #Forus #CivilSociety</div><div class="post-cta"><strong>CTA:</strong> Écouter les podcasts</div></div></div>
-    <div class="post-card"><div class="post-head"><span class="obj-pill">Espace civique</span><span class="post-date">Jeudi 9 juillet</span></div><div class="post-body"><div class="post-copy">🕊️🌍📊🔍 Le développement durable dépend d'un environnement favorable à la société civile.
+🤝 C'est pourquoi les membres de Forus partageront leurs perspectives, leurs enseignements et leurs recommandations tout au long du #FPHN2026.
 
-Grâce à l'initiative #EUSEE, les organisations de la société civile dans 86 pays documentent les changements dans l'espace civique, la participation, les libertés et les conditions qui permettent aux organisations de contribuer efficacement aux processus de développement.
+🔗 Découvrez notre engagement :
+https://www.forus-international.org/en/agenda-2030
 
-Alors que les gouvernements présentent leurs examens nationaux volontaires au #HLPF2026, ces preuves constituent un complément important aux rapports officiels et nous aident à mieux comprendre si la société civile peut véritablement participer à l'élaboration des résultats du développement.
+#ENV2026 #Agenda2030 #ODD #SociétéCivile #Forus</div>
+        <div class="post-tags"><span>@UN</span> <span>@UNDESA</span> <span>@UNDP</span> <span>@EU</span></div>
+        <div class="post-cta"><strong>CTA:</strong> En savoir plus sur notre engagement</div>
+      </div>
+    </div>
 
-#HLPF2026 #CivilSociety #SDGs #Agenda2030 #Forus #VNRs</div><div class="post-cta"><strong>CTA:</strong> En savoir plus sur EU-SEE</div></div></div>
-    <div class="post-card"><div class="post-head"><span class="obj-pill">Voix africaines</span><span class="post-date">Mardi 14 juillet, 13:15–14:45 EST</span></div><div class="post-body"><div class="post-copy">🌍🗣️🌍📢 Les voix de Forus Afrique s'élèvent à l'ONU aujourd'hui — gouvernance, redevabilité et agence africaine, en leurs propres termes.
+    <!-- Jeudi 9 juillet - Beyond the Review -->
+    <div class="post-card">
+      <div class="post-head"><span class="obj-pill">Beyond the Review</span><span class="post-date">Jeudi 9 juillet 2026</span></div>
+      <div class="post-body">
+        <div class="post-copy">🎙️ Que se passe-t-il après l'Examen national volontaire ?
 
-📅 14 juillet, 13:15–14:45 EST
-📍 Nations Unies, New York</div><div class="post-cta"><strong>CTA:</strong> Amplifiez les voix africaines</div></div></div>
-    <div class="post-card"><div class="post-head"><span class="obj-pill">Localiser les ODD</span><span class="post-date">Mardi 14 juillet, 15:00–18:00 EDT</span></div><div class="post-body"><div class="post-copy">📍🌍📊🗣️ Notre Présidente Justina Kaluinaitė de la Plateforme NGDO lituanienne prend la parole aujourd'hui: localiser les ODD est la clé pour que le changement atteigne là où il compte.
+Alors que les pays présentent leurs progrès vers les Objectifs de développement durable (ODD), Forus lance une nouvelle saison de Beyond the Review.
 
-📅 14 juillet, 15:00–18:00 EDT
-📍 New York</div><div class="post-cta"><strong>CTA:</strong> Lire le policy brief</div></div></div>
+À travers des échanges avec les plateformes nationales et des responsables de la société civile, cette série met en lumière ce que les rapports officiels ne montrent pas toujours : les réalités vécues par les communautés, les défis qui subsistent et le rôle essentiel de la société civile dans l'avancement du développement durable.
 
-    <div class="post-section-title">🔁 APRÈS <span class="badge badge-after">16–19 juillet</span></div>
-    <div class="post-card"><div class="post-head"><span class="obj-pill">Vision post-2030</span><span class="post-date">Jeudi 16 juillet</span></div><div class="post-body"><div class="post-copy">📸🌍🔮📢 Photos de l'événement #HLPF2026 de Forus: L'avenir après 2030 est déjà en train de se dessiner.
+🎧 Restez à l'écoute pour découvrir les premiers épisodes pendant le #FPHN2026.
 
-Le débat ne porte pas seulement sur les objectifs futurs. Il s'agit de participation, de redevabilité, de financement et des valeurs qui guideront la coopération internationale dans les années à venir.
+🔗 Écoutez tous nos podcasts ici :
+https://www.forus-international.org/en/a-space-for-us
 
-Grâce à des consultations avec les membres et les partenaires du monde entier, Forus a développé une vision collective de la société civile pour le programme post-2030.
+#BeyondTheReview #Agenda2030 #ENV2026 #Forus #SociétéCivile</div>
+        <div class="post-tags"><span>@UN</span> <span>@UNDESA</span> <span>@UNDP</span> <span>@Hivos</span> <span>@EU</span></div>
+        <div class="post-cta"><strong>CTA:</strong> Écouter les podcasts</div>
+      </div>
+    </div>
 
-Notre vision repose sur trois questions simples:
+    <!-- Jeudi 9 juillet - EUSEE -->
+    <div class="post-card">
+      <div class="post-head"><span class="obj-pill">EUSEE</span><span class="post-date">Jeudi 9 juillet 2026</span></div>
+      <div class="post-body">
+        <div class="post-copy">🌍 Le développement durable dépend d'un environnement favorable à la société civile.
 
-✔ Que devons-nous défendre?
-✔ Que devons-nous exiger?
-✔ Que devons-nous refuser?
+Grâce à l'initiative #EUSEE, des organisations de la société civile dans 86 pays documentent les évolutions de l'espace civique, de la participation, des libertés fondamentales et des conditions permettant aux organisations de contribuer efficacement aux processus de développement.
 
-Lisez notre vision: https://www.forus-international.org/en/campaigns?modal_page=campaign&modal_detail_id=forus-post-2030-vision
+Alors que les gouvernements présentent leurs Examens nationaux volontaires (ENV) pendant le #FPHN2026, ces données viennent compléter les rapports officiels et nous permettent de mieux comprendre si la société civile peut réellement participer à l'élaboration des politiques de développement.
 
-#Post2030 #HLPF2026 #Agenda2030 #Forus</div><div class="post-cta"><strong>CTA:</strong> Lire la vision</div></div></div>
-    <div class="post-card"><div class="post-head"><span class="obj-pill">Récapitulatif</span><span class="post-date">19 juillet</span></div><div class="post-body"><div class="post-copy">🌍📢🤝🔮 #HLPF2026 - Alors que nous approchons des cinq dernières années de l'Agenda 2030, les progrès dépendent des partenariats, de la participation et de la redevabilité.
+🔗 En savoir plus sur notre travail :
+https://www.forus-international.org/en/agenda-2030
 
-Tout au long du #HLPF2026, les membres de Forus du monde entier ont apporté des preuves locales, des perspectives communautaires et des solutions pratiques aux conversations mondiales sur le développement durable.
+#FPHN2026 #SociétéCivile #ODD #Agenda2030 #Forus #ENV</div>
+        <div class="post-tags"><span>@Hivos</span> <span>@CIVICUS</span> <span>@EU</span> <span>@TransparIntl</span> <span>@OxfamNovib</span> <span>@UNDESA</span></div>
+        <div class="post-cta"><strong>CTA:</strong> En savoir plus sur EU-SEE</div>
+      </div>
+    </div>
 
-Des examens nationaux volontaires au suivi d'un environnement favorable, de la coopération Sud-Sud au programme post-2030, notre message reste le même:
+    <!-- Mardi 14 juillet - African Agency -->
+    <div class="post-card">
+      <div class="post-head"><span class="obj-pill">African Agency</span><span class="post-date">Mardi 14 juillet 2026 | 13:15–14:45 EST</span></div>
+      <div class="post-body">
+        <div class="post-copy">🌍 Les voix de Forus Afrique résonnent aujourd'hui aux Nations Unies.
 
-Aucun avenir durable ne peut être construit sans la société civile.
+Participez à cette discussion sur la gouvernance, la redevabilité et le leadership africain, en mettant en lumière le rôle de la société civile africaine dans la mise en œuvre de l'Agenda 2030 et de l'Agenda 2063.
 
-#HLPF2026 #SDGs #Agenda2030 #Forus #CivilSociety #GlobalGoals</div><div class="post-cta"><strong>CTA:</strong> Partagez vos moments forts</div></div></div>
+📅 14 juillet | 13h15–14h45 EST
+📍 Nations Unies, New York
+
+#FPHN2026 #Agenda2030 #Agenda2063 #ForusAfrica #Gouvernance #Redevabilité #SociétéCivile #Forus</div>
+        <div class="post-tags"><span>@UN</span> <span>@UNDESA</span> <span>@UNDP</span> <span>@AFD_France</span> <span>@Fondationfrance</span> <span>@oxfamhongkong</span> <span>@GvtMonaco</span> <span>@EU</span></div>
+        <div class="post-cta"><strong>CTA:</strong> Amplifiez les voix africaines</div>
+      </div>
+    </div>
+
+    <!-- Mardi 14 juillet - Local2030 -->
+    <div class="post-card">
+      <div class="post-head"><span class="obj-pill">Local2030 Coalition</span><span class="post-date">Mardi 14 juillet 2026 | 15:00–18:00 EDT</span></div>
+      <div class="post-body">
+        <div class="post-copy">📍 Coalition Local2030 GT1 : Lancement de la note d'orientation sur la localisation des six transitions des ODD
+
+Organisateur : Coalition Local2030 – Groupe de travail 1
+
+🎤 Aujourd'hui, notre Présidente, Justina Kaluinaitė, de la Plateforme lituanienne des ONG de développement, prend la parole pour rappeler que la localisation des #ODD est essentielle afin que le développement durable produise des changements concrets là où ils sont le plus nécessaires.
+
+📅 14 juillet | 15h00–18h00 EDT
+📍 New York
+
+#Local2030 #FPHN2026 #ODD #Agenda2030 #Localisation #SociétéCivile #Forus</div>
+        <div class="post-tags"><span>@Local2030</span> <span>@UN_Habitat</span> <span>@UNDESA</span> <span>@UNDP</span> <span>@AFD_France</span> <span>@Fondationfrance</span> <span>@oxfamhongkong</span> <span>@GvtMonaco</span> <span>@EU</span></div>
+        <div class="post-cta"><strong>CTA:</strong> Lire la note d'orientation</div>
+      </div>
+    </div>
+
+    <!-- Jeudi 16 juillet - Post-2030 -->
+    <div class="post-card">
+      <div class="post-head"><span class="obj-pill">Vision Post-2030</span><span class="post-date">Jeudi 16 juillet 2026 | 📸 Galerie photos</span></div>
+      <div class="post-body">
+        <div class="post-copy">📸 Retour en images sur l'événement de Forus au #FPHN2026
+
+L'après-2030 est déjà en train de se construire.
+
+Le débat ne porte pas uniquement sur les futurs objectifs. Il concerne aussi la participation, la redevabilité, le financement et les valeurs qui guideront la coopération internationale dans les années à venir.
+
+À travers des consultations avec ses membres et partenaires du monde entier, Forus a élaboré une vision collective de la société civile pour l'après-2030.
+
+Notre vision s'articule autour de trois questions essentielles :
+
+✔️ Que devons-nous défendre ?
+✔️ Que devons-nous revendiquer ?
+✔️ Que devons-nous refuser ?
+
+🔗 Découvrez notre vision :
+https://www.forus-international.org/en/campaigns?modal_page=campaign&modal_detail_id=forus-post-2030-vision
+
+#Post2030 #FPHN2026 #Agenda2030 #SociétéCivile #ODD #Forus</div>
+        <div class="post-tags"><span>@UN</span> <span>@UNDESA</span> <span>@UNDP</span> <span>@AFD_France</span> <span>@Fondationfrance</span> <span>@oxfamhongkong</span> <span>@GvtMonaco</span> <span>@EU</span></div>
+        <div class="post-cta"><strong>CTA:</strong> Lire la vision</div>
+      </div>
+    </div>
+
+    <!-- 19 juillet - Recap -->
+    <div class="post-card">
+      <div class="post-head"><span class="obj-pill">Récapitulatif final</span><span class="post-date">19 juillet 2026 | 📸 Galerie photos</span></div>
+      <div class="post-body">
+        <div class="post-copy">📸 Retour sur les temps forts du #FPHN2026
+
+À l'approche des cinq dernières années de l'#Agenda2030, les progrès reposent sur les partenariats, la participation et la redevabilité.
+
+Tout au long du #FPHN2026, les membres de Forus du monde entier ont apporté des données locales, les perspectives des communautés et des solutions concrètes aux discussions mondiales sur le développement durable.
+
+Des Examens nationaux volontaires (ENV) au suivi d'un environnement favorable à la société civile, en passant par la coopération Sud-Sud et triangulaire (CSST) et l'après-2030, notre message reste le même :
+
+💙 Aucun avenir durable ne peut être construit sans la société civile.
+
+#FPHN2026 #ODD #Agenda2030 #Forus #SociétéCivile #ObjectifsMondiaux</div>
+        <div class="post-tags"><span>@UNOSSC</span> <span>@UN</span> <span>@UNDESA</span> <span>@UNDP</span> <span>@AFD_France</span> <span>@Fondationfrance</span> <span>@oxfamhongkong</span> <span>@GvtMonaco</span> <span>@EU</span></div>
+        <div class="post-cta"><strong>CTA:</strong> Partagez vos moments forts</div>
+      </div>
+    </div>
+
   </div>
 </div>
 
@@ -1859,18 +2272,55 @@ Aucun avenir durable ne peut être construit sans la société civile.
     <span class="page-tag">07 / Audio</span>
     <p class="eyebrow">Écouter et partager</p>
     <h2 class="section-title">Série de podcasts</h2>
-    <p class="lead">En complément du rapport, Forus présente une série de 5 épisodes de podcast avec des voix du réseau sur la coopération Sud-Sud et triangulaire.</p>
+    <p class="lead">En complément du rapport, Forus présente une série d'épisodes du podcast "Beyond the Review" avec des voix du réseau sur la mise en œuvre des ODD et l'engagement de la société civile.</p>
+
     <div class="podcast-grid">
-      <div class="podcast-card"><span class="podcast-num">1</span><div><span class="podcast-meta">Épisode 1</span><p><span class="podcast-name">Aron Halfen — ForUM (Norvège)</span></p></div></div>
-      <div class="podcast-card"><span class="podcast-num">2</span><div><span class="podcast-meta">Épisode 2</span><p><span class="podcast-name">Felisberto de Barros Silva Moreira — PLATONG (Cabo Verde)</span></p></div></div>
-      <div class="podcast-card"><span class="podcast-num">3</span><div><span class="podcast-meta">Épisode 3</span><p><span class="podcast-name">Henrique Botelho Frota — ABONG (Brésil)</span></p></div></div>
-      <div class="podcast-card"><span class="podcast-num">4</span><div><span class="podcast-meta">Épisode 4</span><p><span class="podcast-name">Iti — AKÜ (Estonie)</span></p></div></div>
-      <div class="podcast-card"><span class="podcast-num">5</span><div><span class="podcast-meta">Épisode 5</span><p><span class="podcast-name">Jose Ramon Avila Quiñonez — ASONOG (Honduras)</span></p><p><span class="podcast-name">Malick Ndome — CONGAD (Sénégal)</span></p><p><span class="podcast-name">Mylène Lawson — ADRA (Togo)</span></p></div></div>
+      <!-- Épisode 1 - Norvège -->
+      <div class="podcast-card">
+        <div class="podcast-icon">
+          <span class="num">1</span>
+          <span class="icon">🇳🇴</span>
+          <span class="podcast-meta">Épisode 1</span>
+        </div>
+        <h4>Beyond the Review - Lessons from Norway on transformative actions for the 2030 Agenda</h4>
+        <p><span class="podcast-speaker">Aron Halfen</span> — Head of Policy, ForUM (Norwegian Forum for Development and Environment)</p>
+        <p>La Norvège présente son troisième Examen National Volontaire. Un moment pour évaluer honnêtement ce qui a vraiment changé et ce que la société civile a à dire sur l'écart entre l'ambition politique et la réalité vécue.</p>
+        <a href="https://soundcloud.com/user-975127425/beyond-the-review" target="_blank" class="podcast-link">🎧 Écouter sur SoundCloud →</a>
+      </div>
+
+      <!-- Épisode 2 - Estonie -->
+      <div class="podcast-card">
+        <div class="podcast-icon">
+          <span class="num">2</span>
+          <span class="icon">🇪🇪</span>
+          <span class="podcast-meta">Épisode 2</span>
+        </div>
+        <h4>Beyond the Review: Lessons from Estonia on SDGs implementation and civil society engagement</h4>
+        <p><span class="podcast-speaker">Iti Aavik</span> — Head of International Projects, AKÜ (Estonian Roundtable for Development Cooperation)</p>
+        <p>L'Estonie présente son troisième ENV. Un petit pays mais numériquement avancé qui a intégré les ODD dans sa stratégie nationale à long terme, avec une société civile qui pousse pour que l'ambition se traduise en action.</p>
+        <a href="https://soundcloud.com/user-975127425/beyond-the-review-lessons-from" target="_blank" class="podcast-link">🎧 Écouter sur SoundCloud →</a>
+      </div>
+
+      <!-- Épisode 3 - Brésil -->
+      <div class="podcast-card">
+        <div class="podcast-icon">
+          <span class="num">3</span>
+          <span class="icon">🇧🇷</span>
+          <span class="podcast-meta">Épisode 3</span>
+        </div>
+        <h4>Beyond the Review: Lessons from Brazil on occupying multilateral spaces with concrete proposals and an independent voice</h4>
+        <p><span class="podcast-speaker">Henrique Frota</span> — President, ABONG (Brazilian Association of NGOs)</p>
+        <p>Le Brésil présente son troisième ENV. Un pays aux dimensions continentales, aux profondes inégalités et à la société civile extraordinairement vibrante qui a montré au monde comment occuper les espaces multilatéraux avec des propositions concrètes et une voix indépendante.</p>
+        <a href="https://soundcloud.com/user-975127425/en-beyond-the-review-lessons" target="_blank" class="podcast-link">🎧 Écouter sur SoundCloud →</a>
+      </div>
     </div>
+
     <div class="report-box" style="margin-top:24px;">
       <h3>🎧 Écouter la série complète</h3>
-      <p>Disponible sur <span class="placeholder">[plateforme de podcast]</span>.</p>
-      <div class="report-actions"><a href="#" class="btn btn-primary">Écouter la série</a></div>
+      <p>La série "Beyond the Review" explore ce que les rapports officiels ne capturent pas : les réalités auxquelles les communautés sont confrontées, les défis qui subsistent et le rôle de la société civile dans l'avancement du développement durable.</p>
+      <div class="report-actions">
+        <a href="https://www.forus-international.org/en/a-space-for-us" target="_blank" class="btn btn-primary">🌐 Tous les podcasts de Forus</a>
+      </div>
     </div>
   </div>
 </div>
@@ -1889,6 +2339,9 @@ Aucun avenir durable ne peut être construit sans la société civile.
         <span class="tag">#2030Agenda</span><span class="tag">#CivilSociety</span><span class="tag">#CivilSocietyVoice</span>
         <span class="tag">#SouthSouthCooperation</span><span class="tag">#LeaveNoOneBehind</span><span class="tag">#GlobalAdvocacy</span>
         <span class="tag">#VNR2026</span><span class="tag">#BeyondTheReview</span><span class="tag">#Post2030</span>
+        <span class="tag">#FPHN2026</span><span class="tag">#CSST</span><span class="tag">#CooperationSudSud</span>
+        <span class="tag">#ENV2026</span><span class="tag">#ODD</span><span class="tag">#SociétéCivile</span>
+        <span class="tag">#ASpaceForUs</span>
       </div>
     </div>
   </div>
@@ -1907,6 +2360,21 @@ Aucun avenir durable ne peut être construit sans la société civile.
       <div class="account-card"><div class="av">SS</div><h5>UNOSSC</h5><span>@UNOSSC</span></div>
       <div class="account-card"><div class="av">UN</div><h5>United Nations</h5><span>@UN</span></div>
       <div class="account-card"><div class="av">UD</div><h5>UNDP</h5><span>@UNDP</span></div>
+      <div class="account-card"><div class="av">EU</div><h5>European Union</h5><span>@EU</span></div>
+    </div>
+    <h4 style="margin:24px 0 10px; color:var(--forus-dark-azure);">Organisations partenaires</h4>
+    <div class="account-grid">
+      <div class="account-card"><div class="av" style="background:var(--forus-vivid-crimson);">AF</div><h5>AFD</h5><span>@AFD_France</span></div>
+      <div class="account-card"><div class="av" style="background:var(--forus-vivid-crimson);">FF</div><h5>Fondation de France</h5><span>@Fondationfrance</span></div>
+      <div class="account-card"><div class="av" style="background:var(--forus-vivid-crimson);">OX</div><h5>Oxfam Hong Kong</h5><span>@oxfamhongkong</span></div>
+      <div class="account-card"><div class="av" style="background:var(--forus-vivid-crimson);">GM</div><h5>Govt. Monaco</h5><span>@GvtMonaco</span></div>
+      <div class="account-card"><div class="av" style="background:var(--forus-vivid-crimson);">EU</div><h5>EU at UN</h5><span>@EUatUN</span></div>
+      <div class="account-card"><div class="av" style="background:var(--forus-vivid-crimson);">HV</div><h5>Hivos</h5><span>@Hivos</span></div>
+      <div class="account-card"><div class="av" style="background:var(--forus-vivid-crimson);">CV</div><h5>CIVICUS</h5><span>@CIVICUS</span></div>
+      <div class="account-card"><div class="av" style="background:var(--forus-vivid-crimson);">TI</div><h5>Transparency Intl</h5><span>@TransparIntl</span></div>
+      <div class="account-card"><div class="av" style="background:var(--forus-vivid-crimson);">OXN</div><h5>Oxfam Novib</h5><span>@OxfamNovib</span></div>
+      <div class="account-card"><div class="av" style="background:var(--forus-vivid-crimson);">L23</div><h5>Local2030</h5><span>@Local2030</span></div>
+      <div class="account-card"><div class="av" style="background:var(--forus-vivid-crimson);">UNH</div><h5>UN-Habitat</h5><span>@UN_Habitat</span></div>
     </div>
     <h4 style="margin:24px 0 10px; color:var(--forus-dark-azure);">Plateformes nationales membres</h4>
     <div class="account-grid" style="grid-template-columns:repeat(5,1fr);">
