@@ -83,10 +83,9 @@
     gap:20px;
     flex-wrap:wrap;
   }
-  .logo-banner img.logo-img{
+  .logo-banner img{
     height:50px;
     width:auto;
-    object-fit:contain;
   }
   .logo-banner .logo-text{
     font-size:16px;
@@ -302,6 +301,15 @@
     background:rgba(255,255,255,0.10);
     color:#fff;
     border-color:#fff;
+  }
+  .btn-outline{
+    background:transparent;
+    color:var(--forus-dark-azure);
+    border:2px solid var(--forus-teal);
+  }
+  .btn-outline:hover{
+    background:var(--forus-teal);
+    color:#fff;
   }
   .btn-green{
     background:var(--forus-green);
@@ -646,7 +654,7 @@
     table, thead, tbody, th, td, tr{font-size:11.5px;}
     th, td{padding:6px 10px;}
     .logo-banner{flex-wrap:wrap; justify-content:center; text-align:center; padding:10px 16px;}
-    .logo-banner img.logo-img{height:40px;}
+    .logo-banner img{height:36px;}
     .lang-selector{justify-content:center; flex-wrap:wrap; padding:8px 16px;}
     .hero .hlpf-badge{font-size:12px; padding:8px 18px;}
     .cta-row .btn{font-size:11px; padding:8px 14px;}
@@ -660,7 +668,6 @@
     .toolkit-nav button{font-size:9px; padding:3px 8px;}
     .hero .hlpf-badge{font-size:10px; padding:6px 12px;}
     .cta-row .btn{font-size:10px; padding:6px 12px;}
-    .logo-banner img.logo-img{height:32px;}
   }
 
   /* --- OCULTAR IDIOMAS --- */
@@ -679,7 +686,7 @@
 
 <!-- LOGO BANNER -->
 <div class="logo-banner">
-  <img class="logo-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60'%3E%3Crect width='200' height='60' fill='%2301424d' rx='8'/%3E%3Ctext x='20' y='38' font-family='Arial' font-size='28' font-weight='800' fill='%23ffffff'%3EForus%3C/text%3E%3Ctext x='100' y='38' font-family='Arial' font-size='16' font-weight='400' fill='%2358c4c6'%3E%3C/text%3E%3C/svg%3E" alt="Forus Logo">
+  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60'%3E%3Crect width='200' height='60' fill='%2301424d' rx='8'/%3E%3Ctext x='20' y='38' font-family='Arial' font-size='28' font-weight='800' fill='%23ffffff'%3EForus%3C/text%3E%3C/svg%3E" alt="Forus Logo" style="height:44px;">
   <div>
     <div class="logo-text">HLPF 2026 <span>Toolkit</span></div>
     <div class="logo-sub">High-Level Political Forum on Sustainable Development</div>
@@ -838,24 +845,19 @@
     <table>
       <tr><th>Fecha</th><th>Título</th><th>Objetivo</th></tr>
       <tr>
-        <td><strong>Miércoles 1 julio</strong></td>
-        <td class="event-title">Teaser de expectativa</td>
-        <td>Generar curiosidad inicial sin revelar contenido del reporte.</td>
-      </tr>
-      <tr>
         <td><strong>Jueves 2 julio</strong></td>
-        <td class="event-title">El problema que nadie está resolviendo</td>
-        <td>Conectar la urgencia del contexto ODS con la relevancia del reporte.</td>
+        <td class="event-title">HLPF 2026: De los compromisos a la acción</td>
+        <td>Enmarcar la participación de Forus en el HLPF 2026, destacando que la sociedad civil aporta experiencia local, evidencia y soluciones prácticas para el desarrollo sostenible.</td>
       </tr>
       <tr>
         <td><strong>Viernes 3 julio</strong></td>
-        <td class="event-title">20 historias, un mismo mensaje</td>
-        <td>Mostrar el alcance global de la evidencia recogida en el reporte.</td>
+        <td class="event-title">Teaser del nuevo reporte SSTC</td>
+        <td>Anunciar el próximo lanzamiento del reporte global de Forus sobre cooperación Sur-Sur y triangular, destacando que se basa en más de 20 casos de estudio de la red.</td>
       </tr>
       <tr>
         <td><strong>Lunes 6 julio</strong></td>
-        <td class="event-title">SSTC Report Launch — Webinar Virtual</td>
-        <td><span class="event-org">Organiza: Forus International</span><br>Lanzar oficialmente el reporte SSTC ante toda la red global de Forus y la sociedad civil, destacar los mensajes clave sobre el rol de la sociedad civil en la cooperación Sur-Sur y triangular, y generar impulso antes del lanzamiento presencial en Nueva York. (Disponible en inglés, francés y español, en el Forus Virtual Hub.)</td>
+        <td class="event-title">Forus Virtual Hub: Lanzamiento del Reporte SSTC (Webinar)</td>
+        <td><span class="event-org">Organiza: Forus International</span><br>Lanzar el reporte SSTC para toda la red de Forus y la sociedad civil en general. Generar impulso antes del lanzamiento presencial en Nueva York. (Disponible en inglés, francés y español.)</td>
       </tr>
     </table>
 
@@ -863,14 +865,29 @@
     <table>
       <tr><th>Fecha</th><th>Título</th><th>Objetivo</th></tr>
       <tr>
+        <td><strong>Martes 7 julio</strong></td>
+        <td class="event-title">Lanzamiento del Reporte SSTC (Evento Presencial)</td>
+        <td><span class="event-org">Organiza: Forus International</span><br>Lanzar oficialmente el reporte con diplomáticos, formuladores de políticas y sociedad civil. Presentar las conclusiones y el llamado a la acción.</td>
+      </tr>
+      <tr>
+        <td><strong>Miércoles 8 julio</strong></td>
+        <td class="event-title">Forus y los VNRs 2026</td>
+        <td>Destacar el trabajo de las 13 Plataformas Nacionales de Forus en países que presentan sus VNRs. Enfatizar la importancia de la rendición de cuentas y la participación de la sociedad civil.</td>
+      </tr>
+      <tr>
         <td><strong>Jueves 9 julio</strong></td>
-        <td class="event-title">SSTC Report Launch — Presencial, Nueva York</td>
-        <td><span class="event-org">Organiza: Forus International</span><br>Presentar los hallazgos del reporte y las 5 Calls to Action ante diplomáticos, formuladores de políticas y sociedad civil, y construir alianzas para el seguimiento post-HLPF.</td>
+        <td class="event-title">Nueva temporada de "Beyond the Review"</td>
+        <td>Anunciar el lanzamiento de una nueva temporada del podcast de Forus, que explora lo que los informes oficiales no capturan: las realidades y desafíos de las comunidades.</td>
+      </tr>
+      <tr>
+        <td><strong>Jueves 9 julio</strong></td>
+        <td class="event-title">Iniciativa EU-SEE: Monitoreo del espacio cívico</td>
+        <td>Presentar la iniciativa EU-SEE y cómo documenta los cambios en el espacio cívico en 86 países, complementando los VNRs oficiales.</td>
       </tr>
       <tr>
         <td><strong>Jueves 9 julio<br>13:00–15:00</strong></td>
         <td class="event-title">Roundtable: Pact of the Future, Summit of the Future & Post-2030</td>
-        <td><span class="event-org">Organiza: Misión de la República de Corea ante la ONU</span><br>Posicionar a Forus en el debate post-2030 y construir relaciones diplomáticas con la Misión de Corea y socios aliados.</td>
+        <td><span class="event-org">Organiza: Misión de la República de Corea ante la ONU</span><br>Posicionar a Forus en el debate post-2030 y construir relaciones diplomáticas.</td>
       </tr>
     </table>
 
@@ -908,9 +925,9 @@
         <td><span class="event-org">Organiza: Forus International</span><br>Presentar el marco 3Ds (Defend, Demand, Decline) a audiencia internacional y trazar el camino hacia la Cumbre ODS 2027. <em>(Nota: asistencia obligatoria de todo el staff de Forus en NY; miembros deben confirmar sus speaking slots antes de fin de junio.)</em></td>
       </tr>
       <tr>
-        <td><strong>16 o 19 julio</strong></td>
-        <td class="event-title">Recapitulación del reporte</td>
-        <td>Compartir un resumen/carrusel con los hallazgos clave del reporte.</td>
+        <td><strong>19 julio</strong></td>
+        <td class="event-title">Recapitulación del HLPF 2026</td>
+        <td>Compartir un resumen visual de la participación de Forus en el HLPF 2026 y reforzar el mensaje central: "No hay futuro sostenible sin la sociedad civil".</td>
       </tr>
     </table>
   </div>
@@ -925,99 +942,111 @@
     <p class="lead">Contenido listo para usar o adaptar en cualquier red social. Disponible en inglés (idioma original).</p>
 
     <!-- SECCIÓN 1: PRE-LAUNCH -->
-    <div class="post-section-title">📢 PRE-LAUNCH <span class="badge badge-pre">1–6 July</span></div>
+    <div class="post-section-title">📢 PRE-LAUNCH <span class="badge badge-pre">2–6 July</span></div>
 
     <div class="post-card">
-      <div class="post-head"><span class="obj-pill">Teaser</span><span class="post-date">Wednesday, July 1</span></div>
+      <div class="post-head"><span class="obj-pill">Kick-off</span><span class="post-date">Thursday, July 2</span></div>
       <div class="post-body">
-        <div class="post-copy">👀 Something big is coming from Forus. On July 9, we're breaking the silence on who really powers South-South and Triangular Cooperation.
+        <div class="post-copy">🎯🌍📢🤝 As governments, civil society and UN stakeholders gather for the #HLPF2026 how do we move from commitments to action?
 
-📅 July 9, 2026
-📍 New York
-Stay tuned. 🔥</div>
-        <div class="post-cta"><strong>CTA:</strong> Stay tuned for more</div>
-      </div>
-    </div>
+This year, #Forus and its members are bringing local experiences, civil society evidence and practical solutions to global discussions on sustainable development. From Voluntary National Reviews to the future of the post-2030 agenda, we believe meaningful participation and accountability must remain at the heart of international cooperation.
 
-    <div class="post-card">
-      <div class="post-head"><span class="obj-pill">Urgency</span><span class="post-date">Thursday, July 2</span></div>
-      <div class="post-body">
-        <div class="post-copy">⏳ With just 4 years left to 2030, SDG progress is still stalling. The overlooked solution? Putting civil society at the decision-making table.
+Over the coming days, we'll be sharing insights, reports, podcasts, events and perspectives from across our network.
 
-We're telling you why very soon.
-🔗 Full story coming July 9.</div>
-        <div class="post-cta"><strong>CTA:</strong> Save the date</div>
-      </div>
-    </div>
+https://www.forus-international.org/en/campaigns?modal_page=page&modal_detail_id=high-level-political-forum-2026
 
-    <div class="post-card">
-      <div class="post-head"><span class="obj-pill">Global Stories</span><span class="post-date">Friday, July 3</span></div>
-      <div class="post-body">
-        <div class="post-copy">🌍 From Senegal to the Pacific, from South Korea to Guatemala — 20 real stories of communities reshaping international cooperation.
-
-📅 We tell it all on July 9.
-📍 New York
-Get ready.</div>
-        <div class="post-cta"><strong>CTA:</strong> Get ready</div>
-      </div>
-    </div>
-
-    <div class="post-card">
-      <div class="post-head"><span class="obj-pill">Virtual Launch</span><span class="post-date">Monday, July 6</span></div>
-      <div class="post-body">
-        <div class="post-copy">🔴 LIVE TODAY. Before we touch down in New York, we're launching our report to the world — in English, French and Spanish. Global civil society, one conversation.
-
-📅 Today, July 6, 2026
-📍 Forus Virtual Hub
-🔗 Join us: <a href="https://us02web.zoom.us/meeting/register/WXoC-XbeQ9yPugq_IybHDQ#/registration" target="_blank">Register here</a></div>
-        <div class="post-cta"><strong>CTA:</strong> Join the virtual launch</div>
-      </div>
-    </div>
-
-    <!-- SECCIÓN 2: LAUNCH & HLPF EVENT -->
-    <div class="post-section-title">🚀 LAUNCH & HLPF EVENT <span class="badge badge-launch">9–14 July</span></div>
-
-    <div class="post-card">
-      <div class="post-head"><span class="obj-pill">NY Launch</span><span class="post-date">Thursday, July 9</span></div>
-      <div class="post-body">
-        <div class="post-copy">📢 Big news from Forus! At #HLPF2026 we're launching 'Cooperation That Works: Civil Society in South-South and Triangular Cooperation.'
-
-It brings together evidence from across our network on how civil society makes South-South and triangular cooperation more effective, legitimate and sustainable.
-
-📅 Today, July 9, 2026
-📍 New York
-🔗 Read more: <a href="https://www.forus-international.org/en/resources" target="_blank">forus-international.org/en/resources</a></div>
-        <div class="post-cta"><strong>CTA:</strong> Read the report</div>
-      </div>
-    </div>
-
-    <div class="post-card">
-      <div class="post-head"><span class="obj-pill">Diplomatic Table</span><span class="post-date">Thursday, July 9, 1:00–3:00 PM</span></div>
-      <div class="post-body">
-        <div class="post-copy">🤝 Forus takes a seat at the diplomatic table today to talk about the future of global cooperation.
-
-📅 Today, 1:00–3:00 PM
-📍 RoK Mission to the UN, New York
-Civil society, where the decisions that matter get made.</div>
+#HLPF2026 #Agenda2030 #GlobalGoals #Forus #CivilSociety</div>
         <div class="post-cta"><strong>CTA:</strong> Follow the conversation</div>
       </div>
     </div>
 
     <div class="post-card">
-      <div class="post-head"><span class="obj-pill">Weekend Workshops</span><span class="post-date">Saturday–Sunday, July 11–12</span></div>
+      <div class="post-head"><span class="obj-pill">Report Teaser</span><span class="post-date">Friday, July 3</span></div>
       <div class="post-body">
-        <div class="post-copy">🧠 While the world rests, our network keeps working. Two intensive days of peer learning and shared strategy — laying the groundwork for what's next.
+        <div class="post-copy">📢📄🌍🔍 New report launch | 7 July 2026
 
-📅 July 11–12, 2026
-📍 Scandinavia House, New York</div>
-        <div class="post-cta"><strong>CTA:</strong> Learn more</div>
+South-South and Triangular Cooperation is increasingly shaping how countries and communities share knowledge, resources and solutions.
+
+But what makes these partnerships truly effective?
+
+Drawing on more than 20 case studies from across the Forus network, our new global report explores how South-South and Triangular Cooperation can become more inclusive, accountable and responsive to local realities.
+
+The report highlights practical lessons on peer exchange, shared learning, governance, participation and partnership-building.
+
+Join us during #HLPF2026 as we launch the report and discuss how cooperation can better support sustainable development. Register here: https://us02web.zoom.us/meeting/register/WXoC-XbeQ9yPugq_IybHDQ#/registration
+
+#SSTC #SouthSouthCooperation #SDGs #HLPF2026 #Forus</div>
+        <div class="post-cta"><strong>CTA:</strong> Register for the launch</div>
+      </div>
+    </div>
+
+    <!-- SECCIÓN 2: DURING HLPF -->
+    <div class="post-section-title">🚀 DURING HLPF <span class="badge badge-launch">7–14 July</span></div>
+
+    <div class="post-card">
+      <div class="post-head"><span class="obj-pill">SSTC Launch</span><span class="post-date">Monday, July 7</span></div>
+      <div class="post-body">
+        <div class="post-copy">🌍🤝📊💡 What does effective South-South and Triangular Cooperation look like in practice?
+
+Together with partners and civil society leaders, we'll explore how locally driven cooperation can strengthen development outcomes, promote shared learning and support more inclusive decision-making.
+
+The conversation will build on findings from Forus' new global SSTC report. Read the executive summary here: https://www.forus-international.org/en/extra/hub/resources-publications?modal_page=pdf&modal_detail_id=executive-summary-cooperation-that-works-civil-society-in-south-south-and-triangular-cooperation
+
+#HLPF2026 #SSTC #SouthSouthCooperation #Forus</div>
+        <div class="post-cta"><strong>CTA:</strong> Read the executive summary</div>
+      </div>
+    </div>
+
+    <div class="post-card">
+      <div class="post-head"><span class="obj-pill">VNRs</span><span class="post-date">Tuesday, July 8</span></div>
+      <div class="post-body">
+        <div class="post-copy">📊🌍🗣️📢 This year, 13 Forus National Platforms are based in countries presenting Voluntary National Reviews (#VNRs) at the United Nations High-Level Political Forum.
+
+Our members are working every day to monitor progress, engage communities and hold decision-makers accountable for #SDG commitments. The VNR process is an important opportunity for governments to report on implementation. But accountability is strongest when civil society voices are also heard.
+
+That's why Forus members will be sharing their perspectives, lessons learned and recommendations throughout #HLPF2026.
+
+Learn more about our engagement here: https://www.forus-international.org/en/agenda-2030
+
+#VNR2026 #Agenda2030 #SDGs #CivilSociety #Forus</div>
+        <div class="post-cta"><strong>CTA:</strong> Learn more about our engagement</div>
+      </div>
+    </div>
+
+    <div class="post-card">
+      <div class="post-head"><span class="obj-pill">Beyond the Review</span><span class="post-date">Thursday, July 9</span></div>
+      <div class="post-body">
+        <div class="post-copy">🎙️🌍📢🔍 What happens beyond the Voluntary National Review?
+
+As countries present their progress on the Sustainable Development Goals, Forus is launching a new season of Beyond the Review.
+
+Through conversations with National Platforms and civil society leaders, the series explores what the official reports often cannot capture: the realities communities face, the challenges that remain, and the role civil society plays in driving sustainable development forward.
+
+Stay tuned for the first episodes during #HLPF2026. Listen to all our podcasts here: https://www.forus-international.org/en/a-space-for-us
+
+#BeyondTheReview #Agenda2030 #VNR2026 #Forus #CivilSociety</div>
+        <div class="post-cta"><strong>CTA:</strong> Listen to the podcasts</div>
+      </div>
+    </div>
+
+    <div class="post-card">
+      <div class="post-head"><span class="obj-pill">Civic Space</span><span class="post-date">Thursday, July 9</span></div>
+      <div class="post-body">
+        <div class="post-copy">🕊️🌍📊🔍 Sustainable development depends on an enabling environment for civil society.
+
+Through the #EUSEE initiative, civil society organisations in 86 countries are documenting changes in civic space, participation, freedoms and the conditions that allow organisations to contribute effectively to development processes.
+
+As governments present their Voluntary National Reviews at #HLPF2026, this evidence provides an important complement to official reporting and helps us better understand whether civil society can genuinely participate in shaping development outcomes.
+
+#HLPF2026 #CivilSociety #SDGs #Agenda2030 #Forus #VNRs</div>
+        <div class="post-cta"><strong>CTA:</strong> Learn more about EU-SEE</div>
       </div>
     </div>
 
     <div class="post-card">
       <div class="post-head"><span class="obj-pill">African Voices</span><span class="post-date">Tuesday, July 14, 1:15–2:45 PM EST</span></div>
       <div class="post-body">
-        <div class="post-copy">🌍 Forus Africa voices speak loud at the UN today — governance, accountability and African agency, on their own terms.
+        <div class="post-copy">🌍🗣️🌍📢 Forus Africa voices speak loud at the UN today — governance, accountability and African agency, on their own terms.
 
 📅 July 14, 1:15–2:45 PM EST
 📍 United Nations, New York</div>
@@ -1028,11 +1057,10 @@ Civil society, where the decisions that matter get made.</div>
     <div class="post-card">
       <div class="post-head"><span class="obj-pill">Localising SDGs</span><span class="post-date">Tuesday, July 14, 3:00–6:00 PM EDT</span></div>
       <div class="post-body">
-        <div class="post-copy">📍 Our President Justina takes the floor today: localising the SDGs isn't a technicality — it's the key to making change reach where it matters.
+        <div class="post-copy">📍🌍📊🗣️ Our Chair Justina Kaluinaitė from the Lithuanian NGDO Platform takes the floor today: localising the SDGs is the key to making change reach where it matters.
 
 📅 July 14, 3:00–6:00 PM EDT
-📍 New York
-🔗 Policy brief: <a href="https://www.forus-international.org/en/resources" target="_blank">forus-international.org/en/resources</a></div>
+📍 New York</div>
         <div class="post-cta"><strong>CTA:</strong> Read the policy brief</div>
       </div>
     </div>
@@ -1041,26 +1069,40 @@ Civil society, where the decisions that matter get made.</div>
     <div class="post-section-title">🔁 AFTER <span class="badge badge-after">16–19 July</span></div>
 
     <div class="post-card">
-      <div class="post-head"><span class="obj-pill">Post-2030 Vision</span><span class="post-date">Thursday, July 16, 10:30 AM–12:00 PM</span></div>
+      <div class="post-head"><span class="obj-pill">Post-2030 Vision</span><span class="post-date">Thursday, July 16</span></div>
       <div class="post-body">
-        <div class="post-copy">🔮 What do we defend? What do we demand? What do we no longer accept? Today we present our Post-2030 Vision and chart the road to 2027.
+        <div class="post-copy">📸🌍🔮📢 Pictures from the Forus #HLPF2026 event: The future after 2030 is already being shaped.
 
-📅 Today, July 16, 10:30 AM–12:00 PM
-📍 New York
-The future of cooperation is being written now.
+The debate is not only about future goals. It is about participation, accountability, financing and the values that will guide international cooperation in the years ahead.
 
-🔗 Read more: <a href="https://www.forus-international.org/en/campaign/forus-post-2030-vision" target="_blank">forus-international.org/en/campaign/forus-post-2030-vision</a></div>
-        <div class="post-cta"><strong>CTA:</strong> Join the conversation</div>
+Through consultations with members and partners around the world, Forus has developed a collective civil society vision for the post-2030 agenda.
+
+Our vision is built around three simple questions:
+
+✔ What must we defend?
+✔ What must we demand?
+✔ What must we decline?
+
+Read our vision: https://www.forus-international.org/en/campaigns?modal_page=campaign&modal_detail_id=forus-post-2030-vision
+
+#Post2030 #HLPF2026 #Agenda2030 #Forus</div>
+        <div class="post-cta"><strong>CTA:</strong> Read the vision</div>
       </div>
     </div>
 
     <div class="post-card">
-      <div class="post-head"><span class="obj-pill">Report Recap</span><span class="post-date">July 16 or 19</span></div>
+      <div class="post-head"><span class="obj-pill">Closing Recap</span><span class="post-date">July 19</span></div>
       <div class="post-body">
-        <div class="post-copy">🔁 Missed it? Here's everything you need to know from 'Cooperation That Works' in one thread.
+        <div class="post-copy">🌍📢🤝🔮 #HLPF2026 - As we approach the final five years of Agenda 2030 progress depends on partnerships, participation and accountability.
 
-🔗 Full report: <a href="https://www.forus-international.org/en/resources" target="_blank">forus-international.org/en/resources</a></div>
-        <div class="post-cta"><strong>CTA:</strong> Read the recap</div>
+Throughout #HLPF2026, Forus members from around the world brought local evidence, community perspectives and practical solutions to global conversations on sustainable development.
+
+From Voluntary National Reviews to monitoring of an enabling environment, from South-South Cooperation to the post-2030 agenda, our message remains the same:
+
+No sustainable future can be built without civil society.
+
+#HLPF2026 #SDGs #Agenda2030 #Forus #CivilSociety #GlobalGoals</div>
+        <div class="post-cta"><strong>CTA:</strong> Share your highlights</div>
       </div>
     </div>
 
@@ -1144,6 +1186,9 @@ The future of cooperation is being written now.
         <span class="tag">#SouthSouthCooperation</span>
         <span class="tag">#LeaveNoOneBehind</span>
         <span class="tag">#GlobalAdvocacy</span>
+        <span class="tag">#VNR2026</span>
+        <span class="tag">#BeyondTheReview</span>
+        <span class="tag">#Post2030</span>
       </div>
     </div>
   </div>
@@ -1320,17 +1365,19 @@ The future of cooperation is being written now.
     <span class="phase-label pre">PRE-LAUNCH</span>
     <table>
       <tr><th>Date</th><th>Title</th><th>Objective</th></tr>
-      <tr><td><strong>Wednesday, July 1</strong></td><td class="event-title">Anticipation Teaser</td><td>Build curiosity without revealing report content.</td></tr>
-      <tr><td><strong>Thursday, July 2</strong></td><td class="event-title">The Problem No One Is Solving</td><td>Connect the urgency of the SDG context to the report's relevance.</td></tr>
-      <tr><td><strong>Friday, July 3</strong></td><td class="event-title">20 Stories, One Message</td><td>Show the global scope of the evidence gathered in the report.</td></tr>
-      <tr><td><strong>Monday, July 6</strong></td><td class="event-title">SSTC Report Launch — Virtual Webinar</td><td><span class="event-org">Organiser: Forus International</span><br>Formally launch the SSTC report to the global Forus network and civil society, highlight key messages about civil society's role in South-South and triangular cooperation, and build momentum ahead of the in-person New York launch. (Available in English, French and Spanish, at the Forus Virtual Hub.)</td></tr>
+      <tr><td><strong>Thursday, July 2</strong></td><td class="event-title">HLPF 2026: From Commitments to Action</td><td>Frame Forus' participation in HLPF 2026, highlighting that civil society brings local expertise, evidence and practical solutions for sustainable development.</td></tr>
+      <tr><td><strong>Friday, July 3</strong></td><td class="event-title">Teaser of the new SSTC report</td><td>Announce the upcoming launch of Forus' global report on South-South and triangular cooperation, based on over 20 case studies from the network.</td></tr>
+      <tr><td><strong>Monday, July 6</strong></td><td class="event-title">Forus Virtual Hub: SSTC Report Launch (Webinar)</td><td><span class="event-org">Organiser: Forus International</span><br>Launch the SSTC report for the entire Forus network and civil society at large. Build momentum ahead of the in-person launch in New York. (Available in English, French and Spanish.)</td></tr>
     </table>
 
     <span class="phase-label during">DURING HLPF — Week 1</span>
     <table>
       <tr><th>Date</th><th>Title</th><th>Objective</th></tr>
-      <tr><td><strong>Thursday, July 9</strong></td><td class="event-title">SSTC Report Launch — In-Person, New York</td><td><span class="event-org">Organiser: Forus International</span><br>Present the report's findings and 5 Calls to Action to diplomats, policymakers and civil society, and build alliances for post-HLPF follow-up.</td></tr>
-      <tr><td><strong>Thursday, July 9<br>1:00–3:00 PM</strong></td><td class="event-title">Roundtable: Pact of the Future, Summit of the Future & Post-2030</td><td><span class="event-org">Organiser: Republic of Korea Mission to the United Nations</span><br>Position Forus in the post-2030 debate and build diplomatic relationships with the RoK Mission and allied partners.</td></tr>
+      <tr><td><strong>Tuesday, July 7</strong></td><td class="event-title">SSTC Report Launch (In-Person Event)</td><td><span class="event-org">Organiser: Forus International</span><br>Officially launch the report with diplomats, policymakers and civil society. Present the findings and the call to action.</td></tr>
+      <tr><td><strong>Wednesday, July 8</strong></td><td class="event-title">Forus and the 2026 VNRs</td><td>Highlight the work of Forus' 13 National Platforms in countries presenting their VNRs. Emphasize the importance of accountability and civil society participation.</td></tr>
+      <tr><td><strong>Thursday, July 9</strong></td><td class="event-title">New season of "Beyond the Review"</td><td>Announce the launch of a new season of Forus' podcast, which explores what official reports often cannot capture: the realities and challenges of communities.</td></tr>
+      <tr><td><strong>Thursday, July 9</strong></td><td class="event-title">EU-SEE Initiative: Monitoring Civic Space</td><td>Present the EU-SEE initiative and how it documents changes in civic space in 86 countries, complementing official VNRs.</td></tr>
+      <tr><td><strong>Thursday, July 9<br>1:00–3:00 PM</strong></td><td class="event-title">Roundtable: Pact of the Future, Summit of the Future & Post-2030</td><td><span class="event-org">Organiser: Republic of Korea Mission to the United Nations</span><br>Position Forus in the post-2030 debate and build diplomatic relationships.</td></tr>
     </table>
 
     <span class="phase-label">BETWEEN HLPF WEEKS</span>
@@ -1350,7 +1397,7 @@ The future of cooperation is being written now.
     <table>
       <tr><th>Date</th><th>Title</th><th>Objective</th></tr>
       <tr><td><strong>Thursday, July 16<br>10:30 AM–12:00 PM</strong></td><td class="event-title">Beyond 2030: What Civil Society Defends, Demands and Declines</td><td><span class="event-org">Organiser: Forus International</span><br>Present the 3Ds framework (Defend, Demand, Decline) to an international audience and chart the road to the 2027 SDG Summit. <em>(Note: mandatory attendance for all Forus NY staff; members must confirm speaking slots by end of June.)</em></td></tr>
-      <tr><td><strong>July 16 or 19</strong></td><td class="event-title">Report Recap</td><td>Share a summary/carousel of the report's key findings.</td></tr>
+      <tr><td><strong>July 19</strong></td><td class="event-title">HLPF 2026 Recap</td><td>Share a visual summary of Forus' participation in HLPF 2026 and reinforce the central message: "No sustainable future can be built without civil society."</td></tr>
     </table>
   </div>
 </div>
@@ -1363,22 +1410,97 @@ The future of cooperation is being written now.
     <h2 class="section-title">Social media posts</h2>
     <p class="lead">Ready-to-use content for any social platform.</p>
 
-    <div class="post-section-title">📢 PRE-LAUNCH <span class="badge badge-pre">1–6 July</span></div>
-    <div class="post-card"><div class="post-head"><span class="obj-pill">Teaser</span><span class="post-date">Wednesday, July 1</span></div><div class="post-body"><div class="post-copy">👀 Something big is coming from Forus. On July 9, we're breaking the silence on who really powers South-South and Triangular Cooperation.\n\n📅 July 9, 2026\n📍 New York\nStay tuned. 🔥</div><div class="post-cta"><strong>CTA:</strong> Stay tuned for more</div></div></div>
-    <div class="post-card"><div class="post-head"><span class="obj-pill">Urgency</span><span class="post-date">Thursday, July 2</span></div><div class="post-body"><div class="post-copy">⏳ With just 4 years left to 2030, SDG progress is still stalling. The overlooked solution? Putting civil society at the decision-making table.\n\nWe're telling you why very soon.\n🔗 Full story coming July 9.</div><div class="post-cta"><strong>CTA:</strong> Save the date</div></div></div>
-    <div class="post-card"><div class="post-head"><span class="obj-pill">Global Stories</span><span class="post-date">Friday, July 3</span></div><div class="post-body"><div class="post-copy">🌍 From Senegal to the Pacific, from South Korea to Guatemala — 20 real stories of communities reshaping international cooperation.\n\n📅 We tell it all on July 9.\n📍 New York\nGet ready.</div><div class="post-cta"><strong>CTA:</strong> Get ready</div></div></div>
-    <div class="post-card"><div class="post-head"><span class="obj-pill">Virtual Launch</span><span class="post-date">Monday, July 6</span></div><div class="post-body"><div class="post-copy">🔴 LIVE TODAY. Before we touch down in New York, we're launching our report to the world — in English, French and Spanish. Global civil society, one conversation.\n\n📅 Today, July 6, 2026\n📍 Forus Virtual Hub\n🔗 Join us: <a href="https://us02web.zoom.us/meeting/register/WXoC-XbeQ9yPugq_IybHDQ#/registration" target="_blank">Register here</a></div><div class="post-cta"><strong>CTA:</strong> Join the virtual launch</div></div></div>
+    <div class="post-section-title">📢 PRE-LAUNCH <span class="badge badge-pre">2–6 July</span></div>
+    <div class="post-card"><div class="post-head"><span class="obj-pill">Kick-off</span><span class="post-date">Thursday, July 2</span></div><div class="post-body"><div class="post-copy">🎯🌍📢🤝 As governments, civil society and UN stakeholders gather for the #HLPF2026 how do we move from commitments to action?
 
-    <div class="post-section-title">🚀 LAUNCH & HLPF EVENT <span class="badge badge-launch">9–14 July</span></div>
-    <div class="post-card"><div class="post-head"><span class="obj-pill">NY Launch</span><span class="post-date">Thursday, July 9</span></div><div class="post-body"><div class="post-copy">📢 Big news from Forus! At #HLPF2026 we're launching 'Cooperation That Works: Civil Society in South-South and Triangular Cooperation.'\n\nIt brings together evidence from across our network on how civil society makes South-South and triangular cooperation more effective, legitimate and sustainable.\n\n📅 Today, July 9, 2026\n📍 New York\n🔗 Read more: <a href="https://www.forus-international.org/en/resources" target="_blank">forus-international.org/en/resources</a></div><div class="post-cta"><strong>CTA:</strong> Read the report</div></div></div>
-    <div class="post-card"><div class="post-head"><span class="obj-pill">Diplomatic Table</span><span class="post-date">Thursday, July 9, 1:00–3:00 PM</span></div><div class="post-body"><div class="post-copy">🤝 Forus takes a seat at the diplomatic table today to talk about the future of global cooperation.\n\n📅 Today, 1:00–3:00 PM\n📍 RoK Mission to the UN, New York\nCivil society, where the decisions that matter get made.</div><div class="post-cta"><strong>CTA:</strong> Follow the conversation</div></div></div>
-    <div class="post-card"><div class="post-head"><span class="obj-pill">Weekend Workshops</span><span class="post-date">Saturday–Sunday, July 11–12</span></div><div class="post-body"><div class="post-copy">🧠 While the world rests, our network keeps working. Two intensive days of peer learning and shared strategy — laying the groundwork for what's next.\n\n📅 July 11–12, 2026\n📍 Scandinavia House, New York</div><div class="post-cta"><strong>CTA:</strong> Learn more</div></div></div>
-    <div class="post-card"><div class="post-head"><span class="obj-pill">African Voices</span><span class="post-date">Tuesday, July 14, 1:15–2:45 PM EST</span></div><div class="post-body"><div class="post-copy">🌍 Forus Africa voices speak loud at the UN today — governance, accountability and African agency, on their own terms.\n\n📅 July 14, 1:15–2:45 PM EST\n📍 United Nations, New York</div><div class="post-cta"><strong>CTA:</strong> Amplify African voices</div></div></div>
-    <div class="post-card"><div class="post-head"><span class="obj-pill">Localising SDGs</span><span class="post-date">Tuesday, July 14, 3:00–6:00 PM EDT</span></div><div class="post-body"><div class="post-copy">📍 Our President Justina takes the floor today: localising the SDGs isn't a technicality — it's the key to making change reach where it matters.\n\n📅 July 14, 3:00–6:00 PM EDT\n📍 New York\n🔗 Policy brief: <a href="https://www.forus-international.org/en/resources" target="_blank">forus-international.org/en/resources</a></div><div class="post-cta"><strong>CTA:</strong> Read the policy brief</div></div></div>
+This year, #Forus and its members are bringing local experiences, civil society evidence and practical solutions to global discussions on sustainable development. From Voluntary National Reviews to the future of the post-2030 agenda, we believe meaningful participation and accountability must remain at the heart of international cooperation.
+
+Over the coming days, we'll be sharing insights, reports, podcasts, events and perspectives from across our network.
+
+https://www.forus-international.org/en/campaigns?modal_page=page&modal_detail_id=high-level-political-forum-2026
+
+#HLPF2026 #Agenda2030 #GlobalGoals #Forus #CivilSociety</div><div class="post-cta"><strong>CTA:</strong> Follow the conversation</div></div></div>
+    <div class="post-card"><div class="post-head"><span class="obj-pill">Report Teaser</span><span class="post-date">Friday, July 3</span></div><div class="post-body"><div class="post-copy">📢📄🌍🔍 New report launch | 7 July 2026
+
+South-South and Triangular Cooperation is increasingly shaping how countries and communities share knowledge, resources and solutions.
+
+But what makes these partnerships truly effective?
+
+Drawing on more than 20 case studies from across the Forus network, our new global report explores how South-South and Triangular Cooperation can become more inclusive, accountable and responsive to local realities.
+
+The report highlights practical lessons on peer exchange, shared learning, governance, participation and partnership-building.
+
+Join us during #HLPF2026 as we launch the report and discuss how cooperation can better support sustainable development. Register here: https://us02web.zoom.us/meeting/register/WXoC-XbeQ9yPugq_IybHDQ#/registration
+
+#SSTC #SouthSouthCooperation #SDGs #HLPF2026 #Forus</div><div class="post-cta"><strong>CTA:</strong> Register for the launch</div></div></div>
+
+    <div class="post-section-title">🚀 DURING HLPF <span class="badge badge-launch">7–14 July</span></div>
+    <div class="post-card"><div class="post-head"><span class="obj-pill">SSTC Launch</span><span class="post-date">Monday, July 7</span></div><div class="post-body"><div class="post-copy">🌍🤝📊💡 What does effective South-South and Triangular Cooperation look like in practice?
+
+Together with partners and civil society leaders, we'll explore how locally driven cooperation can strengthen development outcomes, promote shared learning and support more inclusive decision-making.
+
+The conversation will build on findings from Forus' new global SSTC report. Read the executive summary here: https://www.forus-international.org/en/extra/hub/resources-publications?modal_page=pdf&modal_detail_id=executive-summary-cooperation-that-works-civil-society-in-south-south-and-triangular-cooperation
+
+#HLPF2026 #SSTC #SouthSouthCooperation #Forus</div><div class="post-cta"><strong>CTA:</strong> Read the executive summary</div></div></div>
+    <div class="post-card"><div class="post-head"><span class="obj-pill">VNRs</span><span class="post-date">Tuesday, July 8</span></div><div class="post-body"><div class="post-copy">📊🌍🗣️📢 This year, 13 Forus National Platforms are based in countries presenting Voluntary National Reviews (#VNRs) at the United Nations High-Level Political Forum.
+
+Our members are working every day to monitor progress, engage communities and hold decision-makers accountable for #SDG commitments. The VNR process is an important opportunity for governments to report on implementation. But accountability is strongest when civil society voices are also heard.
+
+That's why Forus members will be sharing their perspectives, lessons learned and recommendations throughout #HLPF2026.
+
+Learn more about our engagement here: https://www.forus-international.org/en/agenda-2030
+
+#VNR2026 #Agenda2030 #SDGs #CivilSociety #Forus</div><div class="post-cta"><strong>CTA:</strong> Learn more about our engagement</div></div></div>
+    <div class="post-card"><div class="post-head"><span class="obj-pill">Beyond the Review</span><span class="post-date">Thursday, July 9</span></div><div class="post-body"><div class="post-copy">🎙️🌍📢🔍 What happens beyond the Voluntary National Review?
+
+As countries present their progress on the Sustainable Development Goals, Forus is launching a new season of Beyond the Review.
+
+Through conversations with National Platforms and civil society leaders, the series explores what the official reports often cannot capture: the realities communities face, the challenges that remain, and the role civil society plays in driving sustainable development forward.
+
+Stay tuned for the first episodes during #HLPF2026. Listen to all our podcasts here: https://www.forus-international.org/en/a-space-for-us
+
+#BeyondTheReview #Agenda2030 #VNR2026 #Forus #CivilSociety</div><div class="post-cta"><strong>CTA:</strong> Listen to the podcasts</div></div></div>
+    <div class="post-card"><div class="post-head"><span class="obj-pill">Civic Space</span><span class="post-date">Thursday, July 9</span></div><div class="post-body"><div class="post-copy">🕊️🌍📊🔍 Sustainable development depends on an enabling environment for civil society.
+
+Through the #EUSEE initiative, civil society organisations in 86 countries are documenting changes in civic space, participation, freedoms and the conditions that allow organisations to contribute effectively to development processes.
+
+As governments present their Voluntary National Reviews at #HLPF2026, this evidence provides an important complement to official reporting and helps us better understand whether civil society can genuinely participate in shaping development outcomes.
+
+#HLPF2026 #CivilSociety #SDGs #Agenda2030 #Forus #VNRs</div><div class="post-cta"><strong>CTA:</strong> Learn more about EU-SEE</div></div></div>
+    <div class="post-card"><div class="post-head"><span class="obj-pill">African Voices</span><span class="post-date">Tuesday, July 14, 1:15–2:45 PM EST</span></div><div class="post-body"><div class="post-copy">🌍🗣️🌍📢 Forus Africa voices speak loud at the UN today — governance, accountability and African agency, on their own terms.
+
+📅 July 14, 1:15–2:45 PM EST
+📍 United Nations, New York</div><div class="post-cta"><strong>CTA:</strong> Amplify African voices</div></div></div>
+    <div class="post-card"><div class="post-head"><span class="obj-pill">Localising SDGs</span><span class="post-date">Tuesday, July 14, 3:00–6:00 PM EDT</span></div><div class="post-body"><div class="post-copy">📍🌍📊🗣️ Our Chair Justina Kaluinaitė from the Lithuanian NGDO Platform takes the floor today: localising the SDGs is the key to making change reach where it matters.
+
+📅 July 14, 3:00–6:00 PM EDT
+📍 New York</div><div class="post-cta"><strong>CTA:</strong> Read the policy brief</div></div></div>
 
     <div class="post-section-title">🔁 AFTER <span class="badge badge-after">16–19 July</span></div>
-    <div class="post-card"><div class="post-head"><span class="obj-pill">Post-2030 Vision</span><span class="post-date">Thursday, July 16, 10:30 AM–12:00 PM</span></div><div class="post-body"><div class="post-copy">🔮 What do we defend? What do we demand? What do we no longer accept? Today we present our Post-2030 Vision and chart the road to 2027.\n\n📅 Today, July 16, 10:30 AM–12:00 PM\n📍 New York\nThe future of cooperation is being written now.\n\n🔗 Read more: <a href="https://www.forus-international.org/en/campaign/forus-post-2030-vision" target="_blank">forus-international.org/en/campaign/forus-post-2030-vision</a></div><div class="post-cta"><strong>CTA:</strong> Join the conversation</div></div></div>
-    <div class="post-card"><div class="post-head"><span class="obj-pill">Report Recap</span><span class="post-date">July 16 or 19</span></div><div class="post-body"><div class="post-copy">🔁 Missed it? Here's everything you need to know from 'Cooperation That Works' in one thread.\n\n🔗 Full report: <a href="https://www.forus-international.org/en/resources" target="_blank">forus-international.org/en/resources</a></div><div class="post-cta"><strong>CTA:</strong> Read the recap</div></div></div>
+    <div class="post-card"><div class="post-head"><span class="obj-pill">Post-2030 Vision</span><span class="post-date">Thursday, July 16</span></div><div class="post-body"><div class="post-copy">📸🌍🔮📢 Pictures from the Forus #HLPF2026 event: The future after 2030 is already being shaped.
+
+The debate is not only about future goals. It is about participation, accountability, financing and the values that will guide international cooperation in the years ahead.
+
+Through consultations with members and partners around the world, Forus has developed a collective civil society vision for the post-2030 agenda.
+
+Our vision is built around three simple questions:
+
+✔ What must we defend?
+✔ What must we demand?
+✔ What must we decline?
+
+Read our vision: https://www.forus-international.org/en/campaigns?modal_page=campaign&modal_detail_id=forus-post-2030-vision
+
+#Post2030 #HLPF2026 #Agenda2030 #Forus</div><div class="post-cta"><strong>CTA:</strong> Read the vision</div></div></div>
+    <div class="post-card"><div class="post-head"><span class="obj-pill">Closing Recap</span><span class="post-date">July 19</span></div><div class="post-body"><div class="post-copy">🌍📢🤝🔮 #HLPF2026 - As we approach the final five years of Agenda 2030 progress depends on partnerships, participation and accountability.
+
+Throughout #HLPF2026, Forus members from around the world brought local evidence, community perspectives and practical solutions to global conversations on sustainable development.
+
+From Voluntary National Reviews to monitoring of an enabling environment, from South-South Cooperation to the post-2030 agenda, our message remains the same:
+
+No sustainable future can be built without civil society.
+
+#HLPF2026 #SDGs #Agenda2030 #Forus #CivilSociety #GlobalGoals</div><div class="post-cta"><strong>CTA:</strong> Share your highlights</div></div></div>
   </div>
 </div>
 
@@ -1417,6 +1539,7 @@ The future of cooperation is being written now.
         <span class="tag">#SSTC</span><span class="tag">#SDGs</span><span class="tag">#GlobalGoals</span>
         <span class="tag">#2030Agenda</span><span class="tag">#CivilSociety</span><span class="tag">#CivilSocietyVoice</span>
         <span class="tag">#SouthSouthCooperation</span><span class="tag">#LeaveNoOneBehind</span><span class="tag">#GlobalAdvocacy</span>
+        <span class="tag">#VNR2026</span><span class="tag">#BeyondTheReview</span><span class="tag">#Post2030</span>
       </div>
     </div>
   </div>
@@ -1591,17 +1714,19 @@ The future of cooperation is being written now.
     <span class="phase-label pre">PRÉ-LANCEMENT</span>
     <table>
       <tr><th>Date</th><th>Titre</th><th>Objectif</th></tr>
-      <tr><td><strong>Mercredi 1 juillet</strong></td><td class="event-title">Teaser d'attente</td><td>Créer de la curiosité sans révéler le contenu du rapport.</td></tr>
-      <tr><td><strong>Jeudi 2 juillet</strong></td><td class="event-title">Le problème que personne ne résout</td><td>Connecter l'urgence du contexte des ODD à la pertinence du rapport.</td></tr>
-      <tr><td><strong>Vendredi 3 juillet</strong></td><td class="event-title">20 histoires, un même message</td><td>Montrer la portée mondiale des preuves recueillies dans le rapport.</td></tr>
-      <tr><td><strong>Lundi 6 juillet</strong></td><td class="event-title">SSTC Report Launch — Webinaire virtuel</td><td><span class="event-org">Organise: Forus International</span><br>Lancer officiellement le rapport SSTC devant l'ensemble du réseau mondial de Forus et de la société civile, mettre en évidence les messages clés sur le rôle de la société civile dans la coopération Sud-Sud et triangulaire, et créer un élan avant le lancement en personne à New York. (Disponible en anglais, français et espagnol, sur le Forus Virtual Hub.)</td></tr>
+      <tr><td><strong>Jeudi 2 juillet</strong></td><td class="event-title">HLPF 2026: Des engagements à l'action</td><td>Cadrer la participation de Forus au HLPF 2026, en soulignant que la société civile apporte une expertise locale, des preuves et des solutions pratiques pour le développement durable.</td></tr>
+      <tr><td><strong>Vendredi 3 juillet</strong></td><td class="event-title">Teaser du nouveau rapport SSTC</td><td>Annoncer le lancement prochain du rapport mondial de Forus sur la coopération Sud-Sud et triangulaire, basé sur plus de 20 études de cas du réseau.</td></tr>
+      <tr><td><strong>Lundi 6 juillet</strong></td><td class="event-title">Forus Virtual Hub: Lancement du Rapport SSTC (Webinaire)</td><td><span class="event-org">Organise: Forus International</span><br>Lancer le rapport SSTC pour l'ensemble du réseau Forus et de la société civile en général. Créer un élan avant le lancement en personne à New York. (Disponible en anglais, français et espagnol.)</td></tr>
     </table>
 
     <span class="phase-label during">PENDANT LE HLPF — Semaine 1</span>
     <table>
       <tr><th>Date</th><th>Titre</th><th>Objectif</th></tr>
-      <tr><td><strong>Jeudi 9 juillet</strong></td><td class="event-title">SSTC Report Launch — En personne, New York</td><td><span class="event-org">Organise: Forus International</span><br>Présenter les conclusions du rapport et les 5 Calls to Action aux diplomates, décideurs politiques et société civile, et construire des alliances pour le suivi post-HLPF.</td></tr>
-      <tr><td><strong>Jeudi 9 juillet<br>13:00–15:00</strong></td><td class="event-title">Roundtable: Pact of the Future, Summit of the Future & Post-2030</td><td><span class="event-org">Organise: Mission de la République de Corée auprès de l'ONU</span><br>Positionner Forus dans le débat post-2030 et construire des relations diplomatiques avec la Mission de Corée et les partenaires alliés.</td></tr>
+      <tr><td><strong>Mardi 7 juillet</strong></td><td class="event-title">Lancement du Rapport SSTC (Événement en personne)</td><td><span class="event-org">Organise: Forus International</span><br>Lancer officiellement le rapport avec les diplomates, les décideurs politiques et la société civile. Présenter les conclusions et l'appel à l'action.</td></tr>
+      <tr><td><strong>Mercredi 8 juillet</strong></td><td class="event-title">Forus et les VNRs 2026</td><td>Mettre en lumière le travail des 13 Plateformes Nationales de Forus dans les pays présentant leurs VNRs. Souligner l'importance de la redevabilité et de la participation de la société civile.</td></tr>
+      <tr><td><strong>Jeudi 9 juillet</strong></td><td class="event-title">Nouvelle saison de "Beyond the Review"</td><td>Annoncer le lancement d'une nouvelle saison du podcast de Forus, qui explore ce que les rapports officiels ne peuvent souvent pas capturer: les réalités et les défis des communautés.</td></tr>
+      <tr><td><strong>Jeudi 9 juillet</strong></td><td class="event-title">Initiative EU-SEE: Surveillance de l'espace civique</td><td>Présenter l'initiative EU-SEE et comment elle documente les changements dans l'espace civique dans 86 pays, complétant les VNRs officiels.</td></tr>
+      <tr><td><strong>Jeudi 9 juillet<br>13:00–15:00</strong></td><td class="event-title">Roundtable: Pact of the Future, Summit of the Future & Post-2030</td><td><span class="event-org">Organise: Mission de la République de Corée auprès de l'ONU</span><br>Positionner Forus dans le débat post-2030 et construire des relations diplomatiques.</td></tr>
     </table>
 
     <span class="phase-label">ENTRE LES SEMAINES DU HLPF</span>
@@ -1621,7 +1746,7 @@ The future of cooperation is being written now.
     <table>
       <tr><th>Date</th><th>Titre</th><th>Objectif</th></tr>
       <tr><td><strong>Jeudi 16 juillet<br>10:30–12:00</strong></td><td class="event-title">Beyond 2030: What Civil Society Defends, Demands and Declines</td><td><span class="event-org">Organise: Forus International</span><br>Présenter le cadre 3Ds (Defend, Demand, Decline) à un public international et tracer la route vers le Sommet ODD 2027. <em>(Note: présence obligatoire de tout le personnel de Forus à NY; les membres doivent confirmer leurs créneaux de parole avant fin juin.)</em></td></tr>
-      <tr><td><strong>16 ou 19 juillet</strong></td><td class="event-title">Récapitulatif du rapport</td><td>Partager un résumé/carrousel des principales conclusions du rapport.</td></tr>
+      <tr><td><strong>19 juillet</strong></td><td class="event-title">Récapitulatif du HLPF 2026</td><td>Partager un résumé visuel de la participation de Forus au HLPF 2026 et renforcer le message central: "Il n'y a pas d'avenir durable sans la société civile."</td></tr>
     </table>
   </div>
 </div>
@@ -1634,22 +1759,97 @@ The future of cooperation is being written now.
     <h2 class="section-title">Publications pour réseaux sociaux</h2>
     <p class="lead">Contenu prêt à l'emploi en anglais (langue originale).</p>
 
-    <div class="post-section-title">📢 PRÉ-LANCEMENT <span class="badge badge-pre">1–6 juillet</span></div>
-    <div class="post-card"><div class="post-head"><span class="obj-pill">Teaser</span><span class="post-date">Mercredi 1 juillet</span></div><div class="post-body"><div class="post-copy">👀 Quelque chose de grand arrive de Forus. Le 9 juillet, nous brisons le silence sur qui alimente vraiment la coopération Sud-Sud et triangulaire.\n\n📅 9 juillet 2026\n📍 New York\nRestez à l'écoute. 🔥</div><div class="post-cta"><strong>CTA:</strong> Restez à l'écoute</div></div></div>
-    <div class="post-card"><div class="post-head"><span class="obj-pill">Urgence</span><span class="post-date">Jeudi 2 juillet</span></div><div class="post-body"><div class="post-copy">⏳ À seulement 4 ans de 2030, les progrès des ODD stagnent encore. La solution oubliée? Mettre la société civile à la table des décisions.\n\nNous vous disons pourquoi très bientôt.\n🔗 L'histoire complète arrive le 9 juillet.</div><div class="post-cta"><strong>CTA:</strong> Réservez la date</div></div></div>
-    <div class="post-card"><div class="post-head"><span class="obj-pill">Histoires globales</span><span class="post-date">Vendredi 3 juillet</span></div><div class="post-body"><div class="post-copy">🌍 Du Sénégal au Pacifique, de la Corée du Sud au Guatemala — 20 histoires réelles de communautés qui refaçonnent la coopération internationale.\n\n📅 Nous racontons tout le 9 juillet.\n📍 New York\nPréparez-vous.</div><div class="post-cta"><strong>CTA:</strong> Préparez-vous</div></div></div>
-    <div class="post-card"><div class="post-head"><span class="obj-pill">Lancement virtuel</span><span class="post-date">Lundi 6 juillet</span></div><div class="post-body"><div class="post-copy">🔴 EN DIRECT AUJOURD'HUI. Avant d'arriver à New York, nous lançons notre rapport au monde — en anglais, français et espagnol. La société civile mondiale, une seule conversation.\n\n📅 Aujourd'hui, 6 juillet 2026\n📍 Forus Virtual Hub\n🔗 Rejoignez-nous: <a href="https://us02web.zoom.us/meeting/register/WXoC-XbeQ9yPugq_IybHDQ#/registration" target="_blank">Inscrivez-vous ici</a></div><div class="post-cta"><strong>CTA:</strong> Rejoignez le lancement virtuel</div></div></div>
+    <div class="post-section-title">📢 PRÉ-LANCEMENT <span class="badge badge-pre">2–6 juillet</span></div>
+    <div class="post-card"><div class="post-head"><span class="obj-pill">Kick-off</span><span class="post-date">Jeudi 2 juillet</span></div><div class="post-body"><div class="post-copy">🎯🌍📢🤝 Alors que les gouvernements, la société civile et les parties prenantes de l'ONU se réunissent pour le #HLPF2026, comment passer des engagements à l'action?
 
-    <div class="post-section-title">🚀 LANCEMENT & ÉVÉNEMENT HLPF <span class="badge badge-launch">9–14 juillet</span></div>
-    <div class="post-card"><div class="post-head"><span class="obj-pill">Lancement à NY</span><span class="post-date">Jeudi 9 juillet</span></div><div class="post-body"><div class="post-copy">📢 Grande nouvelle de Forus! Au #HLPF2026 nous lançons 'Cooperation That Works: Civil Society in South-South and Triangular Cooperation.'\n\nIl rassemble des preuves de tout notre réseau sur la façon dont la société civile rend la coopération Sud-Sud et triangulaire plus efficace, légitime et durable.\n\n📅 Aujourd'hui, 9 juillet 2026\n📍 New York\n🔗 En savoir plus: <a href="https://www.forus-international.org/en/resources" target="_blank">forus-international.org/en/resources</a></div><div class="post-cta"><strong>CTA:</strong> Lire le rapport</div></div></div>
-    <div class="post-card"><div class="post-head"><span class="obj-pill">Table diplomatique</span><span class="post-date">Jeudi 9 juillet, 13:00–15:00</span></div><div class="post-body"><div class="post-copy">🤝 Forus prend place à la table diplomatique aujourd'hui pour parler de l'avenir de la coopération mondiale.\n\n📅 Aujourd'hui, 13:00–15:00\n📍 Mission de la Corée du Sud à l'ONU, New York\nLa société civile, là où les décisions importantes sont prises.</div><div class="post-cta"><strong>CTA:</strong> Suivez la conversation</div></div></div>
-    <div class="post-card"><div class="post-head"><span class="obj-pill">Ateliers du week-end</span><span class="post-date">Samedi–dimanche 11–12 juillet</span></div><div class="post-body"><div class="post-copy">🧠 Pendant que le monde se repose, notre réseau continue de travailler. Deux jours intensifs d'apprentissage entre pairs et de stratégie partagée — poser les bases de la suite.\n\n📅 11–12 juillet 2026\n📍 Scandinavia House, New York</div><div class="post-cta"><strong>CTA:</strong> En savoir plus</div></div></div>
-    <div class="post-card"><div class="post-head"><span class="obj-pill">Voix africaines</span><span class="post-date">Mardi 14 juillet, 13:15–14:45 EST</span></div><div class="post-body"><div class="post-copy">🌍 Les voix de Forus Afrique s'élèvent à l'ONU aujourd'hui — gouvernance, redevabilité et agence africaine, en leurs propres termes.\n\n📅 14 juillet, 13:15–14:45 EST\n📍 Nations Unies, New York</div><div class="post-cta"><strong>CTA:</strong> Amplifiez les voix africaines</div></div></div>
-    <div class="post-card"><div class="post-head"><span class="obj-pill">Localiser les ODD</span><span class="post-date">Mardi 14 juillet, 15:00–18:00 EDT</span></div><div class="post-body"><div class="post-copy">📍 Notre Présidente Justina prend la parole aujourd'hui: localiser les ODD n'est pas une technicité — c'est la clé pour que le changement atteigne là où il compte.\n\n📅 14 juillet, 15:00–18:00 EDT\n📍 New York\n🔗 Policy brief: <a href="https://www.forus-international.org/en/resources" target="_blank">forus-international.org/en/resources</a></div><div class="post-cta"><strong>CTA:</strong> Lire le policy brief</div></div></div>
+Cette année, #Forus et ses membres apportent des expériences locales, des preuves de la société civile et des solutions pratiques aux discussions mondiales sur le développement durable. Des examens nationaux volontaires à l'avenir du programme post-2030, nous croyons que la participation significative et la redevabilité doivent rester au cœur de la coopération internationale.
+
+Dans les jours à venir, nous partagerons des idées, des rapports, des podcasts, des événements et des perspectives de l'ensemble de notre réseau.
+
+https://www.forus-international.org/en/campaigns?modal_page=page&modal_detail_id=high-level-political-forum-2026
+
+#HLPF2026 #Agenda2030 #GlobalGoals #Forus #CivilSociety</div><div class="post-cta"><strong>CTA:</strong> Suivez la conversation</div></div></div>
+    <div class="post-card"><div class="post-head"><span class="obj-pill">Teaser du rapport</span><span class="post-date">Vendredi 3 juillet</span></div><div class="post-body"><div class="post-copy">📢📄🌍🔍 Nouveau rapport | 7 juillet 2026
+
+La coopération Sud-Sud et triangulaire façonne de plus en plus la manière dont les pays et les communautés partagent les connaissances, les ressources et les solutions.
+
+Mais qu'est-ce qui rend ces partenariats vraiment efficaces?
+
+S'appuyant sur plus de 20 études de cas du réseau Forus, notre nouveau rapport mondial explore comment la coopération Sud-Sud et triangulaire peut devenir plus inclusive, responsable et adaptée aux réalités locales.
+
+Le rapport met en lumière des leçons pratiques sur les échanges entre pairs, l'apprentissage partagé, la gouvernance, la participation et la construction de partenariats.
+
+Rejoignez-nous pendant le #HLPF2026 pour le lancement du rapport et discuter de la manière dont la coopération peut mieux soutenir le développement durable. Inscrivez-vous ici: https://us02web.zoom.us/meeting/register/WXoC-XbeQ9yPugq_IybHDQ#/registration
+
+#SSTC #SouthSouthCooperation #SDGs #HLPF2026 #Forus</div><div class="post-cta"><strong>CTA:</strong> Inscrivez-vous au lancement</div></div></div>
+
+    <div class="post-section-title">🚀 PENDANT LE HLPF <span class="badge badge-launch">7–14 juillet</span></div>
+    <div class="post-card"><div class="post-head"><span class="obj-pill">Lancement SSTC</span><span class="post-date">Lundi 7 juillet</span></div><div class="post-body"><div class="post-copy">🌍🤝📊💡 À quoi ressemble une coopération Sud-Sud et triangulaire efficace dans la pratique?
+
+Avec des partenaires et des leaders de la société civile, nous explorerons comment la coopération menée localement peut renforcer les résultats du développement, promouvoir l'apprentissage partagé et soutenir une prise de décision plus inclusive.
+
+La conversation s'appuiera sur les conclusions du nouveau rapport SSTC de Forus. Lisez le résumé analytique ici: https://www.forus-international.org/en/extra/hub/resources-publications?modal_page=pdf&modal_detail_id=executive-summary-cooperation-that-works-civil-society-in-south-south-and-triangular-cooperation
+
+#HLPF2026 #SSTC #SouthSouthCooperation #Forus</div><div class="post-cta"><strong>CTA:</strong> Lire le résumé</div></div></div>
+    <div class="post-card"><div class="post-head"><span class="obj-pill">VNRs</span><span class="post-date">Mardi 8 juillet</span></div><div class="post-body"><div class="post-copy">📊🌍🗣️📢 Cette année, 13 Plateformes Nationales de Forus sont basées dans des pays présentant des examens nationaux volontaires (#VNRs) au Forum politique de haut niveau des Nations Unies.
+
+Nos membres travaillent chaque jour pour surveiller les progrès, engager les communautés et tenir les décideurs responsables des engagements #ODD. Le processus des VNRs est une occasion importante pour les gouvernements de rendre compte de la mise en œuvre. Mais la redevabilité est plus forte lorsque les voix de la société civile sont également entendues.
+
+C'est pourquoi les membres de Forus partageront leurs perspectives, les leçons apprises et leurs recommandations tout au long du #HLPF2026.
+
+Apprenez-en plus sur notre engagement ici: https://www.forus-international.org/en/agenda-2030
+
+#VNR2026 #Agenda2030 #SDGs #CivilSociety #Forus</div><div class="post-cta"><strong>CTA:</strong> En savoir plus sur notre engagement</div></div></div>
+    <div class="post-card"><div class="post-head"><span class="obj-pill">Beyond the Review</span><span class="post-date">Jeudi 9 juillet</span></div><div class="post-body"><div class="post-copy">🎙️🌍📢🔍 Que se passe-t-il au-delà de l'examen national volontaire?
+
+Alors que les pays présentent leurs progrès sur les Objectifs de développement durable, Forus lance une nouvelle saison de Beyond the Review.
+
+À travers des conversations avec les Plateformes Nationales et les leaders de la société civile, la série explore ce que les rapports officiels ne peuvent souvent pas capturer: les réalités auxquelles les communautés sont confrontées, les défis qui subsistent et le rôle que joue la société civile pour faire avancer le développement durable.
+
+Restez à l'écoute pour les premiers épisodes pendant le #HLPF2026. Écoutez tous nos podcasts ici: https://www.forus-international.org/en/a-space-for-us
+
+#BeyondTheReview #Agenda2030 #VNR2026 #Forus #CivilSociety</div><div class="post-cta"><strong>CTA:</strong> Écouter les podcasts</div></div></div>
+    <div class="post-card"><div class="post-head"><span class="obj-pill">Espace civique</span><span class="post-date">Jeudi 9 juillet</span></div><div class="post-body"><div class="post-copy">🕊️🌍📊🔍 Le développement durable dépend d'un environnement favorable à la société civile.
+
+Grâce à l'initiative #EUSEE, les organisations de la société civile dans 86 pays documentent les changements dans l'espace civique, la participation, les libertés et les conditions qui permettent aux organisations de contribuer efficacement aux processus de développement.
+
+Alors que les gouvernements présentent leurs examens nationaux volontaires au #HLPF2026, ces preuves constituent un complément important aux rapports officiels et nous aident à mieux comprendre si la société civile peut véritablement participer à l'élaboration des résultats du développement.
+
+#HLPF2026 #CivilSociety #SDGs #Agenda2030 #Forus #VNRs</div><div class="post-cta"><strong>CTA:</strong> En savoir plus sur EU-SEE</div></div></div>
+    <div class="post-card"><div class="post-head"><span class="obj-pill">Voix africaines</span><span class="post-date">Mardi 14 juillet, 13:15–14:45 EST</span></div><div class="post-body"><div class="post-copy">🌍🗣️🌍📢 Les voix de Forus Afrique s'élèvent à l'ONU aujourd'hui — gouvernance, redevabilité et agence africaine, en leurs propres termes.
+
+📅 14 juillet, 13:15–14:45 EST
+📍 Nations Unies, New York</div><div class="post-cta"><strong>CTA:</strong> Amplifiez les voix africaines</div></div></div>
+    <div class="post-card"><div class="post-head"><span class="obj-pill">Localiser les ODD</span><span class="post-date">Mardi 14 juillet, 15:00–18:00 EDT</span></div><div class="post-body"><div class="post-copy">📍🌍📊🗣️ Notre Présidente Justina Kaluinaitė de la Plateforme NGDO lituanienne prend la parole aujourd'hui: localiser les ODD est la clé pour que le changement atteigne là où il compte.
+
+📅 14 juillet, 15:00–18:00 EDT
+📍 New York</div><div class="post-cta"><strong>CTA:</strong> Lire le policy brief</div></div></div>
 
     <div class="post-section-title">🔁 APRÈS <span class="badge badge-after">16–19 juillet</span></div>
-    <div class="post-card"><div class="post-head"><span class="obj-pill">Vision post-2030</span><span class="post-date">Jeudi 16 juillet, 10:30–12:00</span></div><div class="post-body"><div class="post-copy">🔮 Que défendons-nous? Qu'exigeons-nous? Que n'acceptons-nous plus? Aujourd'hui nous présentons notre Vision post-2030 et traçons la route vers 2027.\n\n📅 Aujourd'hui, 16 juillet, 10:30–12:00\n📍 New York\nL'avenir de la coopération s'écrit maintenant.\n\n🔗 En savoir plus: <a href="https://www.forus-international.org/en/campaign/forus-post-2030-vision" target="_blank">forus-international.org/en/campaign/forus-post-2030-vision</a></div><div class="post-cta"><strong>CTA:</strong> Rejoignez la conversation</div></div></div>
-    <div class="post-card"><div class="post-head"><span class="obj-pill">Récapitulatif</span><span class="post-date">16 ou 19 juillet</span></div><div class="post-body"><div class="post-copy">🔁 Vous l'avez manqué? Tout ce que vous devez savoir de 'Cooperation That Works' en un seul fil.\n\n🔗 Rapport complet: <a href="https://www.forus-international.org/en/resources" target="_blank">forus-international.org/en/resources</a></div><div class="post-cta"><strong>CTA:</strong> Lire le récapitulatif</div></div></div>
+    <div class="post-card"><div class="post-head"><span class="obj-pill">Vision post-2030</span><span class="post-date">Jeudi 16 juillet</span></div><div class="post-body"><div class="post-copy">📸🌍🔮📢 Photos de l'événement #HLPF2026 de Forus: L'avenir après 2030 est déjà en train de se dessiner.
+
+Le débat ne porte pas seulement sur les objectifs futurs. Il s'agit de participation, de redevabilité, de financement et des valeurs qui guideront la coopération internationale dans les années à venir.
+
+Grâce à des consultations avec les membres et les partenaires du monde entier, Forus a développé une vision collective de la société civile pour le programme post-2030.
+
+Notre vision repose sur trois questions simples:
+
+✔ Que devons-nous défendre?
+✔ Que devons-nous exiger?
+✔ Que devons-nous refuser?
+
+Lisez notre vision: https://www.forus-international.org/en/campaigns?modal_page=campaign&modal_detail_id=forus-post-2030-vision
+
+#Post2030 #HLPF2026 #Agenda2030 #Forus</div><div class="post-cta"><strong>CTA:</strong> Lire la vision</div></div></div>
+    <div class="post-card"><div class="post-head"><span class="obj-pill">Récapitulatif</span><span class="post-date">19 juillet</span></div><div class="post-body"><div class="post-copy">🌍📢🤝🔮 #HLPF2026 - Alors que nous approchons des cinq dernières années de l'Agenda 2030, les progrès dépendent des partenariats, de la participation et de la redevabilité.
+
+Tout au long du #HLPF2026, les membres de Forus du monde entier ont apporté des preuves locales, des perspectives communautaires et des solutions pratiques aux conversations mondiales sur le développement durable.
+
+Des examens nationaux volontaires au suivi d'un environnement favorable, de la coopération Sud-Sud au programme post-2030, notre message reste le même:
+
+Aucun avenir durable ne peut être construit sans la société civile.
+
+#HLPF2026 #SDGs #Agenda2030 #Forus #CivilSociety #GlobalGoals</div><div class="post-cta"><strong>CTA:</strong> Partagez vos moments forts</div></div></div>
   </div>
 </div>
 
@@ -1688,6 +1888,7 @@ The future of cooperation is being written now.
         <span class="tag">#SSTC</span><span class="tag">#SDGs</span><span class="tag">#GlobalGoals</span>
         <span class="tag">#2030Agenda</span><span class="tag">#CivilSociety</span><span class="tag">#CivilSocietyVoice</span>
         <span class="tag">#SouthSouthCooperation</span><span class="tag">#LeaveNoOneBehind</span><span class="tag">#GlobalAdvocacy</span>
+        <span class="tag">#VNR2026</span><span class="tag">#BeyondTheReview</span><span class="tag">#Post2030</span>
       </div>
     </div>
   </div>
